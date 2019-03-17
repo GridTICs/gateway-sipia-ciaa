@@ -26,23 +26,17 @@ void setup() {
   // initialize serial:
   Serial.begin(9600);
   Serial1.begin(115200);
-  attachInterrupt(19, serialInterrupt, CHANGE);
+  //attachInterrupt(19, serialInterrupt, CHANGE);
 }
 
 void loop() {
 
-      Serial1.print("Hi, i am Arduino!!! El número es: ");
+      Serial.println("Mande un paquete a la EDU-CIAA");
+      Serial1.print("Hi, i am Arduino!!! El numero es: ");
       Serial1.print(numero);
       Serial1.print("\r\n");
       numero++;
 
-    delay(30000);
+      delay(20000);
 
  }
-
-void  serialInterrupt()
-{
-  char c = Serial1.read();
-  Serial.print(c);
-  Serial.print("Hola");
-}

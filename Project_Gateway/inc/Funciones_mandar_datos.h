@@ -8,9 +8,10 @@
 void Mandar_Uart_TCP()
 {
     
-    if(bandera_dato_gpio == true && tickRead() - time_rx_gpio_set > timeout_rx_gpio && bandera_dato_esp == false)
+    if(bandera_dato_gpio == true && tickRead() - time_rx_gpio_set > timeout_rx_gpio)
     {   
         uartInterrupt(UART_232, false);
+        
         char buffer_fp[1024];
         memset( buffer_fp, '\0', sizeof(buffer_fp) );
         char buffer_aux[1024];
@@ -30,10 +31,10 @@ void Mandar_Uart_TCP()
         }
         else
         {
-            uartWriteString(UART_USB,"\r\nNo se leyeron correctamente los datos, o no hay datos que leer.\r\n");
+            uartWriteString(UART_USB,"\r\nNo hay datos que leer.\r\n");
         }  
     
-        if(esp01SendTPCIPDataToServer(SERVER_URL, SERVER_PORT, gpioRxBuffer, strlen(gpioRxBuffer))==true)
+        if(esp01SendTPCIPDataToServer(servidor_tcpip, atoi(puerto_tcpip), gpioRxBuffer, strlen(gpioRxBuffer))==true)
         {
             uartWriteString(UART_USB,"\r\nPaquete enviado con éxito...\r\n");
             memset( gpioRxBuffer, '\0', sizeof(gpioRxBuffer) );
@@ -48,7 +49,7 @@ void Mandar_Uart_TCP()
             if(fatFs_Add_Buff(gpioRxBuffer))
             {
                 memset( gpioRxBuffer, '\0', sizeof(gpioRxBuffer) );
-                punt_rx_gpio = 0;
+                punt_rx_gpio = gpioRxBuffer;
                 fatFs_Add_Log(sdcardDriveName(), "No hay conexión TCP con el servidor, se guarda el paquete en la SD.");
             }
             else
@@ -61,6 +62,8 @@ void Mandar_Uart_TCP()
     
         mandar_paquete = false;
         bandera_dato_gpio = false;
+        
+        
         uartInterrupt(UART_232, true);
     }
 }
@@ -81,7 +84,7 @@ void Mandar_Uart_TCP()
 void Mandar_Uart_Gpio()
 {
  
-        if(bandera_dato_esp == true && tickRead() - time_rx_esp_set > timeout_rx_esp )
+        if(bandera_dato_esp == true && tickRead() - time_rx_esp_set > timeout_rx_esp && bandera_dato_gpio == false)
         {
             uartWriteString(UART_USB, "\r\nLa cantidad de datos en Buffer es: ");
             uartWriteString(UART_USB,intToString(strlen(espRxIntBuffer)));

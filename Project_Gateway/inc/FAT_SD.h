@@ -22,6 +22,13 @@
 char sdBuffer[SD_BUFFER_SIZE];
 unsigned int punt_rx_sd;
 
+char ssid_wifi[30];
+char clave_wifi[30];
+char servidor_tcpip[50];
+char puerto_tcpip[10];
+char servidor_ntp[30];
+
+
 // Wrappers para manejar dispositivos USB Mass Storage y tarjeta SD
 sdcard_t sdcard;
 
@@ -296,4 +303,104 @@ static bool Erase_Arch(const char *nombre_archivo)
     f_close( &file );
     
     return true;
+}
+
+bool_t Tomar_Config_SD()
+{
+ 
+    char buf[1024];
+    char buf_aux[50]={0};
+    char filename[64];    
+    FIL file;
+    FRESULT fr;
+    int r;
+    unsigned int size_of_file, out_bytes;
+    bool result;
+    char *ptr_inicio;
+    char *ptr_final;
+    char *ptr_aux;
+    
+    
+    sprintf( filename, "%s/CONFIG.TXT", sdcardDriveName());
+
+    uartWriteString( UART_USB, "\r\n-------------------------------------------\r\n" );   
+    sprintf( buf, "Abriendo archivo: '%s'.\r\n", filename);
+    uartWriteString( UART_USB, buf);
+    uartWriteString( UART_USB, "-------------------------------------------\r\n" ); 
+ 
+    // Abre un archivo. Si no existe lo crea, si existe, me manda el puntero al último para escribir debajo.
+    fr = f_open( &file, filename, FA_READ);
+    if( fr != FR_OK )
+    {
+        fatFsTestERROR( fr );
+        return false;
+    }
+    
+    size_of_file = f_size(&file);
+    
+    if(size_of_file > 0)
+    {
+        //fr = f_read(&fsrc, buffer, sizeof buffer, &br); 
+        if(f_read(&file,buf,(size_of_file+1), &out_bytes) == FR_OK)uartWriteString(UART_USB, "\r\nEl dato ha sido leído correctamente.\r\n");
+    
+    }
+    
+
+    ptr_inicio = strstr(buf, "=");
+    ptr_final = strstr(buf, ";");
+    
+    for(ptr_aux=(ptr_inicio+1);ptr_aux<(ptr_final);ptr_aux++)buf_aux[ptr_aux-(ptr_inicio+1)] = *ptr_aux;
+    strcpy(ssid_wifi,buf_aux);
+    memset( buf_aux, '\0', sizeof(buf_aux));
+    
+    ptr_inicio = strstr((ptr_inicio+1), "=");
+    ptr_final = strstr((ptr_final+1), ";");
+    
+    for(ptr_aux=(ptr_inicio+1);ptr_aux<(ptr_final);ptr_aux++)buf_aux[ptr_aux-(ptr_inicio+1)] = *ptr_aux;
+    strcpy(clave_wifi,buf_aux);
+    memset( buf_aux, '\0', sizeof(buf_aux)); 
+    
+    ptr_inicio = strstr((ptr_inicio+1), "=");
+    ptr_final = strstr((ptr_final+1), ";");
+    
+    for(ptr_aux=(ptr_inicio+1);ptr_aux<(ptr_final);ptr_aux++)buf_aux[ptr_aux-(ptr_inicio+1)] = *ptr_aux;
+    strcpy(servidor_tcpip,buf_aux);
+    memset( buf_aux, '\0', sizeof(buf_aux)); 
+    
+    ptr_inicio = strstr((ptr_inicio+1), "=");
+    ptr_final = strstr((ptr_final+1), ";");
+    
+    for(ptr_aux=(ptr_inicio+1);ptr_aux<(ptr_final);ptr_aux++)buf_aux[ptr_aux-(ptr_inicio+1)] = *ptr_aux;
+    strcpy(puerto_tcpip,buf_aux);
+    memset( buf_aux, '\0', sizeof(buf_aux)); 
+    
+    ptr_inicio = strstr((ptr_inicio+1), "=");
+    ptr_final = strstr((ptr_final+1), ";");
+    
+    for(ptr_aux=(ptr_inicio+1);ptr_aux<(ptr_final);ptr_aux++)buf_aux[ptr_aux-(ptr_inicio+1)] = *ptr_aux;
+    strcpy(servidor_ntp,buf_aux);
+    memset( buf_aux, '\0', sizeof(buf_aux));
+    
+     uartWriteString( UART_USB, "\r\nLos datos obtenidos son: \r\n" );
+    uartWriteString( UART_USB, "SSID WIFI: " );
+    uartWriteString( UART_USB, ssid_wifi );
+    uartWriteString( UART_USB, "\r\n" );
+    
+    uartWriteString( UART_USB, "CLAVE WIFI: " );
+    uartWriteString( UART_USB, clave_wifi );
+    uartWriteString( UART_USB, "\r\n" );
+    
+    uartWriteString( UART_USB, "SERVER TCP/IP: " );
+    uartWriteString( UART_USB, servidor_tcpip );
+    uartWriteString( UART_USB, "\r\n" );
+    
+    uartWriteString( UART_USB, "PUERTO TCP/IP: " );
+    uartWriteString( UART_USB, puerto_tcpip );
+    uartWriteString( UART_USB, "\r\n" );
+    
+    uartWriteString( UART_USB, "SERVIDOR NTP: " );
+    uartWriteString( UART_USB, servidor_ntp );
+    uartWriteString( UART_USB, "\r\n" );
+    
+    
 }

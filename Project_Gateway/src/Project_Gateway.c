@@ -73,8 +73,10 @@ int main(void)
     if(fatFs_Open_or_Create(sdcardDriveName(), "LOG.TXT"))uartWriteString( UART_USB, "Inicio o creación del archivo LOG.TXT corrrecto.\r\n" );
     if(fatFs_Open_or_Create(sdcardDriveName(), "CONFIG.TXT"))uartWriteString( UART_USB, "Inicio o creación del archivo CONFIG.TXT corrrecto.\r\n" );
     
+    uartWriteString( UART_USB, "\r\nSe procede a leer las configuraciones en el archivo CONFIG.TXT...\r\n" );
+    Tomar_Config_SD();
     
-      
+         
     uartWriteString(UART_USB, "\r\nAhora se configurará el ESP8266:\r\n");
     
     if( !esp01Init( UART_ESP01, UART_DEBUG, UARTS_BAUD_RATE ) ){
@@ -90,7 +92,7 @@ int main(void)
    
     uartWriteString(UART_USB, "\r\n\r\nAhora el ESP8266 se conectará a la red preferida:\r\n");
 
-   if( !esp01ConnectToWifiAP( WIFI_SSID, WIFI_PASSWORD ) ){
+   if( !esp01ConnectToWifiAP( ssid_wifi, clave_wifi ) ){
       stopProgramError(); // Como dio falso (error) me quedo en un bucle infinito
    }
     
@@ -109,13 +111,14 @@ int main(void)
     // ***************   No funciona  *****************//
     //NTP_conection();
     
+    punt_rx_gpio = gpioRxBuffer;
     
     uartWriteString(UART_USB, "\r\nActivando las interrupciones del GPIO...\r\n");
     //Activo las interrupciones del UART_GPIO para que guarde las variables que llegan...
-    uartCallbackSet(UART_GPIO, UART_RECEIVE, UART_GPIO_INT, NULL);
+    uartCallbackSet(UART_GPIO, UART_RECEIVE, INT_GPIO_RX, NULL);
     uartInterrupt(UART_GPIO, true);
     
-    uartCallbackSet(UART_232, UART_RECEIVE, Int_esp_Rx, NULL);
+    uartCallbackSet(UART_232, UART_RECEIVE, INT_ESP_RX, NULL);
     uartInterrupt(UART_232, true);
     
     //mandar_paquete = false;
@@ -137,12 +140,14 @@ int main(void)
     const unsigned int timeout_lcd = 5000;
     rtc_t rtc_lcd;
     
+    
+    
     while(1)
     {        
 
         Mandar_Uart_TCP();
         
-        Mandar_Uart_Gpio();
+        //Mandar_Uart_Gpio();
         
         if(tickRead() - tiempo_set_lcd > timeout_lcd)
         {    
