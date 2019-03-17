@@ -1,0 +1,11 @@
+-Comprobar conexión para saber si lo guardamos en la SD o vía TCP.
+-Hacer la parte de grabación de SD.
+-Terminar los circuitos del mote.
+-Empezar el informe del proyecto final.
+-Acomodar menues:
+	-Falta menu de NTP.
+	-Debe incorporarse un menu de configuración de la conexión al servidor, ya sea TCP o UDP.
+	-Debe incorporarse un menu de encender el GATEWAY.
+-Tratar de dejar las configuraciones en memoria FLASH de la EDU-CIAA. COMENZADO 14/01/18 (usuario y contraseña se guardan en FLASH).
+-Ver el tema de dormir a la EDU-CIAA mientras no se reciba nada.
+-Usuario y contraseña para entrar al puerto serial para configuraciones. TERMINADO 14/01/18

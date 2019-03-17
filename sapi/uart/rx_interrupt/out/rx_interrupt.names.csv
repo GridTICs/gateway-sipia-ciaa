@@ -1,0 +1,213 @@
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a0007e8 000000a4 t uartProcessIRQ
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:100000dc 00000004 b rxIsrCallbackUART0
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:100000e0 00000004 b rxIsrCallbackUART2
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:100000e4 00000004 b rxIsrCallbackUART3
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:100000e8 00000004 b txIsrCallbackUART0
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:100000ec 00000004 b txIsrCallbackUART2
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:100000f0 00000004 b txIsrCallbackUART3
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a001ef8 00000048 t lpcUarts
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:10000000 00000004 d ClockSpeed
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000380 00000034 t gpioObtainPinInit
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000608 00000002 t errorOcurred
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a00060a 00000002 t doNothing
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:10000008 00000040 d timer_dd
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:100000c8 00000004 b callBackFuncParams
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:100000d0 00000008 b tickCounter
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:100000d8 00000004 b tickHookFunction
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:100000f4 00000004 b g_hUsb
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000be4 00000010 t clearInterrupt
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000bf4 0000005c t serveInterrupt
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:10000048 00000048 d ultrasonicSensors
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a001f40 00000003 t ultrasonicSensorsIrqMap
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a001f44 00000004 t InitClkStates
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a001f48 00000074 t pinmuxing
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000d3c 00000044 t Board_LED_Init
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000d80 00000040 t Board_TEC_Init
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000dc0 00000040 t Board_GPIO_Init
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000e00 00000038 t Board_SPI_Init
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000e38 00000024 t Board_I2C_Init
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000e5c 00000030 t Board_ADC_Init
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a001fc0 00000008 t GpioButtons
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a001fc8 0000000c t GpioLeds
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a001fd4 00000012 t GpioPorts
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000edc 00000014 t Chip_SSP_GetClockIndex
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000ef0 00000018 t Chip_SSP_GetPeriphClockIndex
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000fe8 00000014 t Chip_ADC_GetClockIndex
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000ffc 00000032 t getClkDiv
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a001fec 00000048 t InitClkStates
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a001204 000000a4 t pll_calc_divs
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a0012a8 0000010c t pll_get_frac
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a0013b4 0000004c t Chip_Clock_FindBaseClock
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a001628 00000022 t Chip_Clock_GetDivRate
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:100000f8 00000008 b audio_usb_pll_freq
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a002040 0000006c t periph_to_base
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a0017a8 0000002c t Chip_UART_GetIndex
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a0020ac 00000008 t UART_BClock
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a0020b4 00000008 t UART_PClock
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:10000090 00000038 d i2c
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a0020bc b __init_array_end
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a0020bc b __preinit_array_end
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a0020bc b __init_array_start
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a0020bc b __preinit_array_start
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a00144c 0000001c T Chip_Clock_GetDividerSource
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a00068c 00000044 T TIMER2_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a0009b0 00000014 T uartRxRead
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a00018e 00000002 W DebugMon_Handler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W RIT_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a080000 A __top_MFlashA512
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W ADCHS_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000114 T __section_table_start
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W FLASH_EEPROM_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W I2C0_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000184 00000002 W HardFault_Handler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000000 A __vectors_start__
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a0010a2 0000000c T Chip_ADC_SetResolution
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a0007b4 00000034 T SysTick_Handler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a001828 00000040 T Chip_UART_SetBaud
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W SDIO_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W ATIMER_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000190 00000002 W PendSV_Handler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000182 00000002 W NMI_Handler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a0020c4 R __exidx_end
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000150 T __data_section_table_end
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W I2C1_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W UART1_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W GPIO5_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W CAN1_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:53ff5e90 A __valid_user_code_checksum
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a0020c4 R _etext
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W USB1_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W I2S0_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a0006d0 00000044 T TIMER3_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a0016ca 0000000c T Chip_Clock_GetBaseClocktHz
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000178 0000000a T UART0_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a0001b4 00000012 T bss_init
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W SGPIO_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a001a54 T __aeabi_uldivmod
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:10000110 ? _noinit
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000a6e 00000018 T uartWriteString
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1000010c 00000004 B SystemCoreClock
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000300 00000012 T onRx
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a0017d4 00000054 T Chip_UART_Init
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W ADC0_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a00018a 00000002 W UsageFault_Handler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a001748 0000004c T Chip_Clock_GetRate
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W GPIO6_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000ca8 0000006c T Board_SetupClocking
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:20008000 A __top_RamAHB32
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a001a84 000002cc T __udivmoddi4
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a001fbc 00000004 T ExtRateIn
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W IntDefaultHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000300 T __CRP_WORD_END__
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000c5a 0000000a T GPIO1_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W SSP0_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a0020bc R __exidx_start
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a0002fc 00000004 T CRP_WORD
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a001d54 00000048 T __libc_init_array
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W ADC1_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000eb0 0000002c T Board_Init
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a001a50 00000002 T _init
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000114 T __data_section_table
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W RTC_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:10000110 B _ebss
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a00060c 00000040 T TIMER0_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000738 0000007c T tickInit
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:20010000 A __top_RamAHB_ETB16
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W SPI_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a001994 00000038 T Chip_I2C_SetClockRate
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W LCD_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a001400 0000004c T Chip_Clock_EnableCrystal
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:10008000 A __top_RamLoc32
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000196 0000001e T data_init
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a00064c 00000040 T TIMER1_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a001970 00000024 T Chip_I2C_Init
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000a86 0000000a T UART2_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a0015bc 0000006c T Chip_Clock_GetMainPLLHz
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a001dc0 00000136 T gpioPinsInit
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a00088c 00000080 T uartInterrupt
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000a54 0000001a T uartWriteByte
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000f08 00000012 T Chip_SSP_SetClockRate
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a0005f2 00000016 T gpioToggle
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000c64 0000000a T GPIO2_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a0016a4 00000026 T Chip_Clock_GetBaseClock
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:100000c8 B _bss
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a001070 00000032 T Chip_ADC_SetSampleRate
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W I2S1_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000f1a 0000003e T Chip_SSP_SetBitRate
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000f90 00000002 T Chip_GPIO_Init
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a001fe8 00000004 T OscRateIn
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a0009d8 0000007c T uartInit
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:10000110 ? _end_noinit
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:10008000 A _vStackTop
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W SSP1_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000178 T __bss_section_table_end
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a0003b4 00000194 T gpioInit
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a001d50 00000002 W __aeabi_ldiv0
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000a9c 0000001c T USB0_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W GPIO3_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W SCT_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a001468 0000001c T Chip_Clock_GetDividerDivisor
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a0002fc T __CRP_WORD_START__
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a001d9c 00000010 T memset
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000186 00000002 W MemManage_Handler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000314 00000050 T main
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W WDT_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:2000c000 A __top_RamAHB16
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1008a000 A __top_RamLoc40
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a00018c 00000002 W SVC_Handler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:10000004 00000004 D DWT_CTRL
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000998 00000018 T uartTxReady
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W GPIO7_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a0016d8 0000003c T Chip_Clock_EnableOpts
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a001484 000000b8 T Chip_Clock_GetClockInputHz
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000f94 00000054 T fpuInit
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a00153c 00000080 T Chip_Clock_CalcMainPLLValue
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000d20 0000001c T SystemInit
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W SPIFI_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000bac 00000038 T delay
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W QEI_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000150 T __bss_section_table
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000548 00000056 T gpioWrite
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a001030 00000040 T Chip_ADC_Init
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:10000108 00000004 B g_pUsbApi
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000c70 00000038 T Board_SetupMuxing
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a001868 000000e8 T Chip_UART_SetBaudFDR
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000714 0000000c T tickRead
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:10000100 00000008 B tickRateMS
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W ETH_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:10000000 ? _end_uninit_RESERVED
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a0009c4 00000014 T uartTxWrite
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W CAN0_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:10000000 D _data
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:10000110 B _pvHeapStart
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000178 T __section_table_end
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000f58 00000038 T Chip_SSP_Init
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W GINT0_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W DAC_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000e8c 00000024 T Board_Debug_Init
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:100000c8 D _edata
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a001950 00000020 T Chip_I2C_EventHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W M0SUB_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a0010b0 00000154 T Chip_SetupCoreClock
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000c50 0000000a T GPIO0_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000000 00000114 T g_pfnVectors
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a0019cc 00000084 T ResetISR
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a001794 00000014 T SystemCoreClockUpdate
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W DMA_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W EVRT_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1b080000 A __top_MFlashB512
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a001d50 00000002 W __aeabi_idiv0
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a00090c 0000008c T uartCallbackSet
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000188 00000002 W BusFault_Handler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a001714 00000034 T Chip_Clock_Enable
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000a90 0000000a T UART3_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W MCPWM_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W M0APP_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a00059e 00000054 T gpioRead
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000ab8 000000f4 T boardInit
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W GINT1_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000720 00000018 T tickPowerSet
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a00164c 00000058 T Chip_Clock_SetBaseClock
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000364 0000001c T cyclesCounterInit
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000194 00000002 W GPIO4_IRQHandler
+sapi/uart/rx_interrupt/out/rx_interrupt.elf:1a000d14 0000000c T Board_SystemInit

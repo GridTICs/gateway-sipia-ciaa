@@ -1,0 +1,374 @@
+ (routes 
+  (resolution mm 100000)
+  (parser
+  )
+  (parser
+  )
+  (structure_out
+   (layer TOP (type signal)
+   )
+   (layer I1 (type signal)
+   )
+   (layer I2 (type signal)
+   )
+   (layer I3 (type signal)
+   )
+   (layer I4 (type signal)
+   )
+   (layer I5 (type signal)
+   )
+   (layer I6 (type signal)
+   )
+   (layer I7 (type signal)
+   )
+   (layer I8 (type signal)
+   )
+   (layer I9 (type signal)
+   )
+   (layer I10 (type signal)
+   )
+   (layer I11 (type signal)
+   )
+   (layer I12 (type signal)
+   )
+   (layer I13 (type signal)
+   )
+   (layer I14 (type signal)
+   )
+   (layer BOT (type signal)
+   )
+  )
+  (library_out
+  (padstack $VIA#0_SIGNAL
+   (shape (circ TOP 76200 0 0))
+   (shape (circ I1 76200 0 0))
+   (shape (circ I2 76200 0 0))
+   (shape (circ I3 76200 0 0))
+   (shape (circ I4 76200 0 0))
+   (shape (circ I5 76200 0 0))
+   (shape (circ I6 76200 0 0))
+   (shape (circ I7 76200 0 0))
+   (shape (circ I8 76200 0 0))
+   (shape (circ I9 76200 0 0))
+   (shape (circ I10 76200 0 0))
+   (shape (circ I11 76200 0 0))
+   (shape (circ I12 76200 0 0))
+   (shape (circ I13 76200 0 0))
+   (shape (circ I14 76200 0 0))
+   (shape (circ BOT 76200 0 0))
+  )
+  )
+  (network_out
+   (Net #00032 
+   (rule
+   )
+   (wire (path TOP 25400  3718800 10093400 3464800 10093400)
+    (connect (terminal pin EDU1-63) (terminal pin EDU1-43))
+   )
+   (wire (path BOT 25400  3718800 9839400 3718800 10093400)
+    (connect (terminal pin EDU1-64) (terminal pin EDU1-63))
+   )
+   (wire (path BOT 25400  3718800 9585400 3718800 9839400)
+    (connect (terminal pin EDU1-65) (terminal pin EDU1-64))
+   )
+   (wire (path BOT 25400  3718800 9331400 3718800 9585400)
+    (connect (terminal pin EDU1-66) (terminal pin EDU1-65))
+   )
+   (wire (path BOT 25400  3718800 9077400 3718800 9331400)
+    (connect (terminal pin EDU1-67) (terminal pin EDU1-66))
+   )
+   (wire (path BOT 25400  3718800 8823400 3718800 9077400)
+    (connect (terminal pin EDU1-68) (terminal pin EDU1-67))
+   )
+   )
+   (Net #00080 
+   (rule
+   )
+   (wire (path TOP 25400  2997200 11557000 2997200 12407900 -1714500 12407900)
+    (connect (terminal pin LCD1-2) (terminal pin RV1-2))
+   )
+   )
+   (Net +3.3V 
+   (rule
+   )
+   (wire (path TOP 25400  -3681200 10855400 -3681200 10972800 1828800 10972800
+     1828800 10769600)
+    (connect (terminal pin EDU1-0) (terminal via))
+   )
+   (wire (path BOT 25400  1828800 10769600 1828800 10855400 3464800 10855400)
+    (connect (terminal via) (terminal pin EDU1-40))
+   )
+   (wire (path BOT 25400  -482600 7797800 -482600 7518400 711200 7518400
+     711200 8331200 1344400 8331200 1344400 8039700 1395200 8039700)
+    (connect (terminal pin SD1-1) (terminal pin ESP1-5))
+   )
+   (wire (path BOT 25400  1828800 8229600 1903200 8229600 1903200 8039700)
+    (connect (terminal wire) (terminal pin ESP1-7))
+   )
+   (wire (path BOT 25400  1828800 8229600 1828800 10668000)
+    (connect (terminal wire) (terminal wire))
+   )
+   (wire (path BOT 25400  1395200 8039700 1395200 8229600 1828800 8229600)
+    (connect (terminal pin ESP1-5) (terminal wire))
+   )
+   (wire (path BOT 25400  1828800 10668000 1828800 10769600)
+    (connect (terminal wire) (terminal via))
+   )
+   (via $VIA#0_SIGNAL 1828800 10769600)
+   )
+   (Net +5V 
+   (rule
+   )
+   (wire (path BOT 25400  -1968500 12407900 -1968500 12700000 -3860800 12700000
+     -3860800 5791200 -736600 5791200 -736600 7797800)
+    (connect (terminal pin RV1-1) (terminal pin SD1-2))
+   )
+   (wire (path TOP 25400  -1968500 12407900 -1968500 12700000 3251200 12700000
+     3251200 11557000)
+    (connect (terminal pin RV1-1) (terminal pin LCD1-1))
+   )
+   (wire (path BOT 25400  -1968500 12407900 -1968500 10855400 -3427200 10855400)
+    (connect (terminal pin RV1-1) (terminal pin EDU1-20))
+   )
+   (wire (path BOT 25400  3251200 11557000 3251200 11277600 3718800 11277600
+     3718800 10855400)
+    (connect (terminal pin LCD1-1) (terminal pin EDU1-60))
+   )
+   )
+   (Net GND 
+   (rule
+   )
+   (wire (path BOT 25400  -3681200 10601400 -3556000 10601400 -3556000 12407900
+     -2222500 12407900)
+    (connect (terminal pin EDU1-1) (terminal pin RV1-0))
+   )
+   (wire (path BOT 25400  -3556000 8940800 -2336800 8940800 -2336800 7797800
+     -2006600 7797800)
+    (connect (terminal wire) (terminal pin SD1-7))
+   )
+   (wire (path TOP 25400  1141200 7785700 1141200 7416800 3718800 7416800
+     3718800 7299400)
+    (connect (terminal pin ESP1-3) (terminal pin EDU1-74))
+   )
+   (wire (path BOT 25400  3505200 11557000 3860800 11557000 3860800 10601400
+     3718800 10601400)
+    (connect (terminal pin LCD1-0) (terminal pin EDU1-61))
+   )
+   (wire (path BOT 25400  -3681200 9331400 -3556000 9331400 -3556000 8940800)
+    (connect (terminal pin EDU1-6) (terminal wire))
+   )
+   (wire (path TOP 25400  -228600 7797800 -228600 7797799 115622 7797799
+     115622 7823200 711200 7823200 711200 7785700 1141200 7785700)
+    (connect (terminal pin SD1-0) (terminal pin ESP1-3))
+   )
+   (wire (path BOT 25400  -3556000 8940800 -3681200 8940800 -3681200 8823400)
+    (connect (terminal wire) (terminal pin EDU1-8))
+   )
+   (wire (path BOT 25400  3718800 8569400 3860800 8569400 3860800 10464800
+     3718800 10464800 3718800 10601400)
+    (connect (terminal pin EDU1-69) (terminal pin EDU1-61))
+   )
+   (wire (path TOP 25400  -228600 7797800 -228600 7620000 -2006600 7620000
+     -2006600 7797800)
+    (connect (terminal pin SD1-0) (terminal pin SD1-7))
+   )
+   (wire (path BOT 25400  -3681200 7553400 -3556000 7553400 -3556000 6283400
+     -3681200 6283400)
+    (connect (terminal pin EDU1-13) (terminal pin EDU1-18))
+   )
+   (wire (path BOT 25400  2489200 11557000 2489200 11887200 3505200 11887200
+     3505200 11557000)
+    (connect (terminal pin LCD1-4) (terminal pin LCD1-0))
+   )
+   (wire (path BOT 25400  3718800 7045400 3860800 7045400 3860800 6283400
+     3718800 6283400)
+    (connect (terminal pin EDU1-75) (terminal pin EDU1-78))
+   )
+   (wire (path TOP 25400  -3681200 7807400 -3681200 7924800 -3860800 7924800
+     -3860800 8569400 -3681200 8569400)
+    (connect (terminal pin EDU1-12) (terminal pin EDU1-9))
+   )
+   (wire (path BOT 25400  -3681200 9585400 -3556000 9585400 -3556000 10093400
+     -3681200 10093400)
+    (connect (terminal pin EDU1-5) (terminal pin EDU1-3))
+   )
+   (wire (path BOT 25400  -3681200 8823400 -3681200 8569400)
+    (connect (terminal pin EDU1-8) (terminal pin EDU1-9))
+   )
+   (wire (path BOT 25400  -3681200 9585400 -3681200 9331400)
+    (connect (terminal pin EDU1-5) (terminal pin EDU1-6))
+   )
+   (wire (path BOT 25400  3718800 6283400 3718800 6029400)
+    (connect (terminal pin EDU1-78) (terminal pin EDU1-79))
+   )
+   (wire (path BOT 25400  -3681200 10093400 -3681200 10347400)
+    (connect (terminal pin EDU1-3) (terminal pin EDU1-2))
+   )
+   (wire (path BOT 25400  3718800 8315400 3718800 8569400)
+    (connect (terminal pin EDU1-70) (terminal pin EDU1-69))
+   )
+   (wire (path BOT 25400  3718800 8061400 3718800 8315400)
+    (connect (terminal pin EDU1-71) (terminal pin EDU1-70))
+   )
+   (wire (path BOT 25400  3718800 7807400 3718800 8061400)
+    (connect (terminal pin EDU1-72) (terminal pin EDU1-71))
+   )
+   (wire (path BOT 25400  3718800 7299400 3718800 7045400)
+    (connect (terminal pin EDU1-74) (terminal pin EDU1-75))
+   )
+   (wire (path BOT 25400  3718800 7553400 3718800 7299400)
+    (connect (terminal pin EDU1-73) (terminal pin EDU1-74))
+   )
+   (wire (path BOT 25400  3718800 7807400 3718800 7553400)
+    (connect (terminal pin EDU1-72) (terminal pin EDU1-73))
+   )
+   (wire (path BOT 25400  -3681200 10347400 -3681200 10601400)
+    (connect (terminal pin EDU1-2) (terminal pin EDU1-1))
+   )
+   (wire (path BOT 25400  -3681200 6283400 -3681200 6029400)
+    (connect (terminal pin EDU1-18) (terminal pin EDU1-19))
+   )
+   (wire (path BOT 25400  -3681200 7807400 -3681200 7553400)
+    (connect (terminal pin EDU1-12) (terminal pin EDU1-13))
+   )
+   )
+   (Net LCD_D1 
+   (rule
+   )
+   (wire (path BOT 25400  0 7620000 0 8737600 965200 8737600
+     965200 11557000)
+    (connect (terminal via) (terminal pin LCD1-10))
+   )
+   (wire (path TOP 25400  -3251200 7315200 0 7315200 0 7620000)
+    (connect (terminal via) (terminal via))
+   )
+   (wire (path BOT 25400  -3427200 7299400 -3251200 7299400 -3251200 7315200)
+    (connect (terminal pin EDU1-34) (terminal via))
+   )
+   (via $VIA#0_SIGNAL 0 7620000)
+   (via $VIA#0_SIGNAL -3251200 7315200)
+   )
+   (Net LCD_D2 
+   (rule
+   )
+   (wire (path TOP 25400  -3251200 7518400 -3251200 7680400 -3860800 7680400
+     -3860800 7721600 -3929750 7721600 -3929750 11582400 -3860800 11582400
+     -3860800 11785600 711200 11785600 711200 11557000)
+    (connect (terminal via) (terminal pin LCD1-11))
+   )
+   (wire (path BOT 25400  -3427200 7553400 -3251200 7553400 -3251200 7518400)
+    (connect (terminal pin EDU1-33) (terminal via))
+   )
+   (via $VIA#0_SIGNAL -3251200 7518400)
+   )
+   (Net LCD_D3 
+   (rule
+   )
+   (wire (path BOT 25400  -2946400 9956800 457200 9956800 457200 11557000)
+    (connect (terminal via) (terminal pin LCD1-12))
+   )
+   (wire (path TOP 25400  -3251200 7823200 -2920918 7823200 -2920918 9956800
+     -2946400 9956800)
+    (connect (terminal via) (terminal via))
+   )
+   (wire (path BOT 25400  -3427200 7807400 -3251200 7807400 -3251200 7823200)
+    (connect (terminal pin EDU1-32) (terminal via))
+   )
+   (via $VIA#0_SIGNAL -2946400 9956800)
+   (via $VIA#0_SIGNAL -3251200 7823200)
+   )
+   (Net LCD_D4 
+   (rule
+   )
+   (wire (path TOP 25400  -3149600 8432800 -3149600 7924800 -3556000 7924800
+     -3556000 10464800 -3860800 10464800 -3860800 11277600 203200 11277600
+     203200 11557000)
+    (connect (terminal via) (terminal pin LCD1-13))
+   )
+   (wire (path BOT 25400  -3427200 8315400 -3427200 8432800 -3149600 8432800)
+    (connect (terminal pin EDU1-30) (terminal via))
+   )
+   (via $VIA#0_SIGNAL -3149600 8432800)
+   )
+   (Net LCD_EN 
+   (rule
+   )
+   (wire (path BOT 25400  -3759200 11176000 -3802750 11176000 -3802750 8061400
+     -3681200 8061400)
+    (connect (terminal via) (terminal pin EDU1-11))
+   )
+   (wire (path TOP 25400  2235200 11277600 2235200 11176000 -3759200 11176000)
+    (connect (terminal via) (terminal via))
+   )
+   (wire (path BOT 25400  2235200 11557000 2235200 11277600)
+    (connect (terminal pin LCD1-5) (terminal via))
+   )
+   (via $VIA#0_SIGNAL -3759200 11176000)
+   (via $VIA#0_SIGNAL 2235200 11277600)
+   )
+   (Net LCD_LIGHT 
+   (rule
+   )
+   )
+   (Net LCD_RS 
+   (rule
+   )
+   (wire (path TOP 25400  -3427200 8061400 -3251200 8061400 -3251200 10261600
+     2743200 10261600 2743200 11557000)
+    (connect (terminal pin EDU1-31) (terminal pin LCD1-3))
+   )
+   )
+   (Net RX_1 
+   (rule
+   )
+   (wire (path TOP 25400  1903200 7785700 3149600 7785700 3149600 7807400
+     3464800 7807400)
+    (connect (terminal pin ESP1-0) (terminal pin EDU1-52))
+   )
+   )
+   (Net SPI_CLK 
+   (rule
+   )
+   (wire (path BOT 25400  -3427200 8569400 -2908620 8569400 -2908620 7518400
+     -1498600 7518400 -1498600 7797800)
+    (connect (terminal pin EDU1-29) (terminal pin SD1-5))
+   )
+   )
+   (Net SPI_CS 
+   (rule
+   )
+   (wire (path TOP 25400  -3681200 7299400 -3681200 7416800 -1016000 7416800)
+    (connect (terminal pin EDU1-14) (terminal via))
+   )
+   (wire (path BOT 25400  -1016000 7416800 -990600 7416800 -990600 7797800)
+    (connect (terminal via) (terminal pin SD1-3))
+   )
+   (via $VIA#0_SIGNAL -1016000 7416800)
+   )
+   (Net SPI_MISO 
+   (rule
+   )
+   (wire (path BOT 25400  -3427200 8823400 -2671118 8823400 -2671118 7620000
+     -1752600 7620000 -1752600 7797800)
+    (connect (terminal pin EDU1-28) (terminal pin SD1-6))
+   )
+   )
+   (Net SPI_MOSI 
+   (rule
+   )
+   (wire (path BOT 25400  -3681200 8315400 -3681200 8432800 -3556000 8432800
+     -3556000 7924800 -3149600 7924800 -3149600 7416800 -1244600 7416800
+     -1244600 7797800)
+    (connect (terminal pin EDU1-10) (terminal pin SD1-4))
+   )
+   )
+   (Net TX_1 
+   (rule
+   )
+   (wire (path TOP 25400  1141200 8039700 1141200 8331200 3149600 8331200
+     3149600 8061400 3464800 8061400)
+    (connect (terminal pin ESP1-4) (terminal pin EDU1-51))
+   )
+   )
+  )
+ )

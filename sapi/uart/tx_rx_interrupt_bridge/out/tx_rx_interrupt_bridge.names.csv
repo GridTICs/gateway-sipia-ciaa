@@ -1,0 +1,215 @@
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a0007c4 000000a4 t uartProcessIRQ
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:100000dc 00000004 b rxIsrCallbackUART0
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:100000e0 00000004 b rxIsrCallbackUART2
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:100000e4 00000004 b rxIsrCallbackUART3
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:100000e8 00000004 b txIsrCallbackUART0
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:100000ec 00000004 b txIsrCallbackUART2
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:100000f0 00000004 b txIsrCallbackUART3
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a001e70 00000048 t lpcUarts
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:10000000 00000004 d ClockSpeed
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000428 00000034 t gpioObtainPinInit
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a0005f0 00000002 t errorOcurred
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a0005f2 00000002 t doNothing
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:10000008 00000040 d timer_dd
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:100000cc 00000004 b callBackFuncParams
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:100000d0 00000008 b tickCounter
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:100000d8 00000004 b tickHookFunction
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:100000f4 00000004 b g_hUsb
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000b70 00000010 t clearInterrupt
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000b80 0000005c t serveInterrupt
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:10000048 00000048 d ultrasonicSensors
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a001eb8 00000003 t ultrasonicSensorsIrqMap
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a001ebc 00000004 t InitClkStates
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a001ec0 00000074 t pinmuxing
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000cc8 00000044 t Board_LED_Init
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000d0c 00000040 t Board_TEC_Init
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000d4c 00000040 t Board_GPIO_Init
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000d8c 00000038 t Board_SPI_Init
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000dc4 00000024 t Board_I2C_Init
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000de8 00000030 t Board_ADC_Init
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a001f38 00000008 t GpioButtons
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a001f40 0000000c t GpioLeds
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a001f4c 00000012 t GpioPorts
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000e68 00000014 t Chip_SSP_GetClockIndex
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000e7c 00000018 t Chip_SSP_GetPeriphClockIndex
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000f74 00000014 t Chip_ADC_GetClockIndex
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000f88 00000032 t getClkDiv
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a001f64 00000048 t InitClkStates
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a001190 000000a4 t pll_calc_divs
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a001234 0000010c t pll_get_frac
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a001340 0000004c t Chip_Clock_FindBaseClock
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a0015b4 00000022 t Chip_Clock_GetDivRate
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:100000f8 00000008 b audio_usb_pll_freq
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a001fb8 0000006c t periph_to_base
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a001734 0000002c t Chip_UART_GetIndex
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a002024 00000008 t UART_BClock
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a00202c 00000008 t UART_PClock
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:10000090 00000038 d i2c
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a002034 b __init_array_end
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a002034 b __preinit_array_end
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a002034 b __init_array_start
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a002034 b __preinit_array_start
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a0013d8 0000001c T Chip_Clock_GetDividerSource
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000300 0000001c T uartUsbReceiveCallback
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000674 00000044 T TIMER2_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a00098c 00000014 T uartRxRead
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a00018e 00000002 W DebugMon_Handler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W RIT_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a080000 A __top_MFlashA512
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W ADCHS_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000114 T __section_table_start
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W FLASH_EEPROM_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W I2C0_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000184 00000002 W HardFault_Handler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000000 A __vectors_start__
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a00102e 0000000c T Chip_ADC_SetResolution
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000790 00000034 T SysTick_Handler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a0017b4 00000040 T Chip_UART_SetBaud
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W SDIO_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W ATIMER_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000190 00000002 W PendSV_Handler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000182 00000002 W NMI_Handler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a00203c R __exidx_end
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000150 T __data_section_table_end
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W I2C1_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W UART1_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W GPIO5_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W CAN1_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:53ff5f04 A __valid_user_code_checksum
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a00203c R _etext
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W USB1_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W I2S0_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a0006b8 00000044 T TIMER3_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a001656 0000000c T Chip_Clock_GetBaseClocktHz
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000178 0000000a T UART0_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a0001b4 00000012 T bss_init
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W SGPIO_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a0019e0 T __aeabi_uldivmod
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:10000110 ? _noinit
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1000010c 00000004 B SystemCoreClock
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a001760 00000054 T Chip_UART_Init
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W ADC0_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a00018a 00000002 W UsageFault_Handler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a0016d4 0000004c T Chip_Clock_GetRate
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W GPIO6_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000c34 0000006c T Board_SetupClocking
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:20008000 A __top_RamAHB32
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a001a10 000002cc T __udivmoddi4
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a001f34 00000004 T ExtRateIn
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W IntDefaultHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000300 T __CRP_WORD_END__
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000be6 0000000a T GPIO1_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W SSP0_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a002034 R __exidx_start
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a0002fc 00000004 T CRP_WORD
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a001ce0 00000048 T __libc_init_array
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W ADC1_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a00031c 0000001c T uart232ReceiveCallback
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000e3c 0000002c T Board_Init
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a0019dc 00000002 T _init
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000114 T __data_section_table
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W RTC_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:10000110 B _ebss
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a0005f4 00000040 T TIMER0_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000338 00000028 T uart232SendCallback
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000714 0000007c T tickInit
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:20010000 A __top_RamAHB_ETB16
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W SPI_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a001920 00000038 T Chip_I2C_SetClockRate
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W LCD_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a00138c 0000004c T Chip_Clock_EnableCrystal
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000360 00000028 T uartUsbSendCallback
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:10008000 A __top_RamLoc32
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000196 0000001e T data_init
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000634 00000040 T TIMER1_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a0018fc 00000024 T Chip_I2C_Init
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000a4a 0000000a T UART2_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a001548 0000006c T Chip_Clock_GetMainPLLHz
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a001d38 00000136 T gpioPinsInit
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000868 00000080 T uartInterrupt
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000a30 0000001a T uartWriteByte
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000e94 00000012 T Chip_SSP_SetClockRate
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000bf0 0000000a T GPIO2_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a001630 00000026 T Chip_Clock_GetBaseClock
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:100000c8 B _bss
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000ffc 00000032 T Chip_ADC_SetSampleRate
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W I2S1_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000ea6 0000003e T Chip_SSP_SetBitRate
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000f1c 00000002 T Chip_GPIO_Init
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a001f60 00000004 T OscRateIn
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a0009b4 0000007c T uartInit
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:10000110 ? _end_noinit
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:10008000 A _vStackTop
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W SSP1_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000178 T __bss_section_table_end
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a00045c 00000194 T gpioInit
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000408 00000004 T sleepUntilNextInterrupt
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a001cdc 00000002 W __aeabi_ldiv0
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000a60 0000001c T USB0_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W GPIO3_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W SCT_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a0013f4 0000001c T Chip_Clock_GetDividerDivisor
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a0002fc T __CRP_WORD_START__
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a001d28 00000010 T memset
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000186 00000002 W MemManage_Handler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000388 00000080 T main
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:100000ca 00000001 B dataToSendToUartUsb
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W WDT_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:2000c000 A __top_RamAHB16
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1008a000 A __top_RamLoc40
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a00018c 00000002 W SVC_Handler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:10000004 00000004 D DWT_CTRL
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000974 00000018 T uartTxReady
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W GPIO7_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a001664 0000003c T Chip_Clock_EnableOpts
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:100000c8 00000001 B dataToSendToUart232
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a001410 000000b8 T Chip_Clock_GetClockInputHz
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000f20 00000054 T fpuInit
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a0014c8 00000080 T Chip_Clock_CalcMainPLLValue
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000cac 0000001c T SystemInit
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W SPIFI_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W QEI_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000150 T __bss_section_table
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000fbc 00000040 T Chip_ADC_Init
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:10000108 00000004 B g_pUsbApi
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000bfc 00000038 T Board_SetupMuxing
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a0017f4 000000e8 T Chip_UART_SetBaudFDR
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:10000100 00000008 B tickRateMS
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W ETH_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:10000000 ? _end_uninit_RESERVED
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a0009a0 00000014 T uartTxWrite
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W CAN0_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:10000000 D _data
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:10000110 B _pvHeapStart
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:100000c9 00000001 B dataToSendToUart232Pending
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000178 T __section_table_end
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000ee4 00000038 T Chip_SSP_Init
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W GINT0_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W DAC_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000e18 00000024 T Board_Debug_Init
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:100000cb 00000001 B dataToSendToUartUsbPending
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:100000c8 D _edata
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a0018dc 00000020 T Chip_I2C_EventHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W M0SUB_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a00103c 00000154 T Chip_SetupCoreClock
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000bdc 0000000a T GPIO0_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000000 00000114 T g_pfnVectors
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a001958 00000084 T ResetISR
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a001720 00000014 T SystemCoreClockUpdate
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W DMA_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W EVRT_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1b080000 A __top_MFlashB512
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a001cdc 00000002 W __aeabi_idiv0
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a0008e8 0000008c T uartCallbackSet
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000188 00000002 W BusFault_Handler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a0016a0 00000034 T Chip_Clock_Enable
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000a54 0000000a T UART3_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W MCPWM_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W M0APP_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000a7c 000000f4 T boardInit
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W GINT1_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a0006fc 00000018 T tickPowerSet
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a0015d8 00000058 T Chip_Clock_SetBaseClock
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a00040c 0000001c T cyclesCounterInit
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000194 00000002 W GPIO4_IRQHandler
+sapi/uart/tx_rx_interrupt_bridge/out/tx_rx_interrupt_bridge.elf:1a000ca0 0000000c T Board_SystemInit
