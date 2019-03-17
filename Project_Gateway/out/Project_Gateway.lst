@@ -68,13 +68,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
  24 .debug_line   00014fe5  00000000  00000000  0007bd98  2**0
                   CONTENTS, READONLY, DEBUGGING
- 25 .debug_str    0002b9cd  00000000  00000000  00090d7d  2**0
+ 25 .debug_str    0002b9c3  00000000  00000000  00090d7d  2**0
                   CONTENTS, READONLY, DEBUGGING
- 26 .comment      0000007e  00000000  00000000  000bc74a  2**0
+ 26 .comment      0000007e  00000000  00000000  000bc740  2**0
                   CONTENTS, READONLY
- 27 .ARM.attributes 00000037  00000000  00000000  000bc7c8  2**0
+ 27 .ARM.attributes 00000037  00000000  00000000  000bc7be  2**0
                   CONTENTS, READONLY
- 28 .debug_frame  000034bc  00000000  00000000  000bc800  2**2
+ 28 .debug_frame  000034bc  00000000  00000000  000bc7f8  2**2
                   CONTENTS, READONLY, DEBUGGING
 SYMBOL TABLE:
 1a000000 l    d  .text	00000000 .text
@@ -18655,11 +18655,11 @@ void _init(void) {}
 1a007dcc:	4c2f7325 	.word	0x4c2f7325
 1a007dd0:	542e474f 	.word	0x542e474f
 1a007dd4:	00005458 	.word	0x00005458
-1a007dd8:	303a3332 	.word	0x303a3332
-1a007ddc:	37313a37 	.word	0x37313a37
+1a007dd8:	333a3831 	.word	0x333a3831
+1a007ddc:	34343a32 	.word	0x34343a32
 1a007de0:	00000000 	.word	0x00000000
 1a007de4:	2072614d 	.word	0x2072614d
-1a007de8:	32203331 	.word	0x32203331
+1a007de8:	32203731 	.word	0x32203731
 1a007dec:	00393130 	.word	0x00393130
 1a007df0:	73250a0d 	.word	0x73250a0d
 1a007df4:	20732520 	.word	0x20732520
