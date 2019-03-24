@@ -84,7 +84,6 @@ bool NTP_conection()
     //Envío el paquete correspondiente para pedir la hora actual al servidor NTP
     sendNTPpacket();
    
-    uartWriteString(UART_USB, intToString(punt_rx_esp));
     while(1);
     
     //delay(2000);

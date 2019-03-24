@@ -38,7 +38,7 @@ void Mandar_Uart_TCP()
         {
             uartWriteString(UART_USB,"\r\nPaquete enviado con éxito...\r\n");
             memset( gpioRxBuffer, '\0', sizeof(gpioRxBuffer) );
-            punt_rx_gpio = 0;
+            punt_rx_gpio = gpioRxBuffer;
         }
         else
         {
@@ -84,7 +84,7 @@ void Mandar_Uart_TCP()
 void Mandar_Uart_Gpio()
 {
  
-        if(bandera_dato_esp == true && tickRead() - time_rx_esp_set > timeout_rx_esp && bandera_dato_gpio == false)
+        if(bandera_dato_esp == true && tickRead() - time_rx_esp_set > timeout_rx_esp) //&& bandera_dato_gpio == false)
         {
             uartWriteString(UART_USB, "\r\nLa cantidad de datos en Buffer es: ");
             uartWriteString(UART_USB,intToString(strlen(espRxIntBuffer)));
@@ -102,7 +102,8 @@ void Mandar_Uart_Gpio()
             uartWriteString(UART_GPIO, espRxIntBuffer);
             memset( espRxIntBuffer, '\0', sizeof(espRxIntBuffer) );
             bandera_dato_esp = false;
-            punt_rx_esp=0; 
+            //Reinicializamos nuevamente el puntero del buffer para que apunte a la primer dirección del mismo
+            punt_rx_esp=espRxIntBuffer; 
         }  
     
 }

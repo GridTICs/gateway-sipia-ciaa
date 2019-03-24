@@ -25,8 +25,8 @@ void INT_GPIO_RX()
 /* La forma del paquete recibido del ESP8266 es:    */
 /* +IPD,<len>:<data>                                */
 
-uint8_t espRxIntBuffer[UART_MOTE_RX_BUFF_SIZE];
-unsigned int punt_rx_esp;
+char espRxIntBuffer[UART_MOTE_RX_BUFF_SIZE];
+char *punt_rx_esp;
 bool_t bandera_dato_esp;
 
 const unsigned int timeout_rx_esp = 5000;
@@ -34,9 +34,21 @@ unsigned int time_rx_esp_set;
 
 void INT_ESP_RX()
 {
-    uint8_t d = uartRxRead(UART_232);
-    espRxIntBuffer[punt_rx_esp]=d;
-    punt_rx_esp++;
-    if(bandera_dato_gpio != true && strlen(espRxIntBuffer)>1)bandera_dato_esp = true;
-    time_rx_esp_set = tickRead();
+    
+        *punt_rx_esp = uartRxRead(UART_232);
+        punt_rx_esp++;
+        uartWriteByte(UART_USB, *punt_rx_esp);
+        //Solo activamos la bandera si NO se está mandando ningún dato por TCP/IP
+        //y si el buffer tiene más de un dato 
+        // ---- TENER CUIDADO, ESTO ÚLTIMO PUEDE SER UN PROBLEMA ----
+        if(espRxIntBuffer[0]=='+')
+        {
+            bandera_dato_esp = true;
+            time_rx_esp_set = tickRead();
+        }
+        else
+        {
+            memset( espRxIntBuffer, '\0', sizeof(espRxIntBuffer) );
+            punt_rx_esp = espRxIntBuffer;
+        }    
 }

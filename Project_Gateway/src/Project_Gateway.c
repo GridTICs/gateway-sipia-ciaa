@@ -111,8 +111,13 @@ int main(void)
     // ***************   No funciona  *****************//
     //NTP_conection();
     
+   
+    //Inicializamos los punteros a sus buffer respectivos...
     punt_rx_gpio = gpioRxBuffer;
-    
+    punt_rx_esp = espRxIntBuffer;
+   
+    esp01ConnectToServer(servidor_tcpip, atoi(puerto_tcpip));
+   
     uartWriteString(UART_USB, "\r\nActivando las interrupciones del GPIO...\r\n");
     //Activo las interrupciones del UART_GPIO para que guarde las variables que llegan...
     uartCallbackSet(UART_GPIO, UART_RECEIVE, INT_GPIO_RX, NULL);
@@ -143,11 +148,16 @@ int main(void)
     
     
     while(1)
-    {        
-
+    {     
+        //Para probar el UART el Arduino
+        /*delay(5000);
+        uartWriteString(UART_USB, "Se manda paquete.\r\n");
+        uartWriteString(UART_GPIO, "Hola soy la EDUCIAA!!!");
+        */
+        
         Mandar_Uart_TCP();
         
-        //Mandar_Uart_Gpio();
+        Mandar_Uart_Gpio();
         
         if(tickRead() - tiempo_set_lcd > timeout_lcd)
         {    
@@ -156,7 +166,7 @@ int main(void)
         }
             
        
-        sleepUntilNextInterrupt();
+        sleepUntilNextInterrupt(); 
    }
 
    return 0;

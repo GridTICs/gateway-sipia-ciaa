@@ -10,14 +10,8 @@
 #define UARTS_BAUD_RATE            115200
 
 #define UART_MOTE_RX_BUFF_SIZE         1024     //Buffer de recepción de datos de los motes por el UART_GPIO
- 
 #define ESP8266_RX_BUFFER_SIZE         1024     //Buffer para la recepción del ESP8266
 
-#define SERVER_URL      "192.168.0.106"
-#define SERVER_PORT     2222
-
-#define WIFI_SSID       "Chupala" 
-#define WIFI_PASSWORD   "Reina650Woody?"
 
 /*==================[definiciones de datos internos]=========================*/
 
@@ -150,7 +144,7 @@ bool_t esp01SendTCPIPData( char* strData, uint32_t strDataLen ){
 
       // Envio los datos TCP/IP ------------------
       uartWriteString( UART_ESP01, strData );
-      //uartWriteString( UART_ESP01, "\r\n" );
+
 
       // No poner funciones entre el envio de comando y la espera de respuesta
       retVal = receiveBytesUntilReceiveStringOrTimeoutBlocking(
@@ -161,43 +155,7 @@ bool_t esp01SendTCPIPData( char* strData, uint32_t strDataLen ){
                );
       if( retVal ){
 
-         /*// Imprimo todo lo recibido
-         uartWriteString( UART_DEBUG, espResponseBuffer );
-
-         // Limpiar Buffer (es necesario antes de usar
-         // "receiveBytesUntilReceiveStringOrTimeoutBlocking")
-         esp01CleanRxBuffer();
-
-         // Envio los datos TCP/IP ------------------
-         uartWriteString( UART_ESP01, strData );
-
-         // No poner funciones entre el envio de comando y la espera de respuesta
-         retVal = receiveBytesUntilReceiveStringOrTimeoutBlocking(
-                     uartEsp01,
-                     "CLOSED\r\n", 8,
-                     espResponseBuffer, &espResponseBufferSize,
-                     5000
-                  );
-
-         if( retVal ){
-
-            // DATO RECIBIDOOOOOOOOOOO -----------------
-
-            // Imprimo todo lo recibido
-            uartWriteString( UART_DEBUG, espResponseBuffer );
-
-
-
-         } else{
-            uartWriteString( UART_DEBUG, ">>>> Error al enviar los datos TCP/IP, en el envio del string\r\n" );
-            uartWriteString( UART_DEBUG, ">>>> \"strData\", cuando el ESP01 pone el prompt > \r\n" );
-            uartWriteString( UART_DEBUG, ">>>> y no se recibe la respuesta y \"CLOSED\"!!\r\n" );
-
-            // Imprimo todo lo recibido
-            uartWriteString( UART_DEBUG, espResponseBuffer );
-         }*/
-
-
+         
       } else{
          uartWriteString( UART_DEBUG, ">>>> Error al enviar los datos TCP/IP, en el envio del string\r\n" );
          uartWriteString( UART_DEBUG, ">>>> \"strData\", cuando el ESP01 pone el prompt > \r\n" );
