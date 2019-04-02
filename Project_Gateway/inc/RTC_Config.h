@@ -118,7 +118,7 @@ void showDateAndTimeLCD( rtc_t * rtc){
     
     lcdSendStringRaw(fecha);
     
-    lcdGoToXY( 5, 2 ); // Poner cursor en 1, 1
+    lcdGoToXY( 6, 2 ); // Poner cursor en 1, 1
 
    /* Conversion de entero a ascii con base decimal */
    itoa( (int) (rtc->hour), (char*)uartBuff_rtc, 10 ); /* 10 significa decimal */

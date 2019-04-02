@@ -46,7 +46,7 @@ int main(void)
     uartWriteString(UART_USB, "\r\n...Ahora se configurará el Real Time Counter (RTC)...\r\n");
     
     //Esta función inicia el RTC, y le pone una fecha y hora establecidos
-    //RTC_Init();
+    RTC_Init();
     
      uartWriteString(UART_USB, "\r\n...Iniciando puerto SPI..\r\n");
    //Primero iniciamos el SPI
@@ -106,10 +106,12 @@ int main(void)
     
     bandera_dato_esp = false;
     
-    //uartCallbackSet(UART_232, UART_RECEIVE, Int_esp_Rx, NULL);
+    
+   
+    uartCallbackSet(UART_232, UART_RECEIVE, INT_ESP_RX, NULL);
     //Debería realizar la conexión con el Servidor NTP y traer la Fecha y Hora
     // ***************   No funciona  *****************//
-    //NTP_conection();
+    NTP_conection();
     
    
     //Inicializamos los punteros a sus buffer respectivos...
@@ -123,7 +125,7 @@ int main(void)
     uartCallbackSet(UART_GPIO, UART_RECEIVE, INT_GPIO_RX, NULL);
     uartInterrupt(UART_GPIO, true);
     
-    uartCallbackSet(UART_232, UART_RECEIVE, INT_ESP_RX, NULL);
+    //uartCallbackSet(UART_232, UART_RECEIVE, INT_ESP_RX, NULL);
     uartInterrupt(UART_232, true);
     
     //mandar_paquete = false;
@@ -134,7 +136,7 @@ int main(void)
     lcdClear(); // Borrar la pantalla
     lcdGoToXY( 1, 1 ); // Poner cursor en 1, 1
     lcdSendStringRaw( "Proyecto Final");
-    lcdGoToXY( 1, 2 ); // Poner cursor en 1, 1
+    lcdGoToXY( 1, 2 ); // Poner cursor en 1, 2
     lcdSendStringRaw( "UTN FRM");
     
     delay(5000);
@@ -142,30 +144,60 @@ int main(void)
     //Variables para mostrar el tiempo
     char dateandtime[30];
     unsigned int tiempo_set_lcd = tickRead();
-    const unsigned int timeout_lcd = 5000;
+    const unsigned int timeout_lcd = 2000;
     rtc_t rtc_lcd;
+    unsigned int boton_pulsado;
     
     
     
     while(1)
     {     
-        //Para probar el UART el Arduino
-        /*delay(5000);
-        uartWriteString(UART_USB, "Se manda paquete.\r\n");
-        uartWriteString(UART_GPIO, "Hola soy la EDUCIAA!!!");
-        */
-        
+               
         Mandar_Uart_TCP();
         
         Mandar_Uart_Gpio();
         
-        if(tickRead() - tiempo_set_lcd > timeout_lcd)
-        {    
-            showDateAndTimeLCD(&rtc_lcd);
-            tiempo_set_lcd = tickRead();
-        }
+        if(gpioRead(TEC1)== FALSE)boton_pulsado = 1;
+        if(gpioRead(TEC2)== FALSE)boton_pulsado = 2;
+        if(gpioRead(TEC3)== FALSE)boton_pulsado = 3;
+        
+        switch(boton_pulsado)
+        {
+        
+            case 1:
+                if(tickRead() - tiempo_set_lcd > timeout_lcd)
+                {    
+                    showDateAndTimeLCD(&rtc_lcd);
+                    tiempo_set_lcd = tickRead();
+                }
+                break;
             
-       
+            
+            case 2:
+                if(tickRead() - tiempo_set_lcd > timeout_lcd)
+                {
+                    lcdClear(); // Borrar la pantalla
+                    lcdGoToXY( 1, 1 ); // Poner cursor en 1, 1
+                    lcdSendStringRaw( "Estoy en el ");
+                    lcdGoToXY( 1, 2 ); // Poner cursor en 1, 2
+                    lcdSendStringRaw( "Menu número 2");
+                    tiempo_set_lcd = tickRead();
+                }
+                break;
+             
+            case 3:
+                if(tickRead() - tiempo_set_lcd > timeout_lcd)
+                {
+                    lcdClear(); // Borrar la pantalla
+                    lcdGoToXY( 1, 1 ); // Poner cursor en 1, 1
+                    lcdSendStringRaw( "Estoy en el ");
+                    lcdGoToXY( 1, 2 ); // Poner cursor en 1, 2
+                    lcdSendStringRaw( "Menu número 3");
+                    tiempo_set_lcd = tickRead();
+                }
+                break;
+        }
+        
         sleepUntilNextInterrupt(); 
    }
 

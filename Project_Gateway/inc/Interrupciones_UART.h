@@ -2,10 +2,8 @@
 
 // MOTE Rx Buffer
 char gpioRxBuffer[ UART_MOTE_RX_BUFF_SIZE ];
-char gpioRxBuffer_aux[ UART_MOTE_RX_BUFF_SIZE ];
 char *punt_rx_gpio;
 
-unsigned int punt_rx_gpio_aux;
 bool_t mandar_paquete;
 bool_t bandera_dato_gpio = false;
 const unsigned int timeout_rx_gpio = 5000;
@@ -32,12 +30,25 @@ bool_t bandera_dato_esp;
 const unsigned int timeout_rx_esp = 5000;
 unsigned int time_rx_esp_set;
 
+//Únicamente utilizado para las funciones del Server NTP
+//Se realiza en un buffer aparte para no tener errores en lo anterior
+// ------- EN UN FUTURO SE PUEDE LLEGAR A OPTIMIZAR SIN NECESIDAD DE VARIABLES NUEVAS ----- //
+char buffer_ntp[100];
+char *punt_ntp;
+bool_t bandera_NTP = false;
+
 void INT_ESP_RX()
 {
-    
+    //Solo cuando se hace una petición al Server NTP se activa esta bandera
+    if(bandera_NTP)
+    {    
+        *punt_ntp = uartRxRead(UART_232);
+        punt_ntp++;
+    }
+    else
+    { 
         *punt_rx_esp = uartRxRead(UART_232);
         punt_rx_esp++;
-        uartWriteByte(UART_USB, *punt_rx_esp);
         //Solo activamos la bandera si NO se está mandando ningún dato por TCP/IP
         //y si el buffer tiene más de un dato 
         // ---- TENER CUIDADO, ESTO ÚLTIMO PUEDE SER UN PROBLEMA ----
@@ -50,5 +61,6 @@ void INT_ESP_RX()
         {
             memset( espRxIntBuffer, '\0', sizeof(espRxIntBuffer) );
             punt_rx_esp = espRxIntBuffer;
-        }    
+        }   
+    }
 }
