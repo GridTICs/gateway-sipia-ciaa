@@ -1,6 +1,6 @@
 ﻿# Proyecto Final UTN-FRM - Ingeniería Electrónica
 
-_El proyecto se basa en la creación de un gateway que enlaza una red de sensores con un servidor de internet. El README está en su versión beta._ <!--## Comenzando 🚀
+_El proyecto se basa en la creación de un gateway que enlaza una red de sensores con un servidor de internet. El README está en su versión beta._  {% comment %}  ## Comenzando 🚀
 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
@@ -101,5 +101,4 @@ Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md
 
 ---
 ⌨️ con ❤️ por [Villanuevand](https://github.com/Villanuevand) 😊
- 
--->
+ {% endcomment %}
