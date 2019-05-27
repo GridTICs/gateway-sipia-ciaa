@@ -19,6 +19,7 @@ Año: 2014
 #include "FAT_SD.h"                 //Funciones de la SD
 #include "Interrupciones_UART.h"    //Funciones de las interrupciones de todos los UART's
 #include "NTP_Config.h"             //Funciones de las conexiones con el Server NTP
+#include "Estados.h"
 
 // ************************ DECLARACIONES ************************************ //
 
@@ -176,11 +177,7 @@ int main(void)
             case 2:
                 if(tickRead() - tiempo_set_lcd > timeout_lcd)
                 {
-                    lcdClear(); // Borrar la pantalla
-                    lcdGoToXY( 1, 1 ); // Poner cursor en 1, 1
-                    lcdSendStringRaw( "Estoy en el ");
-                    lcdGoToXY( 1, 2 ); // Poner cursor en 1, 2
-                    lcdSendStringRaw( "Menu número 2");
+                    LCD_Estado(0);
                     tiempo_set_lcd = tickRead();
                 }
                 break;

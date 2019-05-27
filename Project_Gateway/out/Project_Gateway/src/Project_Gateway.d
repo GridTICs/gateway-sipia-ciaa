@@ -125,5 +125,5 @@ Project_Gateway/out/Project_Gateway/src/Project_Gateway.o: \
  libs/fatfs/source/integer.h libs/fatfs/source/ff.h \
  libs/lpc_fatfs_disks/source/ffconf.h \
  Project_Gateway/inc/Interrupciones_UART.h \
- Project_Gateway/inc/NTP_Config.h \
+ Project_Gateway/inc/NTP_Config.h Project_Gateway/inc/Estados.h \
  Project_Gateway/inc/Funciones_mandar_datos.h
