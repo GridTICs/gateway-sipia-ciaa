@@ -44,10 +44,27 @@ int main(void)
     
  
     uartWriteString(UART_USB, "\r\nLa EDU-CIAA ha sido iniciada correctamente,\r\ny los UART han sido configurados correctamente.\r\n");
-    uartWriteString(UART_USB, "\r\n...Ahora se configurará el Real Time Counter (RTC)...\r\n");
+ 
+    // Inicializar LCD de 16x2 (caracteres x lineas) con cada caracter de 5x2 pixeles
+    lcdInit( 16, 2, 5, 8 );
+    lcdClear(); // Borrar la pantalla
+    lcdGoToXY( 1, 1 ); // Poner cursor en 1, 1
+    lcdSendStringRaw( "Proyecto Final");
+    lcdGoToXY( 1, 2 ); // Poner cursor en 1, 2
+    lcdSendStringRaw( "UTN FRM");
+ 
+    delay(3000);    
     
+    LCD_Estado(EST_OK);
+    
+    uartWriteString(UART_USB, "\r\n...Ahora se configurará el Real Time Counter (RTC)...\r\n");
+     
+    LCD_Estado(CONF_RTC); 
+     
     //Esta función inicia el RTC, y le pone una fecha y hora establecidos
     RTC_Init();
+    
+    LCD_Estado(CONFIG_SD);
     
      uartWriteString(UART_USB, "\r\n...Iniciando puerto SPI..\r\n");
    //Primero iniciamos el SPI
@@ -77,11 +94,13 @@ int main(void)
     uartWriteString( UART_USB, "\r\nSe procede a leer las configuraciones en el archivo CONFIG.TXT...\r\n" );
     Tomar_Config_SD();
     
+    LCD_Estado(CONFIG_ESP);
          
     uartWriteString(UART_USB, "\r\nAhora se configurará el ESP8266:\r\n");
     
     if( !esp01Init( UART_ESP01, UART_DEBUG, UARTS_BAUD_RATE ) ){
-      stopProgramError(); // Como dio falso (error) me quedo en un bucle infinito
+        LCD_Estado(EST_ERROR);  
+        stopProgramError(); // Como dio falso (error) me quedo en un bucle infinito
    }
 
     uartWriteString(UART_USB, "\r\n...ESP8266 iniciado correctamente...\r\n");
@@ -90,11 +109,13 @@ int main(void)
 
     esp8266_mux();
    
+    LCD_Estado(CONECT_RED);
    
     uartWriteString(UART_USB, "\r\n\r\nAhora el ESP8266 se conectará a la red preferida:\r\n");
 
    if( !esp01ConnectToWifiAP( ssid_wifi, clave_wifi ) ){
-      stopProgramError(); // Como dio falso (error) me quedo en un bucle infinito
+        LCD_Estado(EST_ERROR); 
+        stopProgramError(); // Como dio falso (error) me quedo en un bucle infinito
    }
     
     uartWriteString(UART_USB, "\r\n...ESP8266 conectado a red correctamente...\r\n");
@@ -107,11 +128,11 @@ int main(void)
     
     bandera_dato_esp = false;
     
-    
+    LCD_Estado(CONFIG_NTP);
    
     uartCallbackSet(UART_232, UART_RECEIVE, INT_ESP_RX, NULL);
     //Debería realizar la conexión con el Servidor NTP y traer la Fecha y Hora
-    // ***************   No funciona  *****************//
+
     NTP_conection();
     
    
@@ -132,13 +153,7 @@ int main(void)
     //mandar_paquete = false;
     uartWriteString(UART_USB, "\r\n...Interrupciones activadas con éxito...\r\n");
     
-    // Inicializar LCD de 16x2 (caracteres x lineas) con cada caracter de 5x2 pixeles
-    lcdInit( 16, 2, 5, 8 );
-    lcdClear(); // Borrar la pantalla
-    lcdGoToXY( 1, 1 ); // Poner cursor en 1, 1
-    lcdSendStringRaw( "Proyecto Final");
-    lcdGoToXY( 1, 2 ); // Poner cursor en 1, 2
-    lcdSendStringRaw( "UTN FRM");
+    LCD_Estado(EST_OK);
     
     delay(5000);
     
@@ -177,7 +192,7 @@ int main(void)
             case 2:
                 if(tickRead() - tiempo_set_lcd > timeout_lcd)
                 {
-                    LCD_Estado(0);
+                    LCD_Estado(EST_OK);
                     tiempo_set_lcd = tickRead();
                 }
                 break;
