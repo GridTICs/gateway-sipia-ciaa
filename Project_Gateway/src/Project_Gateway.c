@@ -14,12 +14,13 @@ Año: 2014
 
 
 //Inclusiones propias
+#include "Estados.h"                //Estados que se muestran en el LCD.
 #include "ESP8622_driver.h"         //Driver de la placa de WiFi
 #include "RTC_Config.h"             //Funciones de el Real Time Counter
 #include "FAT_SD.h"                 //Funciones de la SD
 #include "Interrupciones_UART.h"    //Funciones de las interrupciones de todos los UART's
 #include "NTP_Config.h"             //Funciones de las conexiones con el Server NTP
-#include "Estados.h"
+
 
 // ************************ DECLARACIONES ************************************ //
 
@@ -42,6 +43,7 @@ int main(void)
     uartConfig(UART_ESP01, 115200);
     uartConfig(UART_GPIO, 115200);
     
+    gpioWrite( LEDB, ON );
  
     uartWriteString(UART_USB, "\r\nLa EDU-CIAA ha sido iniciada correctamente,\r\ny los UART han sido configurados correctamente.\r\n");
  
@@ -68,16 +70,18 @@ int main(void)
     
      uartWriteString(UART_USB, "\r\n...Iniciando puerto SPI..\r\n");
    //Primero iniciamos el SPI
-   if(spiConfig( SPI0 ))uartWriteString(UART_USB, "...El puerto SPI ha sido iniciado con éxtio!!!..\r\n");;
-   
+   if(spiConfig( SPI0 ))uartWriteString(UART_USB, "...El puerto SPI ha sido iniciado con éxtio!!!..\r\n");
+   else 
+   {
+        stopProgramError();        
+   }    
    
    uartWriteString(UART_USB, "\r\n...Iniciando SD..\r\n");
    
    //Ahora si iniciamos la SD
     if (sdcardInit( &sdcard ) == false)
     {
-        uartWriteString( UART_USB, "Inicio de sdcard FALLO.\r\n**FIN**\r\n" );
-        while( 1 );
+        stopProgramError(); 
     }
     else {
         uartWriteString( UART_USB, "Inicio de sdcard OK! Unidad FatFs '" );
@@ -99,8 +103,7 @@ int main(void)
     uartWriteString(UART_USB, "\r\nAhora se configurará el ESP8266:\r\n");
     
     if( !esp01Init( UART_ESP01, UART_DEBUG, UARTS_BAUD_RATE ) ){
-        LCD_Estado(EST_ERROR);  
-        stopProgramError(); // Como dio falso (error) me quedo en un bucle infinito
+            stopProgramError(); // Como dio falso (error) me quedo en un bucle infinito
    }
 
     uartWriteString(UART_USB, "\r\n...ESP8266 iniciado correctamente...\r\n");
@@ -164,7 +167,8 @@ int main(void)
     rtc_t rtc_lcd;
     unsigned int boton_pulsado;
     
-    
+    gpioWrite( LEDB, OFF );
+    gpioWrite( LEDG, ON );
     
     while(1)
     {     

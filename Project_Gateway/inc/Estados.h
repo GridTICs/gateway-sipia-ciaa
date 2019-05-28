@@ -1,5 +1,6 @@
 #define CANT_ESTADOS 20
 
+
 enum ESTADOS {
   
     EST_OK = 0,
@@ -28,16 +29,15 @@ char* estados_maq[CANT_ESTADOS] = {
     "CONFIG. NTP",
     "ENVIANDO TCP",
     "RECIBIENDO TCP"
-
-    
     
 };
 
 
 void LCD_Estado(int est)
 {
-    lcdClear(); // Borrar la pantalla
-    lcdGoToXY( 1, 1 ); // Poner cursor en 1, 1
-    lcdSendStringRaw(estados_maq[est]);
-    
+  
+        lcdClear(); // Borrar la pantalla
+        lcdGoToXY( 1, 1 ); // Poner cursor en 1, 1
+        lcdSendStringRaw(estados_maq[est]);
+
 }

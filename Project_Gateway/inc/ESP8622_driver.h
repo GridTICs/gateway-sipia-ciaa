@@ -480,6 +480,14 @@ bool_t esp01Init( uartMap_t uartForEsp, uartMap_t uartForDebug, uint32_t baudRat
 void stopProgramError( void ){
    // Si hay un error grave me quedo en un bucle infinito
    // en modo bajo consumo
+
+    LCD_Estado(EST_ERROR);
+    
+    gpioWrite( LEDB, OFF );
+    gpioWrite( LEDR, ON );
+    gpioWrite( LEDG, OFF );
+    
+    
    while( TRUE ){
       sleepUntilNextInterrupt();
    }
