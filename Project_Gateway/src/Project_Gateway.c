@@ -96,37 +96,54 @@ int main(void)
     if(fatFs_Open_or_Create(sdcardDriveName(), "CONFIG.TXT"))uartWriteString( UART_USB, "Inicio o creación del archivo CONFIG.TXT corrrecto.\r\n" );
     
     uartWriteString( UART_USB, "\r\nSe procede a leer las configuraciones en el archivo CONFIG.TXT...\r\n" );
+    
     Tomar_Config_SD();
     
     LCD_Estado(CONFIG_ESP);
          
     uartWriteString(UART_USB, "\r\nAhora se configurará el ESP8266:\r\n");
     
-    if( !esp01Init( UART_ESP01, UART_DEBUG, UARTS_BAUD_RATE ) ){
+    
+    //Para pruebas:
+    //esp01_Disconect_AP();
+    
+    //Primeros dejamos que el ESP8266 se conecte por si mismo
+    //Si esto no ocurre se procede a configurar:
+    
+    if(!esp01_IP())
+    {
+        if( !esp01Init( UART_ESP01, UART_DEBUG, UARTS_BAUD_RATE ) ){
             stopProgramError(); // Como dio falso (error) me quedo en un bucle infinito
-   }
+        }
+        
+        esp8266_mode();
 
-    uartWriteString(UART_USB, "\r\n...ESP8266 iniciado correctamente...\r\n");
+        esp8266_mux();
+        
+        uartWriteString(UART_USB, "\r\n...ESP8266 configurado e iniciado correctamente...\r\n");
+        
+        LCD_Estado(CONECT_RED);
    
-    esp8266_mode();
+        uartWriteString(UART_USB, "\r\n\r\nAhora el ESP8266 se conectará a la red preferida:\r\n");
 
-    esp8266_mux();
-   
-    LCD_Estado(CONECT_RED);
-   
-    uartWriteString(UART_USB, "\r\n\r\nAhora el ESP8266 se conectará a la red preferida:\r\n");
-
-   if( !esp01ConnectToWifiAP( ssid_wifi, clave_wifi ) ){
-        LCD_Estado(EST_ERROR); 
-        stopProgramError(); // Como dio falso (error) me quedo en un bucle infinito
-   }
+        if( !esp01ConnectToWifiAP( ssid_wifi, clave_wifi ) ){
+            LCD_Estado(EST_ERROR); 
+            stopProgramError(); // Como dio falso (error) me quedo en un bucle infinito
+        }
     
-    uartWriteString(UART_USB, "\r\n...ESP8266 conectado a red correctamente...\r\n");
-   
-  
+    
+        uartWriteString(UART_USB, "\r\n...ESP8266 conectado a red correctamente...\r\n");
+
+
+    }
+    else
+    {    
+        uartWriteString(UART_USB, "\r\n...SE TOMA CONFIGURACIÓN DE LA FLASH DEL ESP8266...\r\n");
+        uartWriteString(UART_USB, "\r\n...CONFIGURACIÓN AUTOMÁTICA...\r\n");
+    }   
+    
     esp01DisconnectToServer_UDP();
-    
-    
+        
     fatFs_Add_Log(sdcardDriveName(), "La EDU-CIAA es reiniciada por causas desconocidas."); 
     
     bandera_dato_esp = false;

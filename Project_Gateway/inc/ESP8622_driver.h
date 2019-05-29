@@ -62,6 +62,9 @@ void esp8266_mode();
 
 void esp8266_mux();
 
+bool_t esp01_IP();
+
+bool_t esp01_Disconect_AP();
 
 void esp01CleanRxBuffer( void ){
    espResponseBufferSize = ESP8266_RX_BUFFER_SIZE;
@@ -362,7 +365,7 @@ bool_t esp01ConnectToWifiAP( char* wiFiSSID, char* wiFiPassword ){
    uartWriteString( UART_DEBUG, wiFiSSID );
    uartWriteString( UART_DEBUG, "\"...\r\n" );
 
-   uartWriteString( UART_ESP01, "AT+CWJAP=\"" );
+   uartWriteString( UART_ESP01, "AT+CWJAP_DEF=\"" );
    uartWriteString( UART_ESP01, wiFiSSID );
    uartWriteString( UART_ESP01, "\",\"" );
    uartWriteString( UART_ESP01, wiFiPassword );
@@ -429,7 +432,7 @@ bool_t esp01ShowWiFiNetworks( void ){
    uartWriteString( UART_ESP01, "AT+CWLAP\r\n" );
    // No poner funciones entre el envio de comando y la espera de respuesta
    retVal = receiveBytesUntilReceiveStringOrTimeoutBlocking(
-               uartEsp01,
+               UART_ESP01,
                ")\r\n\r\nOK\r\n", 9,
                espResponseBuffer, &espResponseBufferSize,
                20000
@@ -453,22 +456,22 @@ bool_t esp01Init( uartMap_t uartForEsp, uartMap_t uartForDebug, uint32_t baudRat
    // Initialize HW ------------------------------------------
 
    // Inicializar UART_USB como salida de debug
-   uartWriteString( UART_DEBUG, ">>>> UART_USB configurada como salida de debug.\r\n" );
+   uartWriteString( uartForDebug, ">>>> UART_USB configurada como salida de debug.\r\n" );
 
    // Inicializr otra UART donde se conecta el ESP01 como salida de consola
-   uartWriteString( UART_DEBUG, ">>>> UART_ESP (donde se conecta el ESP01), \r\n>>>> configurada como salida de consola.\r\n\r\n" );
+   uartWriteString( uartForDebug, ">>>> UART_ESP (donde se conecta el ESP01), \r\n>>>> configurada como salida de consola.\r\n\r\n" );
 
    // AT -----------------------------------------------------
 
    // Chequear si se encuentra el modulo Wi-Fi enviandole "AT"
-   uartWriteString( UART_DEBUG, ">>>> Chequear si se encuentra el modulo Wi-Fi.\r\n>>>>    Enviando \"AT\"...\r\n" );
-   uartWriteString( UART_ESP01, "AT\r\n" );
+   uartWriteString( uartForDebug, ">>>> Chequear si se encuentra el modulo Wi-Fi.\r\n>>>>    Enviando \"AT\"...\r\n" );
+   uartWriteString( uartForEsp, "AT\r\n" );
    // No poner funciones entre el envio de comando y la espera de respuesta
-   retVal = waitForReceiveStringOrTimeoutBlocking( uartEsp01, "AT\r\n", 4, 500 );
+   retVal = waitForReceiveStringOrTimeoutBlocking( uartForEsp, "AT\r\n", 4, 500 );
    if( retVal ){
-      uartWriteString( UART_DEBUG, ">>>>    Modulo ESP01 Wi-Fi detectado.\r\n" );
+      uartWriteString( uartForDebug, ">>>>    Modulo ESP01 Wi-Fi detectado.\r\n" );
    } else{
-      uartWriteString( UART_DEBUG, ">>>>    Error: Modulo ESP01 Wi-Fi No detectado!!\r\n" );
+      uartWriteString( uartForDebug, ">>>>    Error: Modulo ESP01 Wi-Fi No detectado!!\r\n" );
       return retVal;
    }
 
@@ -590,4 +593,66 @@ void esp8266_mux()
 
 }
 
+bool_t esp01_IP()
+{
+    bool_t retVal = FALSE; 
+    
+    esp01CleanRxBuffer();
 
+	uartWriteString( UART_ESP01,"AT+CIPSTA?\r\n");
+
+	    // No poner funciones entre el envio de comando y la espera de respuesta
+    retVal = receiveBytesUntilReceiveStringOrTimeoutBlocking(
+               uartEsp01,
+               "OK\r\n", 4,
+               espResponseBuffer, &espResponseBufferSize,
+               5000
+            );
+    
+    if(strstr(espResponseBuffer, "+CIPSTA:ip:\"0.0.0.0\"")!=NULL)
+    {
+        retVal = FALSE;
+    }
+    else
+    {
+        retVal = TRUE;
+    }    
+    
+    uartWriteString( UART_USB,espResponseBuffer);
+    
+    if(retVal)uartWriteString( UART_USB,"\r\nTIENE IP ASIGNADA!!!\r\n");
+        
+    if(!retVal)uartWriteString( UART_USB,"\r\nNO TIENE IP ASIGNADA!!!\r\n");
+
+    return retVal;
+}
+
+bool_t esp01_Disconect_AP()
+{
+    
+    bool_t retVal = FALSE; 
+    
+    esp01CleanRxBuffer();
+    
+	uartWriteString( UART_ESP01,"AT+CWQAP\r\n");
+
+	    // No poner funciones entre el envio de comando y la espera de respuesta
+    retVal = receiveBytesUntilReceiveStringOrTimeoutBlocking(
+               uartEsp01,
+               "OK\r\n", 4,
+               espResponseBuffer, &espResponseBufferSize,
+               5000
+            );
+    
+    uartWriteString( UART_USB,espResponseBuffer);
+    
+    if(retVal)uartWriteString( UART_USB,"\r\nDESCONECTADO CORRECTAMENTE!!!\r\n");
+        
+    if(!retVal)uartWriteString( UART_USB,"\r\nNO SE HA DESCONECTADO!!!\r\n");
+
+    return retVal;
+    
+
+
+
+}
