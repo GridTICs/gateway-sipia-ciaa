@@ -76,7 +76,7 @@ int main(void)
         stopProgramError();        
    }    
    
-   uartWriteString(UART_USB, "\r\n...Iniciando SD..\r\n");
+        uartWriteString(UART_USB, "\r\n...Iniciando SD..\r\n");
    
    //Ahora si iniciamos la SD
     if (sdcardInit( &sdcard ) == false)
@@ -109,6 +109,9 @@ int main(void)
     
     //Primeros dejamos que el ESP8266 se conecte por si mismo
     //Si esto no ocurre se procede a configurar:
+    
+    
+    
     
     if(!esp01_IP())
     {

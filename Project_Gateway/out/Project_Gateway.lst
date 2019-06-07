@@ -5022,7 +5022,7 @@ int main(void)
         stopProgramError();        
    }    
    
-   uartWriteString(UART_USB, "\r\n...Iniciando SD..\r\n");
+        uartWriteString(UART_USB, "\r\n...Iniciando SD..\r\n");
 1a001e06:	4999      	ldr	r1, [pc, #612]	; (1a00206c <main+0x308>)
 1a001e08:	2003      	movs	r0, #3
 1a001e0a:	f004 f8e2 	bl	1a005fd2 <uartWriteString>
@@ -5098,10 +5098,10 @@ int main(void)
 1a001e8c:	4982      	ldr	r1, [pc, #520]	; (1a002098 <main+0x334>)
 1a001e8e:	2003      	movs	r0, #3
 1a001e90:	f004 f89f 	bl	1a005fd2 <uartWriteString>
-    //esp01_Disconect_AP();
-    
-    //Primeros dejamos que el ESP8266 se conecte por si mismo
     //Si esto no ocurre se procede a configurar:
+    
+    
+    
     
     if(!esp01_IP())
 1a001e94:	f7ff f856 	bl	1a000f44 <esp01_IP>
@@ -23746,11 +23746,11 @@ void _init(void) {}
 1a00abb0:	4c2f7325 	.word	0x4c2f7325
 1a00abb4:	542e474f 	.word	0x542e474f
 1a00abb8:	00005458 	.word	0x00005458
-1a00abbc:	323a3132 	.word	0x323a3132
-1a00abc0:	32353a38 	.word	0x32353a38
+1a00abbc:	313a3132 	.word	0x313a3132
+1a00abc0:	33353a38 	.word	0x33353a38
 1a00abc4:	00000000 	.word	0x00000000
 1a00abc8:	2079614d 	.word	0x2079614d
-1a00abcc:	32203832 	.word	0x32203832
+1a00abcc:	32203932 	.word	0x32203932
 1a00abd0:	00393130 	.word	0x00393130
 1a00abd4:	73250a0d 	.word	0x73250a0d
 1a00abd8:	20732520 	.word	0x20732520
