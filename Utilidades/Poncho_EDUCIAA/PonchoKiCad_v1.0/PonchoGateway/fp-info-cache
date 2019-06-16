@@ -1,4 +1,4 @@
-16010513282692811
+16036724063366505
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -36463,6 +36463,13 @@ connector Samtec  side entry
 102
 101
 Connector_Samtec_HLE_SMD
+SAMTEC-EDU-CIAA
+Samtec HLE .100" Tiger Beam Cost-effective Single Beam Socket Strip, HLE-115-02-xxx-DV-A, 15 Pins per row (http://suddendocs.samtec.com/prints/hle-1xx-02-xxx-dv-xx-xx-xx-mkt.pdf, http://suddendocs.samtec.com/prints/hle-dv-footprint.pdf), generated with kicad-footprint-generator
+connector Samtec HLE top entry
+0
+64
+60
+Connector_Samtec_HLE_SMD
 Samtec_HLE-102-02-xxx-DV-BE-LC_2x02_P2.54mm_Horizontal
 Samtec HLE .100" Tiger Beam Cost-effective Single Beam Socket Strip, HLE-102-02-xxx-DV-BE-LC, 2 Pins per row (http://suddendocs.samtec.com/prints/hle-1xx-02-xxx-dv-xx-xx-xx-mkt.pdf, http://suddendocs.samtec.com/prints/hle-dv-footprint.pdf), generated with kicad-footprint-generator
 connector Samtec HLE top entry
@@ -43540,6 +43547,13 @@ CR2013-MI2120 ILI9341 LCD Breakout
 18
 14
 Display
+Display_Propio
+LCD 16x2 http://www.wincomlcd.com/pdf/WC1602A-SFYLYHTC06.pdf
+LCD 16x2 Alphanumeric 16pin
+0
+20
+16
+Display
 EA-eDIP128B-XXX
 LCD-graphical display with LED backlight 128x64 RS-232 I2C or SPI http://www.lcd-module.com/fileadmin/eng/pdf/grafik/edip128-6e.pdf
 LCD-graphical display with LED backlight 128x64 RS-232 I2C or SPI
@@ -49083,6 +49097,111 @@ Yellow 5381 Series LED
 0
 2
 2
+lib-ESP8266
+ESP-01
+Module, ESP-8266, ESP-01, 8 pin
+Module ESP-8266 ESP8266
+0
+8
+8
+lib-ESP8266
+ESP-03
+Module, ESP-8266, ESP-03, 14 pad, SMD
+Module ESP-8266 ESP8266
+0
+14
+14
+lib-ESP8266
+ESP-06
+
+
+0
+20
+20
+lib-ESP8266
+ESP-07S
+Module, ESP-8266, ESP-07S, 14 pad, SMD
+Module ESP-8266 ESP8266
+0
+16
+16
+lib-ESP8266
+ESP-07v2
+Module, ESP-8266, ESP-07v2, 16 pad, SMD
+Module ESP-8266 ESP8266
+0
+16
+16
+lib-ESP8266
+ESP-12
+Module, ESP-8266, ESP-12, 16 pad, SMD
+Module ESP-8266 ESP8266
+0
+16
+16
+lib-ESP8266
+ESP-12E
+Module, ESP-8266, ESP-12, 16 pad, SMD
+Module ESP-8266 ESP8266
+0
+22
+22
+lib-ESP8266
+ESP-12E_SMD
+Module, ESP-8266, ESP-12, 16 pad, SMD
+Module ESP-8266 ESP8266
+0
+22
+22
+lib-ESP8266
+ESP-13-WROOM-02
+Module, ESP-8266, ESP-13-WROOM-02, 18 pad, SMD
+Module ESP-8266 ESP8266
+0
+19
+19
+lib-ESP8266
+ESP-201
+Module, ESP-8266, ESP-201, 26 pin, through hole, 0.1 inch
+Module ESP-8266 ESP8266
+0
+26
+26
+lib-ESP8266
+ESP12F-Devkit-V3
+
+
+0
+30
+30
+lib-ESP8266
+JUMPER-PONCHO-EDU-CIAA
+
+
+0
+2
+2
+lib-ESP8266
+NodeMCU-LoLinV3
+
+
+0
+30
+30
+lib-ESP8266
+NodeMCU1.0(12-E)
+
+
+0
+30
+30
+lib-ESP8266
+SD-SHIELD-ARD
+Module, ESP-8266, ESP-01, 8 pin
+Module ESP-8266 ESP8266
+0
+16
+8
 Module
 A20_OLINUXINO_LIME2
 A20 Olinuxino LIME2, 1.2GHz, 512-1024MB RAM, Micro-SD, NAND or eMMC, 1000Mbit Ethernet
