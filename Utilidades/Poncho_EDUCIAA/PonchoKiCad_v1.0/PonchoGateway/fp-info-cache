@@ -1,4 +1,4 @@
-16036724063366505
+16044529463304608
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -61880,6 +61880,34 @@ CONN Poncho
 80
 80
 Poncho_Esqueleto
+gidTICs
+
+
+0
+0
+0
+Poncho_Esqueleto
+logoUTN
+
+
+0
+0
+0
+Poncho_Esqueleto
+logoUTNFRM
+
+
+0
+0
+0
+Poncho_Esqueleto
+logoUTN_chico
+
+
+0
+0
+0
+Poncho_Esqueleto
 Logo_EDU-CIAA
 
 
@@ -61918,6 +61946,13 @@ Poncho_Esqueleto
 Symbol_KiCAD-Logo_CopperAndSilkScreenTop
 Symbol, KiCAD-Logo, Silk & Copper Top,
 Symbol, KiCAD-Logo, Silk & Copper Top,
+0
+0
+0
+Poncho_Esqueleto
+UTN-Simbolo
+
+
 0
 0
 0
