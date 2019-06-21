@@ -527,6 +527,20 @@ Text Notes 10590 7640 0    59   ~ 12
 1.0
 Text Notes 8130 7640 0    59   ~ 12
 15/06/19
+Text GLabel 9900 4350 2    50   Input ~ 0
+GND
+Wire Wire Line
+	9550 4350 9900 4350
+Text GLabel 7450 4450 0    50   Input ~ 0
++3.3V
+Text GLabel 7450 4650 0    50   Input ~ 0
++3.3V
+Wire Wire Line
+	7650 4450 7450 4450
+Wire Wire Line
+	7650 4650 7450 4650
+Text GLabel 7450 4350 0    50   Input ~ 0
+CIAA-UART1-RX
 $Comp
 L ESP8266:ESP-01v090 U1
 U 1 1 5D11C3EC
@@ -538,24 +552,10 @@ F 3 "http://l0l.org.uk/2014/12/esp8266-modules-hardware-guide-gotta-catch-em-all
 	1    8600 4500
 	1    0    0    -1  
 $EndComp
-Text GLabel 7450 4350 0    50   Input ~ 0
-UART-MOTE-TX
 Wire Wire Line
-	7450 4350 7650 4350
-Text GLabel 9900 4350 2    50   Input ~ 0
-GND
-Wire Wire Line
-	9550 4350 9900 4350
+	7650 4350 7450 4350
 Text GLabel 9900 4650 2    50   Input ~ 0
-UART-MOTE-RX
+CIAA-UART1-TX
 Wire Wire Line
 	9900 4650 9550 4650
-Text GLabel 7450 4450 0    50   Input ~ 0
-+3.3V
-Text GLabel 7450 4650 0    50   Input ~ 0
-+3.3V
-Wire Wire Line
-	7650 4450 7450 4450
-Wire Wire Line
-	7650 4650 7450 4650
 $EndSCHEMATC

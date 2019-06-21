@@ -558,4 +558,8 @@ Text GLabel 9900 4650 2    50   Input ~ 0
 CIAA-UART1-TX
 Wire Wire Line
 	9900 4650 9550 4650
+Text GLabel 8800 2300 0    50   Input ~ 0
+GND
+Wire Wire Line
+	9000 2300 8800 2300
 $EndSCHEMATC
