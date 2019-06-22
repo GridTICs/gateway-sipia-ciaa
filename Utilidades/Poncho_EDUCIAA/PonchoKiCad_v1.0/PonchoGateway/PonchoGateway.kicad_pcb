@@ -1763,6 +1763,11 @@
       (net 10 GND))
     (pad 1 thru_hole rect (at 0 0) (size 1.7272 1.7272) (drill 1.016) (layers *.Cu *.Mask F.SilkS)
       (net 103 CIAA-UART1-RX))
+    (model E:/ProyectoFinal_GitHub/Utilidades/Poncho_EDUCIAA/PonchoKiCad_v1.0/PonchoGateway/lib-ESP8266/ESP8266.3dshapes/ESP8266_ESP01_cp.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module lib-ESP8266:SD-SHIELD-ARD (layer F.Cu) (tedit 5D0584A6) (tstamp 5D070899)
