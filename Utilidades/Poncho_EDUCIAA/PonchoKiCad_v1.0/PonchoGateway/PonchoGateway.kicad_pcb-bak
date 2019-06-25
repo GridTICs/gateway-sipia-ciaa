@@ -1763,7 +1763,7 @@
       (net 10 GND))
     (pad 1 thru_hole rect (at 0 0) (size 1.7272 1.7272) (drill 1.016) (layers *.Cu *.Mask F.SilkS)
       (net 103 CIAA-UART1-RX))
-    (model E:/ProyectoFinal_GitHub/Utilidades/Poncho_EDUCIAA/PonchoKiCad_v1.0/PonchoGateway/lib-ESP8266/ESP8266.3dshapes/ESP8266_ESP01_cp.wrl
+    (model lib-ESP8266/ESP8266.3dshapes/ESP8266_ESP01_cp.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1826,10 +1826,10 @@
       (net 17 +3.3V))
     (pad 2 thru_hole oval (at 4.056 20.32) (size 1.7272 1.7272) (drill 1.016) (layers *.Cu *.Mask F.SilkS)
       (net 17 +3.3V))
-    (model E:/ProyectoFinal_GitHub/Utilidades/Poncho_EDUCIAA/PonchoKiCad_v1.0/PonchoGateway/lib-ESP8266/ESP8266.3dshapes/ESP-12E.wrl
-      (at (xyz 0 0 0))
+    (model "/3D_Vistas/SD Card Module Arduino.STEP"
+      (offset (xyz 22.27 -62 4))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz 90 0 0))
     )
   )
 
