@@ -14922,43 +14922,43 @@ END GROUP
                 0x53ff028c                PROVIDE (__valid_user_code_checksum, (0x0 - ((((((_vStackTop + (ResetISR + 0x1)) + (NMI_Handler + 0x1)) + (HardFault_Handler + 0x1)) + (DEFINED (MemManage_Handler)?MemManage_Handler:0x0 + 0x1)) + (DEFINED (BusFault_Handler)?BusFault_Handler:0x0 + 0x1)) + (DEFINED (UsageFault_Handler)?UsageFault_Handler:0x0 + 0x1))))
 OUTPUT(Project_Gateway/out/Project_Gateway.elf elf32-littlearm)
 
-.debug_info     0x00000000    0x334fa
- .debug_info    0x00000000     0x6d03 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_info    0x00006d03     0x5b03 Project_Gateway/out/libs/fatfs/source/ff.o
- .debug_info    0x0000c806      0x280 Project_Gateway/out/libs/fatfs/source/ffunicode.o
- .debug_info    0x0000ca86     0x2103 Project_Gateway/out/libs/lpc_fatfs_disks/source/fssdc.o
- .debug_info    0x0000eb89     0x122e Project_Gateway/out/libs/lpc_fatfs_disks/source/ffdisks.o
- .debug_info    0x0000fdb7     0x122d Project_Gateway/out/libs/lpc_fatfs_disks/sapi/src/sapi_sdcard.o
- .debug_info    0x00010fe4      0x914 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_sleep.o
- .debug_info    0x000118f8      0xec6 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
- .debug_info    0x000127be     0x1a90 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
- .debug_info    0x0001424e     0x1d10 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
- .debug_info    0x00015f5e     0x14a2 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
- .debug_info    0x00017400      0xce4 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_rtc.o
- .debug_info    0x000180e4      0xf66 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_spi.o
- .debug_info    0x0001904a     0x2472 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
- .debug_info    0x0001b4bc     0x330e Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
- .debug_info    0x0001e7ca      0xdb2 Project_Gateway/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
- .debug_info    0x0001f57c      0xbfb Project_Gateway/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_convert.o
- .debug_info    0x00020177      0xb90 Project_Gateway/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
- .debug_info    0x00020d07     0x1dff Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_ultrasonic_hcsr04.o
- .debug_info    0x00022b06     0x25ae Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_lcd.o
- .debug_info    0x000250b4     0x14c3 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board_sysinit.o
- .debug_info    0x00026577      0x95b Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/sysinit.o
- .debug_info    0x00026ed2      0xf73 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/system.o
- .debug_info    0x00027e45     0x20b6 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
- .debug_info    0x00029efb     0x1606 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/ssp_18xx_43xx.o
- .debug_info    0x0002b501      0x219 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/gpio_18xx_43xx.o
- .debug_info    0x0002b71a      0x74e Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/rtc_18xx_43xx.o
- .debug_info    0x0002be68      0x145 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/fpu_init.o
- .debug_info    0x0002bfad      0xaef Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/adc_18xx_43xx.o
- .debug_info    0x0002ca9c      0xab0 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/sysinit_18xx_43xx.o
- .debug_info    0x0002d54c     0x18ed Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
- .debug_info    0x0002ee39      0xc3d Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/chip_18xx_43xx.o
- .debug_info    0x0002fa76     0x164f Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/uart_18xx_43xx.o
- .debug_info    0x000310c5     0x1366 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/i2c_18xx_43xx.o
- .debug_info    0x0003242b     0x1090 Project_Gateway/out/libs/vendor_libs/lpc_startup/src/cr_startup_lpc43xx.o
- .debug_info    0x000334bb       0x3f Project_Gateway/out/libs/vendor_libs/lpc_startup/src/crp.o
+.debug_info     0x00000000    0x3350b
+ .debug_info    0x00000000     0x6d14 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_info    0x00006d14     0x5b03 Project_Gateway/out/libs/fatfs/source/ff.o
+ .debug_info    0x0000c817      0x280 Project_Gateway/out/libs/fatfs/source/ffunicode.o
+ .debug_info    0x0000ca97     0x2103 Project_Gateway/out/libs/lpc_fatfs_disks/source/fssdc.o
+ .debug_info    0x0000eb9a     0x122e Project_Gateway/out/libs/lpc_fatfs_disks/source/ffdisks.o
+ .debug_info    0x0000fdc8     0x122d Project_Gateway/out/libs/lpc_fatfs_disks/sapi/src/sapi_sdcard.o
+ .debug_info    0x00010ff5      0x914 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_sleep.o
+ .debug_info    0x00011909      0xec6 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
+ .debug_info    0x000127cf     0x1a90 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
+ .debug_info    0x0001425f     0x1d10 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
+ .debug_info    0x00015f6f     0x14a2 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
+ .debug_info    0x00017411      0xce4 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_rtc.o
+ .debug_info    0x000180f5      0xf66 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_spi.o
+ .debug_info    0x0001905b     0x2472 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+ .debug_info    0x0001b4cd     0x330e Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
+ .debug_info    0x0001e7db      0xdb2 Project_Gateway/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
+ .debug_info    0x0001f58d      0xbfb Project_Gateway/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_convert.o
+ .debug_info    0x00020188      0xb90 Project_Gateway/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
+ .debug_info    0x00020d18     0x1dff Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_ultrasonic_hcsr04.o
+ .debug_info    0x00022b17     0x25ae Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_lcd.o
+ .debug_info    0x000250c5     0x14c3 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board_sysinit.o
+ .debug_info    0x00026588      0x95b Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/sysinit.o
+ .debug_info    0x00026ee3      0xf73 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/system.o
+ .debug_info    0x00027e56     0x20b6 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
+ .debug_info    0x00029f0c     0x1606 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/ssp_18xx_43xx.o
+ .debug_info    0x0002b512      0x219 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/gpio_18xx_43xx.o
+ .debug_info    0x0002b72b      0x74e Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/rtc_18xx_43xx.o
+ .debug_info    0x0002be79      0x145 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/fpu_init.o
+ .debug_info    0x0002bfbe      0xaef Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/adc_18xx_43xx.o
+ .debug_info    0x0002caad      0xab0 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+ .debug_info    0x0002d55d     0x18ed Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
+ .debug_info    0x0002ee4a      0xc3d Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/chip_18xx_43xx.o
+ .debug_info    0x0002fa87     0x164f Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/uart_18xx_43xx.o
+ .debug_info    0x000310d6     0x1366 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/i2c_18xx_43xx.o
+ .debug_info    0x0003243c     0x1090 Project_Gateway/out/libs/vendor_libs/lpc_startup/src/cr_startup_lpc43xx.o
+ .debug_info    0x000334cc       0x3f Project_Gateway/out/libs/vendor_libs/lpc_startup/src/crp.o
 
 .debug_abbrev   0x00000000     0x61f7
  .debug_abbrev  0x00000000      0x534 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o

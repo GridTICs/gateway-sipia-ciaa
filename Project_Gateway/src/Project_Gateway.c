@@ -115,13 +115,15 @@ int main(void)
     
     if(!esp01_IP())
     {
+        esp8266_mode();
+
+        esp8266_mux();
+        
         if( !esp01Init( UART_ESP01, UART_DEBUG, UARTS_BAUD_RATE ) ){
             stopProgramError(); // Como dio falso (error) me quedo en un bucle infinito
         }
         
-        esp8266_mode();
-
-        esp8266_mux();
+        
         
         uartWriteString(UART_USB, "\r\n...ESP8266 configurado e iniciado correctamente...\r\n");
         

@@ -1,8 +1,8 @@
 //************************   Esta función es la interrupción de recepción que viene por GPIO   ***************************//
 
 // MOTE Rx Buffer
-char gpioRxBuffer[ UART_MOTE_RX_BUFF_SIZE ];
-char *punt_rx_gpio;
+uint8_t gpioRxBuffer[ UART_MOTE_RX_BUFF_SIZE ];
+uint8_t *punt_rx_gpio;
 
 bool_t mandar_paquete;
 bool_t bandera_dato_gpio = false;

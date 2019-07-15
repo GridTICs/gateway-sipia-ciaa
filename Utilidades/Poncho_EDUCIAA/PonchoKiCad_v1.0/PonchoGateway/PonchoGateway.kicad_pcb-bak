@@ -1284,11 +1284,6 @@
       (net 64 "Net-(MDG1-Pad34)"))
     (pad 32 smd rect (at -8.89 -0.5) (size 0.5 3.5) (drill (offset 0 -1.75)) (layers F.Cu F.Paste F.Mask)
       (net 10 GND))
-    (model ${KISYS3DMOD}/Connector_Samtec_HLE_SMD.3dshapes/Samtec_HLE-115-02-xxx-DV-A_2x15_P2.54mm_Horizontal.wrl
-      (at (xyz 0 0 0))
-      (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
-    )
   )
 
   (module Poncho_Esqueleto:Conn_Poncho_SinBorde (layer F.Cu) (tedit 560F0DC0) (tstamp 5D078D68)
@@ -1850,6 +1845,11 @@
       (net 13 "Net-(DS1-Pad2)"))
     (pad 1 thru_hole rect (at -2.54 2.54) (size 1.524 1.524) (drill 0.762) (layers *.Cu *.Mask)
       (net 12 +5V))
+    (model "${KIPRJMOD}/3D_Vistas/2.54 mm DUPONT MALE PIN HEADER, CONFIGURABLE, 1X2.STEP"
+      (offset (xyz -2.5 -2.5 0))
+      (scale (xyz 2 1 2))
+      (rotate (xyz -90 0 0))
+    )
   )
 
   (module Display:Display_Propio (layer F.Cu) (tedit 5D04FD8B) (tstamp 5D0707CD)

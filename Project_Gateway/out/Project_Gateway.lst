@@ -54,27 +54,27 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS
  17 .noinit       00000000  10001a88  10001a88  00020198  2**2
                   CONTENTS
- 18 .debug_info   000334fa  00000000  00000000  00020198  2**0
+ 18 .debug_info   0003350b  00000000  00000000  00020198  2**0
                   CONTENTS, READONLY, DEBUGGING
- 19 .debug_abbrev 000061f7  00000000  00000000  00053692  2**0
+ 19 .debug_abbrev 000061f7  00000000  00000000  000536a3  2**0
                   CONTENTS, READONLY, DEBUGGING
- 20 .debug_loc    0001210b  00000000  00000000  00059889  2**0
+ 20 .debug_loc    0001210b  00000000  00000000  0005989a  2**0
                   CONTENTS, READONLY, DEBUGGING
- 21 .debug_aranges 00001160  00000000  00000000  0006b994  2**0
+ 21 .debug_aranges 00001160  00000000  00000000  0006b9a5  2**0
                   CONTENTS, READONLY, DEBUGGING
- 22 .debug_ranges 00001100  00000000  00000000  0006caf4  2**0
+ 22 .debug_ranges 00001100  00000000  00000000  0006cb05  2**0
                   CONTENTS, READONLY, DEBUGGING
- 23 .debug_macro  0000f9c2  00000000  00000000  0006dbf4  2**0
+ 23 .debug_macro  0000f9c2  00000000  00000000  0006dc05  2**0
                   CONTENTS, READONLY, DEBUGGING
- 24 .debug_line   00014fba  00000000  00000000  0007d5b6  2**0
+ 24 .debug_line   00014fba  00000000  00000000  0007d5c7  2**0
                   CONTENTS, READONLY, DEBUGGING
- 25 .debug_str    0002ba9b  00000000  00000000  00092570  2**0
+ 25 .debug_str    0002ba9b  00000000  00000000  00092581  2**0
                   CONTENTS, READONLY, DEBUGGING
- 26 .comment      0000007e  00000000  00000000  000be00b  2**0
+ 26 .comment      0000007e  00000000  00000000  000be01c  2**0
                   CONTENTS, READONLY
- 27 .ARM.attributes 00000037  00000000  00000000  000be089  2**0
+ 27 .ARM.attributes 00000037  00000000  00000000  000be09a  2**0
                   CONTENTS, READONLY
- 28 .debug_frame  00003978  00000000  00000000  000be0c0  2**2
+ 28 .debug_frame  00003978  00000000  00000000  000be0d4  2**2
                   CONTENTS, READONLY, DEBUGGING
 SYMBOL TABLE:
 1a000000 l    d  .text	00000000 .text
@@ -4648,7 +4648,7 @@ bool gmtime(unsigned long time)
 void Mandar_Uart_TCP()
 {
     
-    if(bandera_dato_gpio == true && tickRead() - time_rx_gpio_set > timeout_rx_gpio)
+    if(bandera_dato_gpio == true && (tickRead() - time_rx_gpio_set) > timeout_rx_gpio)
 1a001b30:	4b4f      	ldr	r3, [pc, #316]	; (1a001c70 <Mandar_Uart_TCP+0x140>)
 1a001b32:	781b      	ldrb	r3, [r3, #0]
 1a001b34:	2b01      	cmp	r3, #1
@@ -4657,7 +4657,7 @@ void Mandar_Uart_TCP()
 {
 1a001b3a:	b530      	push	{r4, r5, lr}
 1a001b3c:	f6ad 0d04 	subw	sp, sp, #2052	; 0x804
-    if(bandera_dato_gpio == true && tickRead() - time_rx_gpio_set > timeout_rx_gpio)
+    if(bandera_dato_gpio == true && (tickRead() - time_rx_gpio_set) > timeout_rx_gpio)
 1a001b40:	f003 ff2a 	bl	1a005998 <tickRead>
 1a001b44:	4b4b      	ldr	r3, [pc, #300]	; (1a001c74 <Mandar_Uart_TCP+0x144>)
 1a001b46:	681b      	ldr	r3, [r3, #0]
@@ -5107,21 +5107,23 @@ int main(void)
 1a001e94:	f7ff f856 	bl	1a000f44 <esp01_IP>
 1a001e98:	bb30      	cbnz	r0, 1a001ee8 <main+0x184>
     {
-        if( !esp01Init( UART_ESP01, UART_DEBUG, UARTS_BAUD_RATE ) ){
-1a001e9a:	f44f 32e1 	mov.w	r2, #115200	; 0x1c200
-1a001e9e:	2103      	movs	r1, #3
-1a001ea0:	2005      	movs	r0, #5
-1a001ea2:	f7fe ff01 	bl	1a000ca8 <esp01Init>
-1a001ea6:	b908      	cbnz	r0, 1a001eac <main+0x148>
-            stopProgramError(); // Como dio falso (error) me quedo en un bucle infinito
-1a001ea8:	f7fe ff42 	bl	1a000d30 <stopProgramError>
-        }
-        
         esp8266_mode();
-1a001eac:	f7fe ffe6 	bl	1a000e7c <esp8266_mode>
+1a001e9a:	f7fe ffef 	bl	1a000e7c <esp8266_mode>
 
         esp8266_mux();
-1a001eb0:	f7ff f816 	bl	1a000ee0 <esp8266_mux>
+1a001e9e:	f7ff f81f 	bl	1a000ee0 <esp8266_mux>
+        
+        if( !esp01Init( UART_ESP01, UART_DEBUG, UARTS_BAUD_RATE ) ){
+1a001ea2:	f44f 32e1 	mov.w	r2, #115200	; 0x1c200
+1a001ea6:	2103      	movs	r1, #3
+1a001ea8:	2005      	movs	r0, #5
+1a001eaa:	f7fe fefd 	bl	1a000ca8 <esp01Init>
+1a001eae:	b908      	cbnz	r0, 1a001eb4 <main+0x150>
+            stopProgramError(); // Como dio falso (error) me quedo en un bucle infinito
+1a001eb0:	f7fe ff3e 	bl	1a000d30 <stopProgramError>
+        }
+        
+        
         
         uartWriteString(UART_USB, "\r\n...ESP8266 configurado e iniciado correctamente...\r\n");
 1a001eb4:	4979      	ldr	r1, [pc, #484]	; (1a00209c <main+0x338>)
@@ -23746,11 +23748,11 @@ void _init(void) {}
 1a00abb0:	4c2f7325 	.word	0x4c2f7325
 1a00abb4:	542e474f 	.word	0x542e474f
 1a00abb8:	00005458 	.word	0x00005458
-1a00abbc:	313a3132 	.word	0x313a3132
-1a00abc0:	33353a38 	.word	0x33353a38
+1a00abbc:	313a3032 	.word	0x313a3032
+1a00abc0:	36343a33 	.word	0x36343a33
 1a00abc4:	00000000 	.word	0x00000000
-1a00abc8:	2079614d 	.word	0x2079614d
-1a00abcc:	32203932 	.word	0x32203932
+1a00abc8:	206c754a 	.word	0x206c754a
+1a00abcc:	32203531 	.word	0x32203531
 1a00abd0:	00393130 	.word	0x00393130
 1a00abd4:	73250a0d 	.word	0x73250a0d
 1a00abd8:	20732520 	.word	0x20732520

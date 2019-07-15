@@ -8,13 +8,13 @@
 void Mandar_Uart_TCP()
 {
     
-    if(bandera_dato_gpio == true && tickRead() - time_rx_gpio_set > timeout_rx_gpio)
+    if(bandera_dato_gpio == true && (tickRead() - time_rx_gpio_set) > timeout_rx_gpio)
     {   
         uartInterrupt(UART_232, false);
         
-        char buffer_fp[1024];
+        char buffer_fp[UART_MOTE_RX_BUFF_SIZE];
         memset( buffer_fp, '\0', sizeof(buffer_fp) );
-        char buffer_aux[1024];
+        char buffer_aux[UART_MOTE_RX_BUFF_SIZE];
         memset( buffer_aux, '\0', sizeof(buffer_aux) );
         unsigned int tam_archivo;
         //Bandera para indicar que estoy mandando el gpioRxBuffer, para que en el 
