@@ -24,51 +24,51 @@ https://github.com/martinribelotta/embedded-ide-builder/releases/tag/v0.6
 
 *En el mismo ya se encuentran las herramientas necesarias para grabar la EDU-CIAA (NXP en mi caso).*
 
-### <!--Instalación 🔧-->
+### Instalación 🔧
 
-<!--_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_-->
+_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
 
-<!--_Dí cómo será ese paso_-->
+_Dí cómo será ese paso_
 
 ```
 Da un ejemplo
 ```
 
-<!--_Y repite_-->
+_Y repite_
 
 ```
 hasta finalizar
 ```
 
-<!--_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_-->
+_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_-
 
-## <!--Ejecutando las pruebas ⚙️-->
+## Ejecutando las pruebas ⚙️
 
-<!--_Explica como ejecutar las pruebas automatizadas para este sistema_-->
+_Explica como ejecutar las pruebas automatizadas para este sistema_
 
-### <!--Analice las pruebas end-to-end 🔩-->
+### Analice las pruebas end-to-end 🔩
 
-<!--_Explica que verifican estas pruebas y por qué_-->
-
-```
-Da un ejemplo
-```
-
-### <!--Y las pruebas de estilo de codificación ⌨️-->
-
-<!--_Explica que verifican estas pruebas y por qué_-->
+_Explica que verifican estas pruebas y por qué_
 
 ```
 Da un ejemplo
 ```
 
-## <!--Deployment 📦-->
+### Y las pruebas de estilo de codificación ⌨️
 
-<!--_Agrega notas adicionales sobre como hacer deploy_-->
+_Explica que verifican estas pruebas y por qué_
 
-## <!--Construido con 🛠️-->
+```
+Da un ejemplo
+```
 
-<!--_[CIAA Embedded IDE](https://github.com/martinribelotta/embedded-ide-builder/releases/tag/v0.6) - El IDE de programación utilizado.-->
+## Deployment 📦
+
+_Agrega notas adicionales sobre como hacer deploy_
+
+## Construido con 🛠️
+
+_[CIAA Embedded IDE](https://github.com/martinribelotta/embedded-ide-builder/releases/tag/v0.6) - El IDE de programación utilizado.
 
 ## Contribuyendo 🖇️
 
@@ -83,17 +83,7 @@ Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](ht
 _Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
 
 * **Lucas Escribano** - [harrylae](https://github.com/harrylae)
-* **Rodrigo Gonzalez** - [fulanitodetal](#fulanito-de-tal)
-
-## Licencia 📄
-
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
+* **Rodrigo Gonzalez** 
 
 ## Expresiones de Gratitud 🎁
-
-* Comenta a otros sobre este proyecto 📢
-* Invita una cerveza 🍺 a alguien del equipo. 
-* Da las gracias públicamente 🤓.
-* etc.
-
 
