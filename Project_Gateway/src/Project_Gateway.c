@@ -7,6 +7,7 @@ Autor: Lucas Escribano - Rodrigo Gonzalez
 Año: 2014
 
 */
+#define PRUEBA
 
 // ************************** INCLUDES *************************************** //
 #include "sapi.h"
@@ -62,9 +63,11 @@ int main(void)
     uartWriteString(UART_USB, "\r\n...Ahora se configurará el Real Time Counter (RTC)...\r\n");
      
     LCD_Estado(CONF_RTC); 
-     
+ 
+#ifndef PRUEBA 
     //Esta función inicia el RTC, y le pone una fecha y hora establecidos
     RTC_Init();
+#endif
     
     LCD_Estado(CONFIG_SD);
     
@@ -155,9 +158,8 @@ int main(void)
     
     LCD_Estado(CONFIG_NTP);
    
-    uartCallbackSet(UART_232, UART_RECEIVE, INT_ESP_RX, NULL);
+    
     //Debería realizar la conexión con el Servidor NTP y traer la Fecha y Hora
-
     NTP_conection();
     
    
@@ -171,8 +173,8 @@ int main(void)
     //Activo las interrupciones del UART_GPIO para que guarde las variables que llegan...
     uartCallbackSet(UART_GPIO, UART_RECEIVE, INT_GPIO_RX, NULL);
     uartInterrupt(UART_GPIO, true);
-    
-    //uartCallbackSet(UART_232, UART_RECEIVE, INT_ESP_RX, NULL);
+
+    uartCallbackSet(UART_232, UART_RECEIVE, INT_ESP_RX, NULL);
     uartInterrupt(UART_232, true);
     
     //mandar_paquete = false;

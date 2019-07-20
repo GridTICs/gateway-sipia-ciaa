@@ -76,7 +76,7 @@ void esp01CleanRxBuffer( void ){
 bool_t esp01SendTPCIPDataToServer( char* url, uint32_t port, char* strData, uint32_t strDataLen ){
 
    // Enviar dato "data" al servidor "url", puerto "port".
-   uartWriteString( UART_DEBUG, ">>>> ===========================================================\r\n" );
+/*   uartWriteString( UART_DEBUG, ">>>> ===========================================================\r\n" );
    uartWriteString( UART_DEBUG,  ">>>> Enviar dato: \"" );
    uartWriteString( UART_DEBUG,  strData );
    uartWriteString( UART_DEBUG, "\"\r\n>>>> al servidor \"" );
@@ -84,7 +84,7 @@ bool_t esp01SendTPCIPDataToServer( char* url, uint32_t port, char* strData, uint
    uartWriteString( UART_DEBUG, "\", puerto \"" );
    uartWriteString( UART_DEBUG, intToString(port) );
    uartWriteString( UART_DEBUG, "\"...\r\n" );
-   uartWriteString( UART_DEBUG,"\r\n");
+   uartWriteString( UART_DEBUG,"\r\n");*/
 
    // AT+CIPSTART="TCP","url",port ---------------------------
    if( !esp01ConnectToServer( url, port ) )
@@ -115,11 +115,11 @@ bool_t esp01SendTCPIPData( char* strData, uint32_t strDataLen ){
    esp01CleanRxBuffer();
 
    // Envio datos TCP/IP al servidor.
-   uartWriteString( UART_DEBUG, ">>>> Envio datos TCP/IP al servidor...\r\n" );
+   /*uartWriteString( UART_DEBUG, ">>>> Envio datos TCP/IP al servidor...\r\n" );
 
    uartWriteString( UART_DEBUG,">>>> AT+CIPSEND=" );
    uartWriteString( UART_DEBUG, intToString(strDataLen) ); // El mas 2 es del \r\n
-   uartWriteString( UART_DEBUG, "\r\n" );
+   uartWriteString( UART_DEBUG, "\r\n" );*/
 
    uartWriteString( UART_ESP01, "AT+CIPSEND=" );
    uartWriteString( UART_ESP01, intToString(strDataLen) ); // El mas 2 es del \r\n
@@ -137,7 +137,7 @@ bool_t esp01SendTCPIPData( char* strData, uint32_t strDataLen ){
    if( retVal ){
 
       // Imprimo todo lo recibido
-      uartWriteString( UART_DEBUG, espResponseBuffer );
+      //uartWriteString( UART_DEBUG, espResponseBuffer );
 
       // strData\r\n --------------------------------------------
 
@@ -225,11 +225,11 @@ bool_t esp01SendNTPData( char* strData, uint32_t strDataLen ){
    esp01CleanRxBuffer();
 
    // Envio datos TCP/IP al servidor.
-   uartWriteString( UART_DEBUG, ">>>> Envio datos UDP al servidor...\r\n" );
+   /*uartWriteString( UART_DEBUG, ">>>> Envio datos UDP al servidor...\r\n" );
 
    uartWriteString( UART_DEBUG,">>>> AT+CIPSEND=" );
    uartWriteString( UART_DEBUG, intToString(strDataLen) ); // El mas 2 es del \r\n
-   uartWriteString( UART_DEBUG, "\r\n" );
+   uartWriteString( UART_DEBUG, "\r\n" );*/
 
    uartWriteString( UART_ESP01, "AT+CIPSEND=" );
    uartWriteString( UART_ESP01, intToString(strDataLen) ); // El mas 2 es del \r\n
@@ -245,7 +245,7 @@ bool_t esp01SendNTPData( char* strData, uint32_t strDataLen ){
    if( retVal ){
 
       // Imprimo todo lo recibido
-      uartWriteString( UART_DEBUG, espResponseBuffer );
+      //uartWriteString( UART_DEBUG, espResponseBuffer );
 
       // strData\r\n --------------------------------------------
 
@@ -256,10 +256,7 @@ bool_t esp01SendNTPData( char* strData, uint32_t strDataLen ){
       // Envio los datos TCP/IP ------------------
       for(i=0;i<strDataLen;i++)
       {    
-        uartWriteByte( UART_ESP01, strData[i] );
-        //uartWriteByte( UART_DEBUG, strData[i] );
-        //uartWriteString( UART_DEBUG, "\r\n" );
-      
+        uartWriteByte( UART_ESP01, strData[i] );        
       }    
       //uartWriteString( UART_ESP01, "\r\n" );
 
@@ -274,7 +271,7 @@ bool_t esp01SendNTPData( char* strData, uint32_t strDataLen ){
             
             //esp01CleanRxBuffer();
             // Habilito todas las interrupciones de UART_USB
-            uartInterrupt(UART_232, true);              
+            //uartInterrupt(UART_232, true);              
           
       } else{
          uartWriteString( UART_DEBUG, ">>>> Error al enviar los datos UDP, en el envio del string\r\n" );
@@ -308,7 +305,7 @@ bool_t esp01ConnectToServer( char* url, uint32_t port ){
    // "receiveBytesUntilReceiveStringOrTimeoutBlocking")
    esp01CleanRxBuffer();
 
-   uartWriteString( UART_DEBUG, ">>>> Conectando al servidor \"" );
+   /*uartWriteString( UART_DEBUG, ">>>> Conectando al servidor \"" );
    uartWriteString( UART_DEBUG, url );
    uartWriteString( UART_DEBUG, "\", puerto \"" );
    uartWriteString( UART_DEBUG, intToString(port) );
@@ -318,7 +315,7 @@ bool_t esp01ConnectToServer( char* url, uint32_t port ){
    uartWriteString( UART_DEBUG, url );
    uartWriteString( UART_DEBUG, "\"," );
    uartWriteString( UART_DEBUG, intToString(port) );
-   uartWriteString( UART_DEBUG, "\r\n" );
+   uartWriteString( UART_DEBUG, "\r\n" );*/
 
    uartWriteString( UART_ESP01, "AT+CIPSTART=\"TCP\",\"" );
    uartWriteString( UART_ESP01,url );
@@ -344,7 +341,7 @@ bool_t esp01ConnectToServer( char* url, uint32_t port ){
       uartWriteString( UART_DEBUG, "\"!!\r\n" );
    }
    // Imprimo todo lo recibido
-   uartWriteString( UART_DEBUG, espResponseBuffer );
+   //uartWriteString( UART_DEBUG, espResponseBuffer );
    return retVal;
 }
 
@@ -361,9 +358,9 @@ bool_t esp01ConnectToWifiAP( char* wiFiSSID, char* wiFiPassword ){
    esp01CleanRxBuffer();
 
    // Conectar a la red Wi-Fi. se envia AT+CWJAP="wiFiSSID","wiFiPassword"
-   uartWriteString( UART_DEBUG, ">>>> Conectando a la red Wi-Fi: \"" );
+   /*uartWriteString( UART_DEBUG, ">>>> Conectando a la red Wi-Fi: \"" );
    uartWriteString( UART_DEBUG, wiFiSSID );
-   uartWriteString( UART_DEBUG, "\"...\r\n" );
+   uartWriteString( UART_DEBUG, "\"...\r\n" );*/
 
    uartWriteString( UART_ESP01, "AT+CWJAP_DEF=\"" );
    uartWriteString( UART_ESP01, wiFiSSID );
@@ -400,7 +397,7 @@ bool_t esp01ConnectToWifiAP( char* wiFiSSID, char* wiFiPassword ){
       index = strstr( (const char*)espResponseBuffer, (const char*)"WIFI CONNECTED" );
       if( index != 0 ){
          // Muestro desde " WIFI CONNECTED" en adelante
-         uartWriteString( UART_DEBUG, index );
+         //uartWriteString( UART_DEBUG, index );
       } else{
          // Muestro todo en caso de error
          uartWriteString( UART_DEBUG,espResponseBuffer );
@@ -515,6 +512,9 @@ bool_t esp01ConnectToServer_UDP(char* url, uint32_t port)
                espResponseBuffer, &espResponseBufferSize,
                10000
             );
+    
+    
+    
     if( !retVal ){
       uartWriteString( UART_DEBUG, ">>>>    Error: No se puede conectar al servidor: \"" );
       uartWriteString( UART_DEBUG, url );
@@ -541,6 +541,7 @@ bool_t esp01DisconnectToServer_UDP(void)
                5000
             );
     
+    if(strstr(espResponseBuffer, "ALREADY CONNECTED") !=NULL ) retVal = true;
     
     if( !retVal ){
       uartWriteString( UART_DEBUG, ">>>>    Error: No se puede desconectar del servidor: \"" );

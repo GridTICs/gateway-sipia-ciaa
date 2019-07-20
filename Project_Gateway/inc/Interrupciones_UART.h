@@ -5,9 +5,8 @@ uint8_t gpioRxBuffer[ UART_MOTE_RX_BUFF_SIZE ];
 uint8_t *punt_rx_gpio;
 uint32_t gpioBuff_cant;
 
-bool_t mandar_paquete;
 bool_t bandera_dato_gpio = false;
-const unsigned int timeout_rx_gpio = 5000;
+const unsigned int timeout_rx_gpio = 3000;
 unsigned int time_rx_gpio_set;
 
 
@@ -15,7 +14,6 @@ void ResetGpioBuff()
 {
     memset( gpioRxBuffer, '\0', sizeof(gpioRxBuffer) );
     punt_rx_gpio = gpioRxBuffer;
-    bandera_dato_gpio = false;
     gpioBuff_cant = 0;
     
 }
@@ -45,20 +43,19 @@ unsigned int time_rx_esp_set;
 //Únicamente utilizado para las funciones del Server NTP
 //Se realiza en un buffer aparte para no tener errores en lo anterior
 // ------- EN UN FUTURO SE PUEDE LLEGAR A OPTIMIZAR SIN NECESIDAD DE VARIABLES NUEVAS ----- //
-char buffer_ntp[100];
-char *punt_ntp;
+
 bool_t bandera_NTP = false;
 
 void INT_ESP_RX()
 {
     //Solo cuando se hace una petición al Server NTP se activa esta bandera
-    if(bandera_NTP)
+    /*if(bandera_NTP)
     {    
         *punt_ntp = uartRxRead(UART_232);
         punt_ntp++;
     }
     else
-    { 
+    { */
         *punt_rx_esp = uartRxRead(UART_232);
         punt_rx_esp++;
         //Solo activamos la bandera si NO se está mandando ningún dato por TCP/IP
@@ -74,5 +71,5 @@ void INT_ESP_RX()
             memset( espRxIntBuffer, '\0', sizeof(espRxIntBuffer) );
             punt_rx_esp = espRxIntBuffer;
         }   
-    }
+    //}
 }

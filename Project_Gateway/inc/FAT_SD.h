@@ -207,7 +207,7 @@ static bool fatFs_Add_Buff(const char *text)
     sprintf (buf, "%s", text);
     
     r = f_puts( buf, &file );
-    if (r < 1)
+    if (f_error(&file))
     {
        uartWriteString( UART_USB, "\r\nERROR AL ESCRIBIR ARCHIVO.\r\n" ); 
        fatFsTestERROR( r );
