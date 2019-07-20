@@ -3,16 +3,28 @@
 // MOTE Rx Buffer
 uint8_t gpioRxBuffer[ UART_MOTE_RX_BUFF_SIZE ];
 uint8_t *punt_rx_gpio;
+uint32_t gpioBuff_cant;
 
 bool_t mandar_paquete;
 bool_t bandera_dato_gpio = false;
 const unsigned int timeout_rx_gpio = 5000;
 unsigned int time_rx_gpio_set;
 
+
+void ResetGpioBuff()
+{
+    memset( gpioRxBuffer, '\0', sizeof(gpioRxBuffer) );
+    punt_rx_gpio = gpioRxBuffer;
+    bandera_dato_gpio = false;
+    gpioBuff_cant = 0;
+    
+}
+
 void INT_GPIO_RX()
 {
     *punt_rx_gpio = uartRxRead(UART_GPIO);
     punt_rx_gpio++;
+    gpioBuff_cant++;
 
     bandera_dato_gpio = true;
     time_rx_gpio_set = tickRead();

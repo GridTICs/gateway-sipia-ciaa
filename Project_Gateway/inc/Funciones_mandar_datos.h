@@ -37,8 +37,7 @@ void Mandar_Uart_TCP()
         if(esp01SendTPCIPDataToServer(servidor_tcpip, atoi(puerto_tcpip), gpioRxBuffer, strlen(gpioRxBuffer))==true)
         {
             uartWriteString(UART_USB,"\r\nPaquete enviado con éxito...\r\n");
-            memset( gpioRxBuffer, '\0', sizeof(gpioRxBuffer) );
-            punt_rx_gpio = gpioRxBuffer;
+            ResetGpioBuff();
         }
         else
         {
@@ -48,8 +47,7 @@ void Mandar_Uart_TCP()
             //Guardo el contenido de gpioRxBuffer en "BUFF.TXT de la tarjeta SD"
             if(fatFs_Add_Buff(gpioRxBuffer))
             {
-                memset( gpioRxBuffer, '\0', sizeof(gpioRxBuffer) );
-                punt_rx_gpio = gpioRxBuffer;
+                ResetGpioBuff();
                 fatFs_Add_Log(sdcardDriveName(), "No hay conexión TCP con el servidor, se guarda el paquete en la SD.");
             }
             else
