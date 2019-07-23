@@ -42,6 +42,8 @@ bool NTP_conection()
 {
 	bool bandera_break = FALSE;
 	int cant=0;
+    
+    uint16_t cantData;
 
 	uint32_t largo=0;
 	uint8_t i=0;
@@ -94,44 +96,14 @@ bool NTP_conection()
     //Envío el paquete correspondiente para pedir la hora actual al servidor NTP
     sendNTPpacket();
     
-    //delay(1000);   
-    //bandera_NTP = false;
-    //uartInterrupt(UART_232, false); 
-    
-     
-    for(j=0;j<100;j++)
-    {
-        delay(10);
-        *punt_ntp = uartRxRead(UART_232);
-        punt_ntp++;
-    }
-    
-    cant_ntp = 100;
-    //espCleanReceivedData(buffer_ntp);
-    
-    /*for(j=0;j<cant_ntp;j++)uartWriteByte(UART_USB,buffer_ntp[j]);
-    
-    while(1);*/
-    
-    uartWriteString(UART_USB, "\r\nLos Datos Son: ");
-    for(j=0;j<cant_ntp;j++)uartWriteByte(UART_USB, buffer_ntp[j]);
-    
-    for(j=0;j<100;j++)
-    {
-        if(band_transp == true)buffer_ntp[j-pos]=buffer_ntp[j]; 
-        
-        if(band_transp == false)
-        {    
-            if(buffer_ntp[j]==58)
-            {    
-                band_transp = true;
-                pos = j+1;    
-            }
-        }    
-    }
-
+    cantData = espCleanReceivedData(espResponseBuffer);
+ 
+ #ifdef PRUEBA   
     uartWriteString(UART_USB, "\r\nLos Datos Ya Trabajados Son: ");
-    for(j=0;j<cant_ntp;j++)uartWriteByte(UART_USB, buffer_ntp[j]);
+    uartWriteByteArray( UART_DEBUG, espResponseBuffer, cantData );
+#endif
+
+    memcpy(buffer_ntp,espResponseBuffer,cantData);
     
     //Cierro la conexión UDP
     esp01DisconnectToServer_UDP();

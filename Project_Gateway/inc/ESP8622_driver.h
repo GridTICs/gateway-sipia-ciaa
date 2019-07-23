@@ -50,7 +50,7 @@ bool_t esp01SendTCPIPData( char* strData, uint32_t strDataLen );
 
 bool_t esp01SendTPCIPDataToServer( char* url, uint32_t port, char* strData, uint32_t strDataLen );
 
-bool_t espCleanReceivedData(char* buffer);
+uint32_t espCleanReceivedData(char* buffer);
 
 bool_t esp01ConnectToServer_UDP(char* addr, uint32_t port);
 
@@ -183,22 +183,31 @@ bool_t esp01SendTCPIPData( char* strData, uint32_t strDataLen ){
 /* +IPD,<id>,<len>:<data>   (No es nuestro caso porque solo tenemos 1 conexión)     */
 /* +IPD,<len>:<data>                                                                */
 
-bool_t espCleanReceivedData(char* buffer)
+uint32_t espCleanReceivedData(char* buffer)
 {
     char *dos_puntos;
+    char *coma;
+    char cant[3];
+    uint32_t cantData;
+    uint16_t cantRcv;
     char buffer_aux[1024];
  
     if(strstr(buffer, "+IPD,")>0)
     {
+                coma = strstr(buffer, ",");
                 dos_puntos = strstr(buffer, ":");
-                strcpy(buffer_aux, (dos_puntos+1));
+                cantData = dos_puntos - coma - 1;
+                strncpy(cant,coma+1,cantData);
+                uartWriteString(UART_USB, cant);
+                cantRcv = atoi(cant);
+                memcpy(buffer_aux, (dos_puntos+1), cantRcv);
                 memset( buffer, '\0', sizeof(buffer) );
-                strcpy(buffer, buffer_aux);
-                return true;
+                memcpy(buffer, buffer_aux, cantRcv);
+                return cantRcv;
     }
     else
     {
-        return false;
+        return 0;
     }    
     
 
@@ -263,15 +272,23 @@ bool_t esp01SendNTPData( char* strData, uint32_t strDataLen ){
       // No poner funciones entre el envio de comando y la espera de respuesta
       retVal = receiveBytesUntilReceiveStringOrTimeoutBlocking(
                   uartEsp01,
-                  "SEND OK", 7,
+                  "SEND OK\r\n\r\n", 12,
                   espResponseBuffer, &espResponseBufferSize,
                   3000
                ); 
       if( retVal ){
             
-            //esp01CleanRxBuffer();
-            // Habilito todas las interrupciones de UART_USB
-            //uartInterrupt(UART_232, true);              
+              
+            esp01CleanRxBuffer();
+            
+            retVal = receiveBytesUntilReceiveStringOrTimeoutBlocking(
+                  uartEsp01,
+                  " ", 1,
+                  espResponseBuffer, &espResponseBufferSize,
+                  1000
+               ); 
+          
+                      
           
       } else{
          uartWriteString( UART_DEBUG, ">>>> Error al enviar los datos UDP, en el envio del string\r\n" );

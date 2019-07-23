@@ -7,7 +7,7 @@ Autor: Lucas Escribano - Rodrigo Gonzalez
 Año: 2014
 
 */
-#define PRUEBA
+//#define PRUEBA
 
 // ************************** INCLUDES *************************************** //
 #include "sapi.h"
