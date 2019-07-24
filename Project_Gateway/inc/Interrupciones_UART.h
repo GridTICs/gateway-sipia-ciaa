@@ -6,7 +6,7 @@ uint8_t *punt_rx_gpio;
 uint32_t gpioBuff_cant;
 
 bool_t bandera_dato_gpio = false;
-const unsigned int timeout_rx_gpio = 1000;
+const unsigned int timeout_rx_gpio = 5000;
 unsigned int time_rx_gpio_set;
 
 

@@ -130,7 +130,7 @@ bool_t esp01SendTCPIPData( char* strData, uint32_t strDataLen ){
                uartEsp01,
                "\r\n\r\nOK\r\n>", 9,
                espResponseBuffer, &espResponseBufferSize,
-               5000
+               2000
             );
     
        
@@ -154,7 +154,7 @@ bool_t esp01SendTCPIPData( char* strData, uint32_t strDataLen ){
                   uartEsp01,
                   "SEND OK\r\n", 9,
                   espResponseBuffer, &espResponseBufferSize,
-                  5000
+                  2000
                );
       if( retVal ){
 
@@ -322,18 +322,6 @@ bool_t esp01ConnectToServer( char* url, uint32_t port ){
    // "receiveBytesUntilReceiveStringOrTimeoutBlocking")
    esp01CleanRxBuffer();
 
-   /*uartWriteString( UART_DEBUG, ">>>> Conectando al servidor \"" );
-   uartWriteString( UART_DEBUG, url );
-   uartWriteString( UART_DEBUG, "\", puerto \"" );
-   uartWriteString( UART_DEBUG, intToString(port) );
-   uartWriteString( UART_DEBUG, "\"...\r\n" );
-
-   uartWriteString( UART_DEBUG, ">>>> AT+CIPSTART=\"TCP\",\"" );
-   uartWriteString( UART_DEBUG, url );
-   uartWriteString( UART_DEBUG, "\"," );
-   uartWriteString( UART_DEBUG, intToString(port) );
-   uartWriteString( UART_DEBUG, "\r\n" );*/
-
    uartWriteString( UART_ESP01, "AT+CIPSTART=\"TCP\",\"" );
    uartWriteString( UART_ESP01,url );
    uartWriteString( UART_ESP01, "\"," );
@@ -348,17 +336,25 @@ bool_t esp01ConnectToServer( char* url, uint32_t port ){
                3000
             );
     
-    if(strstr(espResponseBuffer, "ALREADY CONNECTED") !=NULL ) retVal = true;
+    if(retVal == false)
+    {    
+        if(strstr(espResponseBuffer, "ALREADY CONNECTED") != NULL )
+        {
+            retVal = true;
+        }
+    }
     
-   if( !retVal ){
-      uartWriteString( UART_DEBUG, ">>>>    Error: No se puede conectar al servidor: \"" );
+    if( !retVal ){
+        
+      uartWriteString( UART_DEBUG, ">>>>Error: No se puede conectar al servidor: \"" );
       uartWriteString( UART_DEBUG, url );
       uartWriteString( UART_DEBUG,"\"," );
       uartWriteString( UART_DEBUG, intToString(port) );
       uartWriteString( UART_DEBUG, "\"!!\r\n" );
-   }
+   
+    }
    // Imprimo todo lo recibido
-   //uartWriteString( UART_DEBUG, espResponseBuffer );
+   
    return retVal;
 }
 
