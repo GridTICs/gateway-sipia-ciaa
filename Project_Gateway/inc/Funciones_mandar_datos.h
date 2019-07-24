@@ -82,12 +82,17 @@ void Mandar_Uart_TCP()
 void Mandar_Uart_Gpio()
 {
  
+    uint32_t cantDataIn = 0;
+    
         if(bandera_dato_esp == true && tickRead() - time_rx_esp_set > timeout_rx_esp) //&& bandera_dato_gpio == false)
         {
-            uartWriteString(UART_USB, "\r\nLa cantidad de datos en Buffer es: ");
-            uartWriteString(UART_USB,intToString(strlen(espRxIntBuffer)));
             
-            if(espCleanReceivedData(espRxIntBuffer))
+            cantDataIn = espCleanReceivedData(espRxIntBuffer);
+            
+            uartWriteString(UART_USB, "\r\nLa cantidad de datos en Buffer es: ");
+            uartWriteString(UART_USB,intToString(cantDataIn));
+            
+            if(cantDataIn > 0)
             {
                 uartWriteString(UART_USB, "\r\nEl buffer ha sido limpiado correctamente.\r\n");
             }    
@@ -96,12 +101,13 @@ void Mandar_Uart_Gpio()
                 uartWriteString(UART_USB, "\r\nEl buffer NO ha sido limpiado correctamente.\r\n");
             }    
             uartWriteString(UART_USB, "\r\nEl dato que he recibido es: ");
-            uartWriteString(UART_USB, espRxIntBuffer);
-            uartWriteString(UART_GPIO, espRxIntBuffer);
+            uartWriteByteArray(UART_USB, espRxIntBuffer, cantDataIn);
+            uartWriteByteArray(UART_GPIO, espRxIntBuffer,cantDataIn);
             memset( espRxIntBuffer, '\0', sizeof(espRxIntBuffer) );
             bandera_dato_esp = false;
             //Reinicializamos nuevamente el puntero del buffer para que apunte a la primer dirección del mismo
             punt_rx_esp=espRxIntBuffer; 
+            
         }  
     
 }
