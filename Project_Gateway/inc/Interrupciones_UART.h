@@ -5,6 +5,8 @@ uint8_t gpioRxBuffer[ UART_MOTE_RX_BUFF_SIZE ];
 uint8_t *punt_rx_gpio;
 uint32_t gpioBuff_cant;
 
+uint8_t var_prueba;
+
 bool_t bandera_dato_gpio = false;
 const unsigned int timeout_rx_gpio = 5000;
 unsigned int time_rx_gpio_set;
@@ -20,11 +22,15 @@ void ResetGpioBuff()
 
 void INT_GPIO_RX()
 {
-    *punt_rx_gpio = uartRxRead(UART_GPIO);
-    punt_rx_gpio++;
-    gpioBuff_cant++;
-    bandera_dato_gpio = true;
-    time_rx_gpio_set = tickRead();
+    //*punt_rx_gpio = uartRxRead(UART_GPIO);
+    var_prueba = uartRxRead(UART_GPIO);
+    uartWriteByte(UART_USB, var_prueba);
+    var_prueba = 0;
+    
+    //punt_rx_gpio++;
+    //gpioBuff_cant++;
+    //bandera_dato_gpio = true;
+    //time_rx_gpio_set = tickRead();
         
 }
 

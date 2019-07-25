@@ -8,6 +8,7 @@ Año: 2014
 
 */
 //#define PRUEBA
+#define PRUEBA_INT_UART
 
 // ************************** INCLUDES *************************************** //
 #include "sapi.h"
@@ -42,10 +43,12 @@ int main(void)
     /* Inicializar la UART_USB junto con las interrupciones de Tx y Rx */
     uartConfig(UART_USB, 115200);   
     uartConfig(UART_ESP01, 115200);
-    uartConfig(UART_GPIO, 115200);
+    uartConfig(UART_GPIO, 9600);
     
     gpioWrite( LEDB, ON );
  
+ #ifndef PRUEBA_INT_UART
+    
     uartWriteString(UART_USB, "\r\nLa EDU-CIAA ha sido iniciada correctamente,\r\ny los UART han sido configurados correctamente.\r\n");
  
     // Inicializar LCD de 16x2 (caracteres x lineas) con cada caracter de 5x2 pixeles
@@ -168,7 +171,9 @@ int main(void)
     punt_rx_esp = espRxIntBuffer;
    
     esp01ConnectToServer(servidor_tcpip, atoi(puerto_tcpip));
-   
+ 
+ #endif
+ 
     uartWriteString(UART_USB, "\r\nActivando las interrupciones del GPIO...\r\n");
     //Activo las interrupciones del UART_GPIO para que guarde las variables que llegan...
     uartCallbackSet(UART_GPIO, UART_RECEIVE, INT_GPIO_RX, NULL);
@@ -196,7 +201,9 @@ int main(void)
     
     while(1)
     {     
-               
+ 
+#ifndef PRUEBA_INT_UART
+        
         Mandar_Uart_TCP();
         
         Mandar_Uart_Gpio();
@@ -237,6 +244,7 @@ int main(void)
                 }
                 break;
         }
+#endif
         
         sleepUntilNextInterrupt(); 
    }
