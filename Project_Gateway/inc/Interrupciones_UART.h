@@ -6,6 +6,7 @@ enum ESTADOS_INT {
   ENVIANDO_TRAMA  
 }; 
 
+
 // MOTE Rx Buffer
 uint8_t gpioRxBuffer[ UART_MOTE_RX_BUFF_SIZE ];
 //Puntero al buffer
@@ -80,4 +81,11 @@ void INT_ESP_RX()
         bandera_dato_esp = true;
         time_rx_esp_set = tickRead();
 
+}
+
+//Interrupcion TIMER
+
+void myIntTick()
+{
+     uartWriteString(UART_USB, "\r\nEstoy en la interrupcion de TICK.\r\n");   
 }

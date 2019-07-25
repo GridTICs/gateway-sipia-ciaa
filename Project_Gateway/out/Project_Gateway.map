@@ -2099,20 +2099,14 @@ Discarded input sections
  .text          0x00000000        0x0 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
  .data          0x00000000        0x0 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
  .bss           0x00000000        0x0 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
- .text.Timer_Init
-                0x00000000      0x110 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
  .text.Timer_DeInit
                 0x00000000       0x40 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
- .text.Timer_microsecondsToTicks
-                0x00000000        0x8 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
  .text.Timer_EnableCompareMatch
                 0x00000000       0x38 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
  .text.Timer_DisableCompareMatch
                 0x00000000       0x44 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
  .text.Timer_SetCompareMatch
                 0x00000000       0x18 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
- .rodata.timer_sd
-                0x00000000       0x30 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
  .debug_macro   0x00000000      0xa60 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
  .debug_macro   0x00000000       0x22 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
  .debug_macro   0x00000000       0x4f Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
@@ -10774,23 +10768,10 @@ Discarded input sections
  .text          0x00000000        0x0 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
  .data          0x00000000        0x0 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
  .bss           0x00000000        0x0 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
- .text.Chip_TIMER_GetClockIndex
-                0x00000000       0x2c Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
- .text.Chip_TIMER_Init
-                0x00000000        0xc Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
  .text.Chip_TIMER_DeInit
                 0x00000000        0xc Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
- .text.Chip_TIMER_Reset
-                0x00000000       0x18 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
  .text.Chip_TIMER_ExtMatchControlSet
                 0x00000000       0x26 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
- .debug_info    0x00000000      0x55f Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
- .debug_abbrev  0x00000000      0x1a9 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
- .debug_loc     0x00000000      0x14b Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
- .debug_aranges
-                0x00000000       0x40 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
- .debug_ranges  0x00000000       0x30 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
- .debug_macro   0x00000000      0x30b Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
  .debug_macro   0x00000000      0xa60 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
  .debug_macro   0x00000000       0x10 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
  .debug_macro   0x00000000       0x22 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
@@ -10845,12 +10826,6 @@ Discarded input sections
  .debug_macro   0x00000000       0x18 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
  .debug_macro   0x00000000       0x22 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
  .debug_macro   0x00000000       0x40 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
- .debug_line    0x00000000      0x6e5 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
- .debug_str     0x00000000    0x157b0 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
- .comment       0x00000000       0x7f Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
- .debug_frame   0x00000000       0x80 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
- .ARM.attributes
-                0x00000000       0x39 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
  .group         0x00000000        0xc Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/adc_18xx_43xx.o
  .group         0x00000000        0xc Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/adc_18xx_43xx.o
  .group         0x00000000        0xc Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/adc_18xx_43xx.o
@@ -14267,7 +14242,7 @@ END GROUP
  *(.rodata.$Flash2*)
  *(.rodata.$MFlashB512*)
 
-.text           0x1a000000     0x24d4
+.text           0x1a000000     0x26bc
  FILL mask 0xff
                 0x1a000000                __vectors_start__ = ABSOLUTE (.)
  *(.isr_vector)
@@ -14276,24 +14251,24 @@ END GROUP
                 0x1a000114                . = ALIGN (0x4)
                 0x1a000114                __section_table_start = .
                 0x1a000114                __data_section_table = .
-                0x1a000114        0x4 LONG 0x1a0024dc LOADADDR (.data)
+                0x1a000114        0x4 LONG 0x1a0026c4 LOADADDR (.data)
                 0x1a000118        0x4 LONG 0x10000000 ADDR (.data)
-                0x1a00011c        0x4 LONG 0x118 SIZEOF (.data)
-                0x1a000120        0x4 LONG 0x1a0024dc LOADADDR (.data_RAM2)
+                0x1a00011c        0x4 LONG 0x11c SIZEOF (.data)
+                0x1a000120        0x4 LONG 0x1a0026c4 LOADADDR (.data_RAM2)
                 0x1a000124        0x4 LONG 0x10080000 ADDR (.data_RAM2)
                 0x1a000128        0x4 LONG 0x0 SIZEOF (.data_RAM2)
-                0x1a00012c        0x4 LONG 0x1a0024dc LOADADDR (.data_RAM3)
+                0x1a00012c        0x4 LONG 0x1a0026c4 LOADADDR (.data_RAM3)
                 0x1a000130        0x4 LONG 0x20000000 ADDR (.data_RAM3)
                 0x1a000134        0x4 LONG 0x0 SIZEOF (.data_RAM3)
-                0x1a000138        0x4 LONG 0x1a0024dc LOADADDR (.data_RAM4)
+                0x1a000138        0x4 LONG 0x1a0026c4 LOADADDR (.data_RAM4)
                 0x1a00013c        0x4 LONG 0x20008000 ADDR (.data_RAM4)
                 0x1a000140        0x4 LONG 0x0 SIZEOF (.data_RAM4)
-                0x1a000144        0x4 LONG 0x1a0024dc LOADADDR (.data_RAM5)
+                0x1a000144        0x4 LONG 0x1a0026c4 LOADADDR (.data_RAM5)
                 0x1a000148        0x4 LONG 0x2000c000 ADDR (.data_RAM5)
                 0x1a00014c        0x4 LONG 0x0 SIZEOF (.data_RAM5)
                 0x1a000150                __data_section_table_end = .
                 0x1a000150                __bss_section_table = .
-                0x1a000150        0x4 LONG 0x10000118 ADDR (.bss)
+                0x1a000150        0x4 LONG 0x10000120 ADDR (.bss)
                 0x1a000154        0x4 LONG 0x13d8 SIZEOF (.bss)
                 0x1a000158        0x4 LONG 0x10080000 ADDR (.bss_RAM2)
                 0x1a00015c        0x4 LONG 0x0 SIZEOF (.bss_RAM2)
@@ -14370,390 +14345,412 @@ END GROUP
                 0x1a000300                PROVIDE (__CRP_WORD_END__, .)
                 0x00000001                ASSERT (! ((__CRP_WORD_START__ == __CRP_WORD_END__)), Linker CRP Enabled, but no CRP_WORD provided within application)
  *(.text*)
+ .text.myIntTick
+                0x1a000300       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+                0x1a000300                myIntTick
  .text.INT_ESP_RX
-                0x1a000300       0x30 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
-                0x1a000300                INT_ESP_RX
+                0x1a000310       0x30 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+                0x1a000310                INT_ESP_RX
  .text.LCD_Estado
-                0x1a000330       0x20 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
-                0x1a000330                LCD_Estado
+                0x1a000340       0x20 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+                0x1a000340                LCD_Estado
  .text.ResetGpioBuff
-                0x1a000350       0x3c Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
-                0x1a000350                ResetGpioBuff
+                0x1a000360       0x3c Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+                0x1a000360                ResetGpioBuff
  .text.INT_GPIO_RX
-                0x1a00038c       0xa4 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
-                0x1a00038c                INT_GPIO_RX
- .text.main     0x1a000430       0xa4 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
-                0x1a000430                main
+                0x1a00039c       0xa4 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+                0x1a00039c                INT_GPIO_RX
+ .text.main     0x1a000440       0xbc Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+                0x1a000440                main
  .text.sleepUntilNextInterrupt
-                0x1a0004d4        0x4 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_sleep.o
-                0x1a0004d4                sleepUntilNextInterrupt
+                0x1a0004fc        0x4 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_sleep.o
+                0x1a0004fc                sleepUntilNextInterrupt
  .text.cyclesCounterInit
-                0x1a0004d8       0x1c Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
-                0x1a0004d8                cyclesCounterInit
+                0x1a000500       0x1c Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
+                0x1a000500                cyclesCounterInit
  .text.gpioObtainPinInit
-                0x1a0004f4       0x34 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
+                0x1a00051c       0x34 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
  .text.gpioInit
-                0x1a000528      0x194 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
-                0x1a000528                gpioInit
+                0x1a000550      0x194 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
+                0x1a000550                gpioInit
  .text.gpioWrite
-                0x1a0006bc       0x56 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
-                0x1a0006bc                gpioWrite
+                0x1a0006e4       0x56 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
+                0x1a0006e4                gpioWrite
  .text.errorOcurred
-                0x1a000712        0x2 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
+                0x1a00073a        0x2 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
  .text.doNothing
-                0x1a000714        0x2 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
- *fill*         0x1a000716        0x2 ff
+                0x1a00073c        0x2 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
+ *fill*         0x1a00073e        0x2 ff
+ .text.Timer_Init
+                0x1a000740      0x110 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
+                0x1a000740                Timer_Init
+ .text.Timer_microsecondsToTicks
+                0x1a000850        0x8 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
+                0x1a000850                Timer_microsecondsToTicks
  .text.TIMER0_IRQHandler
-                0x1a000718       0x40 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
-                0x1a000718                TIMER0_IRQHandler
+                0x1a000858       0x40 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
+                0x1a000858                TIMER0_IRQHandler
  .text.TIMER1_IRQHandler
-                0x1a000758       0x40 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
-                0x1a000758                TIMER1_IRQHandler
+                0x1a000898       0x40 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
+                0x1a000898                TIMER1_IRQHandler
  .text.TIMER2_IRQHandler
-                0x1a000798       0x44 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
-                0x1a000798                TIMER2_IRQHandler
+                0x1a0008d8       0x44 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
+                0x1a0008d8                TIMER2_IRQHandler
  .text.TIMER3_IRQHandler
-                0x1a0007dc       0x44 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
-                0x1a0007dc                TIMER3_IRQHandler
+                0x1a00091c       0x44 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
+                0x1a00091c                TIMER3_IRQHandler
  .text.tickRead
-                0x1a000820        0xc Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
-                0x1a000820                tickRead
+                0x1a000960        0xc Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
+                0x1a000960                tickRead
  .text.tickPowerSet
-                0x1a00082c       0x18 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
-                0x1a00082c                tickPowerSet
+                0x1a00096c       0x18 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
+                0x1a00096c                tickPowerSet
  .text.tickInit
-                0x1a000844       0x7c Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
-                0x1a000844                tickInit
+                0x1a000984       0x7c Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
+                0x1a000984                tickInit
  .text.SysTick_Handler
-                0x1a0008c0       0x34 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
-                0x1a0008c0                SysTick_Handler
+                0x1a000a00       0x34 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
+                0x1a000a00                SysTick_Handler
  .text.uartProcessIRQ
-                0x1a0008f4       0xa4 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+                0x1a000a34       0xa4 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
  .text.uartInterrupt
-                0x1a000998       0x80 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
-                0x1a000998                uartInterrupt
+                0x1a000ad8       0x80 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+                0x1a000ad8                uartInterrupt
  .text.uartCallbackSet
-                0x1a000a18       0x8c Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
-                0x1a000a18                uartCallbackSet
+                0x1a000b58       0x8c Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+                0x1a000b58                uartCallbackSet
  .text.uartTxReady
-                0x1a000aa4       0x18 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
-                0x1a000aa4                uartTxReady
+                0x1a000be4       0x18 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+                0x1a000be4                uartTxReady
  .text.uartRxRead
-                0x1a000abc       0x14 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
-                0x1a000abc                uartRxRead
+                0x1a000bfc       0x14 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+                0x1a000bfc                uartRxRead
  .text.uartTxWrite
-                0x1a000ad0       0x14 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
-                0x1a000ad0                uartTxWrite
+                0x1a000c10       0x14 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+                0x1a000c10                uartTxWrite
  .text.uartInit
-                0x1a000ae4       0x7c Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
-                0x1a000ae4                uartInit
+                0x1a000c24       0x7c Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+                0x1a000c24                uartInit
  .text.uartWriteByte
-                0x1a000b60       0x1a Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
-                0x1a000b60                uartWriteByte
+                0x1a000ca0       0x1a Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+                0x1a000ca0                uartWriteByte
  .text.uartWriteString
-                0x1a000b7a       0x18 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
-                0x1a000b7a                uartWriteString
+                0x1a000cba       0x18 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+                0x1a000cba                uartWriteString
  .text.uartWriteByteArray
-                0x1a000b92       0x1c Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
-                0x1a000b92                uartWriteByteArray
+                0x1a000cd2       0x1c Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+                0x1a000cd2                uartWriteByteArray
  .text.UART2_IRQHandler
-                0x1a000bae        0xa Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
-                0x1a000bae                UART2_IRQHandler
+                0x1a000cee        0xa Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+                0x1a000cee                UART2_IRQHandler
  .text.UART3_IRQHandler
-                0x1a000bb8        0xa Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
-                0x1a000bb8                UART3_IRQHandler
- *fill*         0x1a000bc2        0x2 ff
+                0x1a000cf8        0xa Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+                0x1a000cf8                UART3_IRQHandler
+ *fill*         0x1a000d02        0x2 ff
  .text.USB0_IRQHandler
-                0x1a000bc4       0x1c Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
-                0x1a000bc4                USB0_IRQHandler
+                0x1a000d04       0x1c Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
+                0x1a000d04                USB0_IRQHandler
  .text.boardInit
-                0x1a000be0       0xf4 Project_Gateway/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
-                0x1a000be0                boardInit
+                0x1a000d20       0xf4 Project_Gateway/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
+                0x1a000d20                boardInit
  .text.delayInaccurateUs
-                0x1a000cd4       0x68 Project_Gateway/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
-                0x1a000cd4                delayInaccurateUs
- .text.delay    0x1a000d3c       0x38 Project_Gateway/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
-                0x1a000d3c                delay
+                0x1a000e14       0x68 Project_Gateway/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
+                0x1a000e14                delayInaccurateUs
+ .text.delay    0x1a000e7c       0x38 Project_Gateway/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
+                0x1a000e7c                delay
  .text.clearInterrupt
-                0x1a000d74       0x10 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_ultrasonic_hcsr04.o
+                0x1a000eb4       0x10 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_ultrasonic_hcsr04.o
  .text.serveInterrupt
-                0x1a000d84       0x5c Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_ultrasonic_hcsr04.o
+                0x1a000ec4       0x5c Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_ultrasonic_hcsr04.o
  .text.GPIO0_IRQHandler
-                0x1a000de0        0xa Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_ultrasonic_hcsr04.o
-                0x1a000de0                GPIO0_IRQHandler
+                0x1a000f20        0xa Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_ultrasonic_hcsr04.o
+                0x1a000f20                GPIO0_IRQHandler
  .text.GPIO1_IRQHandler
-                0x1a000dea        0xa Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_ultrasonic_hcsr04.o
-                0x1a000dea                GPIO1_IRQHandler
+                0x1a000f2a        0xa Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_ultrasonic_hcsr04.o
+                0x1a000f2a                GPIO1_IRQHandler
  .text.GPIO2_IRQHandler
-                0x1a000df4        0xa Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_ultrasonic_hcsr04.o
-                0x1a000df4                GPIO2_IRQHandler
+                0x1a000f34        0xa Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_ultrasonic_hcsr04.o
+                0x1a000f34                GPIO2_IRQHandler
  .text.lcdSendNibble
-                0x1a000dfe       0x2e Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_lcd.o
+                0x1a000f3e       0x2e Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_lcd.o
  .text.lcdEnablePulse
-                0x1a000e2c       0x1c Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_lcd.o
+                0x1a000f6c       0x1c Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_lcd.o
  .text.lcdCommand
-                0x1a000e48       0x38 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_lcd.o
-                0x1a000e48                lcdCommand
- .text.lcdData  0x1a000e80       0x30 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_lcd.o
-                0x1a000e80                lcdData
+                0x1a000f88       0x38 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_lcd.o
+                0x1a000f88                lcdCommand
+ .text.lcdData  0x1a000fc0       0x30 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_lcd.o
+                0x1a000fc0                lcdData
  .text.lcdGoToXY
-                0x1a000eb0       0x34 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_lcd.o
-                0x1a000eb0                lcdGoToXY
+                0x1a000ff0       0x34 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_lcd.o
+                0x1a000ff0                lcdGoToXY
  .text.lcdClear
-                0x1a000ee4       0x12 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_lcd.o
-                0x1a000ee4                lcdClear
+                0x1a001024       0x12 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_lcd.o
+                0x1a001024                lcdClear
  .text.lcdSendStringRaw
-                0x1a000ef6       0x18 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_lcd.o
-                0x1a000ef6                lcdSendStringRaw
- *fill*         0x1a000f0e        0x2 ff
+                0x1a001036       0x18 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_lcd.o
+                0x1a001036                lcdSendStringRaw
+ *fill*         0x1a00104e        0x2 ff
  .text.Board_SetupMuxing
-                0x1a000f10       0x38 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board_sysinit.o
-                0x1a000f10                Board_SetupMuxing
+                0x1a001050       0x38 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board_sysinit.o
+                0x1a001050                Board_SetupMuxing
  .text.Board_SetupClocking
-                0x1a000f48       0x6c Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board_sysinit.o
-                0x1a000f48                Board_SetupClocking
+                0x1a001088       0x6c Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board_sysinit.o
+                0x1a001088                Board_SetupClocking
  .text.Board_SystemInit
-                0x1a000fb4        0xc Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board_sysinit.o
-                0x1a000fb4                Board_SystemInit
+                0x1a0010f4        0xc Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board_sysinit.o
+                0x1a0010f4                Board_SystemInit
  .text.SystemInit
-                0x1a000fc0       0x1c Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/sysinit.o
-                0x1a000fc0                SystemInit
+                0x1a001100       0x1c Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/sysinit.o
+                0x1a001100                SystemInit
  .text.Board_LED_Init
-                0x1a000fdc       0x44 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
+                0x1a00111c       0x44 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
  .text.Board_TEC_Init
-                0x1a001020       0x40 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
+                0x1a001160       0x40 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
  .text.Board_GPIO_Init
-                0x1a001060       0x40 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
+                0x1a0011a0       0x40 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
  .text.Board_SPI_Init
-                0x1a0010a0       0x38 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
+                0x1a0011e0       0x38 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
  .text.Board_I2C_Init
-                0x1a0010d8       0x24 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
+                0x1a001218       0x24 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
  .text.Board_ADC_Init
-                0x1a0010fc       0x30 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
+                0x1a00123c       0x30 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
  .text.Board_Debug_Init
-                0x1a00112c       0x24 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
-                0x1a00112c                Board_Debug_Init
+                0x1a00126c       0x24 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
+                0x1a00126c                Board_Debug_Init
  .text.Board_Init
-                0x1a001150       0x2c Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
-                0x1a001150                Board_Init
+                0x1a001290       0x2c Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
+                0x1a001290                Board_Init
  .text.Chip_SSP_GetClockIndex
-                0x1a00117c       0x14 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/ssp_18xx_43xx.o
+                0x1a0012bc       0x14 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/ssp_18xx_43xx.o
  .text.Chip_SSP_GetPeriphClockIndex
-                0x1a001190       0x18 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/ssp_18xx_43xx.o
+                0x1a0012d0       0x18 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/ssp_18xx_43xx.o
  .text.Chip_SSP_SetClockRate
-                0x1a0011a8       0x12 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/ssp_18xx_43xx.o
-                0x1a0011a8                Chip_SSP_SetClockRate
+                0x1a0012e8       0x12 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/ssp_18xx_43xx.o
+                0x1a0012e8                Chip_SSP_SetClockRate
  .text.Chip_SSP_SetBitRate
-                0x1a0011ba       0x3e Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/ssp_18xx_43xx.o
-                0x1a0011ba                Chip_SSP_SetBitRate
+                0x1a0012fa       0x3e Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/ssp_18xx_43xx.o
+                0x1a0012fa                Chip_SSP_SetBitRate
  .text.Chip_SSP_Init
-                0x1a0011f8       0x38 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/ssp_18xx_43xx.o
-                0x1a0011f8                Chip_SSP_Init
+                0x1a001338       0x38 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/ssp_18xx_43xx.o
+                0x1a001338                Chip_SSP_Init
  .text.Chip_GPIO_Init
-                0x1a001230        0x2 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/gpio_18xx_43xx.o
-                0x1a001230                Chip_GPIO_Init
- *fill*         0x1a001232        0x2 ff
- .text.fpuInit  0x1a001234       0x54 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/fpu_init.o
-                0x1a001234                fpuInit
+                0x1a001370        0x2 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/gpio_18xx_43xx.o
+                0x1a001370                Chip_GPIO_Init
+ *fill*         0x1a001372        0x2 ff
+ .text.fpuInit  0x1a001374       0x54 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/fpu_init.o
+                0x1a001374                fpuInit
+ .text.Chip_TIMER_GetClockIndex
+                0x1a0013c8       0x2c Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
+ .text.Chip_TIMER_Init
+                0x1a0013f4        0xc Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
+                0x1a0013f4                Chip_TIMER_Init
+ .text.Chip_TIMER_Reset
+                0x1a001400       0x18 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
+                0x1a001400                Chip_TIMER_Reset
  .text.Chip_ADC_GetClockIndex
-                0x1a001288       0x14 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x1a001418       0x14 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/adc_18xx_43xx.o
  .text.getClkDiv
-                0x1a00129c       0x32 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/adc_18xx_43xx.o
- *fill*         0x1a0012ce        0x2 ff
+                0x1a00142c       0x32 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/adc_18xx_43xx.o
+ *fill*         0x1a00145e        0x2 ff
  .text.Chip_ADC_Init
-                0x1a0012d0       0x40 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/adc_18xx_43xx.o
-                0x1a0012d0                Chip_ADC_Init
+                0x1a001460       0x40 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x1a001460                Chip_ADC_Init
  .text.Chip_ADC_SetSampleRate
-                0x1a001310       0x32 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/adc_18xx_43xx.o
-                0x1a001310                Chip_ADC_SetSampleRate
+                0x1a0014a0       0x32 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x1a0014a0                Chip_ADC_SetSampleRate
  .text.Chip_ADC_SetResolution
-                0x1a001342        0xc Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/adc_18xx_43xx.o
-                0x1a001342                Chip_ADC_SetResolution
- *fill*         0x1a00134e        0x2 ff
+                0x1a0014d2        0xc Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x1a0014d2                Chip_ADC_SetResolution
+ *fill*         0x1a0014de        0x2 ff
  .text.Chip_SetupCoreClock
-                0x1a001350      0x154 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/sysinit_18xx_43xx.o
-                0x1a001350                Chip_SetupCoreClock
+                0x1a0014e0      0x154 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+                0x1a0014e0                Chip_SetupCoreClock
  .text.pll_calc_divs
-                0x1a0014a4       0xa4 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a001634       0xa4 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
  .text.pll_get_frac
-                0x1a001548      0x10c Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a0016d8      0x10c Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
  .text.Chip_Clock_FindBaseClock
-                0x1a001654       0x4c Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a0017e4       0x4c Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
  .text.Chip_Clock_EnableCrystal
-                0x1a0016a0       0x4c Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x1a0016a0                Chip_Clock_EnableCrystal
+                0x1a001830       0x4c Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a001830                Chip_Clock_EnableCrystal
  .text.Chip_Clock_GetDividerSource
-                0x1a0016ec       0x1c Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x1a0016ec                Chip_Clock_GetDividerSource
+                0x1a00187c       0x1c Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a00187c                Chip_Clock_GetDividerSource
  .text.Chip_Clock_GetDividerDivisor
-                0x1a001708       0x1c Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x1a001708                Chip_Clock_GetDividerDivisor
+                0x1a001898       0x1c Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a001898                Chip_Clock_GetDividerDivisor
  .text.Chip_Clock_GetClockInputHz
-                0x1a001724       0xb8 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x1a001724                Chip_Clock_GetClockInputHz
+                0x1a0018b4       0xb8 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a0018b4                Chip_Clock_GetClockInputHz
  .text.Chip_Clock_CalcMainPLLValue
-                0x1a0017dc       0x80 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x1a0017dc                Chip_Clock_CalcMainPLLValue
+                0x1a00196c       0x80 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a00196c                Chip_Clock_CalcMainPLLValue
  .text.Chip_Clock_GetMainPLLHz
-                0x1a00185c       0x6c Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x1a00185c                Chip_Clock_GetMainPLLHz
+                0x1a0019ec       0x6c Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a0019ec                Chip_Clock_GetMainPLLHz
  .text.Chip_Clock_GetDivRate
-                0x1a0018c8       0x22 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
- *fill*         0x1a0018ea        0x2 ff
+                0x1a001a58       0x22 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
+ *fill*         0x1a001a7a        0x2 ff
  .text.Chip_Clock_SetBaseClock
-                0x1a0018ec       0x58 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x1a0018ec                Chip_Clock_SetBaseClock
+                0x1a001a7c       0x58 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a001a7c                Chip_Clock_SetBaseClock
  .text.Chip_Clock_GetBaseClock
-                0x1a001944       0x26 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x1a001944                Chip_Clock_GetBaseClock
+                0x1a001ad4       0x26 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a001ad4                Chip_Clock_GetBaseClock
  .text.Chip_Clock_GetBaseClocktHz
-                0x1a00196a        0xc Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x1a00196a                Chip_Clock_GetBaseClocktHz
- *fill*         0x1a001976        0x2 ff
+                0x1a001afa        0xc Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a001afa                Chip_Clock_GetBaseClocktHz
+ *fill*         0x1a001b06        0x2 ff
  .text.Chip_Clock_EnableOpts
-                0x1a001978       0x3c Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x1a001978                Chip_Clock_EnableOpts
+                0x1a001b08       0x3c Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a001b08                Chip_Clock_EnableOpts
  .text.Chip_Clock_Enable
-                0x1a0019b4       0x34 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x1a0019b4                Chip_Clock_Enable
+                0x1a001b44       0x34 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a001b44                Chip_Clock_Enable
  .text.Chip_Clock_GetRate
-                0x1a0019e8       0x4c Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
-                0x1a0019e8                Chip_Clock_GetRate
+                0x1a001b78       0x4c Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a001b78                Chip_Clock_GetRate
  .text.SystemCoreClockUpdate
-                0x1a001a34       0x14 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/chip_18xx_43xx.o
-                0x1a001a34                SystemCoreClockUpdate
+                0x1a001bc4       0x14 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/chip_18xx_43xx.o
+                0x1a001bc4                SystemCoreClockUpdate
  .text.Chip_UART_GetIndex
-                0x1a001a48       0x2c Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/uart_18xx_43xx.o
+                0x1a001bd8       0x2c Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/uart_18xx_43xx.o
  .text.Chip_UART_Init
-                0x1a001a74       0x54 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/uart_18xx_43xx.o
-                0x1a001a74                Chip_UART_Init
+                0x1a001c04       0x54 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/uart_18xx_43xx.o
+                0x1a001c04                Chip_UART_Init
  .text.Chip_UART_SetBaud
-                0x1a001ac8       0x40 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/uart_18xx_43xx.o
-                0x1a001ac8                Chip_UART_SetBaud
+                0x1a001c58       0x40 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/uart_18xx_43xx.o
+                0x1a001c58                Chip_UART_SetBaud
  .text.Chip_UART_SetBaudFDR
-                0x1a001b08       0xe8 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/uart_18xx_43xx.o
-                0x1a001b08                Chip_UART_SetBaudFDR
+                0x1a001c98       0xe8 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/uart_18xx_43xx.o
+                0x1a001c98                Chip_UART_SetBaudFDR
  .text.Chip_I2C_EventHandler
-                0x1a001bf0       0x20 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/i2c_18xx_43xx.o
-                0x1a001bf0                Chip_I2C_EventHandler
+                0x1a001d80       0x20 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/i2c_18xx_43xx.o
+                0x1a001d80                Chip_I2C_EventHandler
  .text.Chip_I2C_Init
-                0x1a001c10       0x24 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/i2c_18xx_43xx.o
-                0x1a001c10                Chip_I2C_Init
+                0x1a001da0       0x24 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/i2c_18xx_43xx.o
+                0x1a001da0                Chip_I2C_Init
  .text.Chip_I2C_SetClockRate
-                0x1a001c34       0x38 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/i2c_18xx_43xx.o
-                0x1a001c34                Chip_I2C_SetClockRate
+                0x1a001dc4       0x38 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/i2c_18xx_43xx.o
+                0x1a001dc4                Chip_I2C_SetClockRate
  .text.ResetISR
-                0x1a001c6c       0x84 Project_Gateway/out/libs/vendor_libs/lpc_startup/src/cr_startup_lpc43xx.o
-                0x1a001c6c                ResetISR
- .text._init    0x1a001cf0        0x2 Project_Gateway/out/libs/vendor_libs/lpc_startup/src/cr_startup_lpc43xx.o
-                0x1a001cf0                _init
- *fill*         0x1a001cf2        0x2 ff
- .text          0x1a001cf4       0x30 c:/ciaa_suite/usr/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_aeabi_uldivmod.o)
-                0x1a001cf4                __aeabi_uldivmod
- .text          0x1a001d24      0x2cc c:/ciaa_suite/usr/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_udivmoddi4.o)
-                0x1a001d24                __udivmoddi4
- .text          0x1a001ff0        0x4 c:/ciaa_suite/usr/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_dvmd_tls.o)
-                0x1a001ff0                __aeabi_idiv0
-                0x1a001ff0                __aeabi_ldiv0
+                0x1a001dfc       0x84 Project_Gateway/out/libs/vendor_libs/lpc_startup/src/cr_startup_lpc43xx.o
+                0x1a001dfc                ResetISR
+ .text._init    0x1a001e80        0x2 Project_Gateway/out/libs/vendor_libs/lpc_startup/src/cr_startup_lpc43xx.o
+                0x1a001e80                _init
+ *fill*         0x1a001e82        0x2 ff
+ .text          0x1a001e84       0x30 c:/ciaa_suite/usr/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_aeabi_uldivmod.o)
+                0x1a001e84                __aeabi_uldivmod
+ .text          0x1a001eb4      0x2cc c:/ciaa_suite/usr/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_udivmoddi4.o)
+                0x1a001eb4                __udivmoddi4
+ .text          0x1a002180        0x4 c:/ciaa_suite/usr/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_dvmd_tls.o)
+                0x1a002180                __aeabi_idiv0
+                0x1a002180                __aeabi_ldiv0
  .text.__libc_init_array
-                0x1a001ff4       0x48 c:/ciaa_suite/usr/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-init.o)
-                0x1a001ff4                __libc_init_array
- .text.memset   0x1a00203c       0x10 c:/ciaa_suite/usr/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memset.o)
-                0x1a00203c                memset
+                0x1a002184       0x48 c:/ciaa_suite/usr/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-init.o)
+                0x1a002184                __libc_init_array
+ .text.memset   0x1a0021cc       0x10 c:/ciaa_suite/usr/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memset.o)
+                0x1a0021cc                memset
  *(.rodata .rodata.* .constdata .constdata.*)
  .rodata.esp8266_mode.str1.4
-                0x1a00204c       0x6a Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- *fill*         0x1a0020b6        0x2 ff
+                0x1a0021dc       0x6a Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ *fill*         0x1a002246        0x2 ff
  .rodata.main.str1.4
-                0x1a0020b8       0x5d Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- *fill*         0x1a002115        0x3 ff
+                0x1a002248       0x5d Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ *fill*         0x1a0022a5        0x3 ff
+ .rodata.myIntTick.str1.4
+                0x1a0022a8       0x26 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ *fill*         0x1a0022ce        0x2 ff
  .rodata.str1.4
-                0x1a002118       0xb9 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+                0x1a0022d0       0xb9 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
                                  0xbd (size before relaxing)
- *fill*         0x1a0021d1        0x3 ff
+ *fill*         0x1a002389        0x3 ff
  .rodata.gpioPinsInit
-                0x1a0021d4      0x136 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
-                0x1a0021d4                gpioPinsInit
- *fill*         0x1a00230a        0x2 ff
+                0x1a00238c      0x136 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
+                0x1a00238c                gpioPinsInit
+ *fill*         0x1a0024c2        0x2 ff
+ .rodata.timer_sd
+                0x1a0024c4       0x30 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
  .rodata.lpcUarts
-                0x1a00230c       0x48 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+                0x1a0024f4       0x48 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
  .rodata.ultrasonicSensorsIrqMap
-                0x1a002354        0x3 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_ultrasonic_hcsr04.o
- *fill*         0x1a002357        0x1 ff
- .rodata        0x1a002358        0x4 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_lcd.o
+                0x1a00253c        0x3 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_ultrasonic_hcsr04.o
+ *fill*         0x1a00253f        0x1 ff
+ .rodata        0x1a002540        0x4 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_lcd.o
  .rodata.InitClkStates
-                0x1a00235c        0x4 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board_sysinit.o
+                0x1a002544        0x4 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board_sysinit.o
  .rodata.pinmuxing
-                0x1a002360       0x74 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board_sysinit.o
+                0x1a002548       0x74 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board_sysinit.o
  .rodata.ExtRateIn
-                0x1a0023d4        0x4 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
-                0x1a0023d4                ExtRateIn
+                0x1a0025bc        0x4 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
+                0x1a0025bc                ExtRateIn
  .rodata.GpioButtons
-                0x1a0023d8        0x8 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
+                0x1a0025c0        0x8 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
  .rodata.GpioLeds
-                0x1a0023e0        0xc Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
+                0x1a0025c8        0xc Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
  .rodata.GpioPorts
-                0x1a0023ec       0x12 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
- *fill*         0x1a0023fe        0x2 ff
+                0x1a0025d4       0x12 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
+ *fill*         0x1a0025e6        0x2 ff
  .rodata.OscRateIn
-                0x1a002400        0x4 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
-                0x1a002400                OscRateIn
+                0x1a0025e8        0x4 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
+                0x1a0025e8                OscRateIn
  .rodata.InitClkStates
-                0x1a002404       0x48 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/sysinit_18xx_43xx.o
- .rodata        0x1a00244c        0x4 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a0025ec       0x48 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+ .rodata        0x1a002634        0x4 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
  .rodata.Chip_Clock_SetDivider.str1.4
-                0x1a002450        0x8 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a002638        0x8 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
                                   0x6 (size before relaxing)
  .rodata.periph_to_base
-                0x1a002458       0x6c Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x1a002640       0x6c Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
  .rodata.UART_BClock
-                0x1a0024c4        0x8 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/uart_18xx_43xx.o
+                0x1a0026ac        0x8 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/uart_18xx_43xx.o
  .rodata.UART_PClock
-                0x1a0024cc        0x8 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/uart_18xx_43xx.o
-                0x1a0024d4                . = ALIGN (0x4)
+                0x1a0026b4        0x8 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/uart_18xx_43xx.o
+                0x1a0026bc                . = ALIGN (0x4)
 
-.glue_7         0x1a0024d4        0x0
- .glue_7        0x1a0024d4        0x0 linker stubs
+.glue_7         0x1a0026bc        0x0
+ .glue_7        0x1a0026bc        0x0 linker stubs
 
-.glue_7t        0x1a0024d4        0x0
- .glue_7t       0x1a0024d4        0x0 linker stubs
+.glue_7t        0x1a0026bc        0x0
+ .glue_7t       0x1a0026bc        0x0 linker stubs
 
-.vfp11_veneer   0x1a0024d4        0x0
- .vfp11_veneer  0x1a0024d4        0x0 linker stubs
+.vfp11_veneer   0x1a0026bc        0x0
+ .vfp11_veneer  0x1a0026bc        0x0 linker stubs
 
-.v4_bx          0x1a0024d4        0x0
- .v4_bx         0x1a0024d4        0x0 linker stubs
+.v4_bx          0x1a0026bc        0x0
+ .v4_bx         0x1a0026bc        0x0 linker stubs
 
-.iplt           0x1a0024d4        0x0
- .iplt          0x1a0024d4        0x0 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
-                0x1a0024d4                . = ALIGN (0x4)
+.iplt           0x1a0026bc        0x0
+ .iplt          0x1a0026bc        0x0 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+                0x1a0026bc                . = ALIGN (0x4)
 
-.preinit_array  0x1a0024d4        0x0
-                0x1a0024d4                PROVIDE (__preinit_array_start, .)
+.preinit_array  0x1a0026bc        0x0
+                0x1a0026bc                PROVIDE (__preinit_array_start, .)
  *(.preinit_array*)
-                0x1a0024d4                PROVIDE (__preinit_array_end, .)
+                0x1a0026bc                PROVIDE (__preinit_array_end, .)
 
-.init_array     0x1a0024d4        0x0
-                0x1a0024d4                PROVIDE (__init_array_start, .)
+.init_array     0x1a0026bc        0x0
+                0x1a0026bc                PROVIDE (__init_array_start, .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
-                0x1a0024d4                PROVIDE (__init_array_end, .)
-                0x1a0024d4                . = ALIGN (0x4)
+                0x1a0026bc                PROVIDE (__init_array_end, .)
+                0x1a0026bc                . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x1a0024d4                __exidx_start = .
+                0x1a0026bc                __exidx_start = .
 
-.ARM.exidx      0x1a0024d4        0x8
+.ARM.exidx      0x1a0026bc        0x8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x1a0024d4        0x8 c:/ciaa_suite/usr/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_udivmoddi4.o)
-                0x1a0024dc                __exidx_end = .
-                0x1a0024dc                _etext = .
+ .ARM.exidx     0x1a0026bc        0x8 c:/ciaa_suite/usr/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_udivmoddi4.o)
+                0x1a0026c4                __exidx_end = .
+                0x1a0026c4                _etext = .
 
-.rel.dyn        0x1a0024dc        0x0
- .rel.iplt      0x1a0024dc        0x0 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+.rel.dyn        0x1a0026c4        0x0
+ .rel.iplt      0x1a0026c4        0x0 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
 
-.data_RAM2      0x10080000        0x0 load address 0x1a0024dc
+.data_RAM2      0x10080000        0x0 load address 0x1a0026c4
  FILL mask 0xff
  *(.ramfunc.$RAM2)
  *(.ramfunc.$RamLoc40)
@@ -14761,7 +14758,7 @@ END GROUP
  *(.data.$RamLoc40*)
                 0x10080000                . = ALIGN (0x4)
 
-.data_RAM3      0x20000000        0x0 load address 0x1a0024dc
+.data_RAM3      0x20000000        0x0 load address 0x1a0026c4
  FILL mask 0xff
  *(.ramfunc.$RAM3)
  *(.ramfunc.$RamAHB32)
@@ -14769,7 +14766,7 @@ END GROUP
  *(.data.$RamAHB32*)
                 0x20000000                . = ALIGN (0x4)
 
-.data_RAM4      0x20008000        0x0 load address 0x1a0024dc
+.data_RAM4      0x20008000        0x0 load address 0x1a0026c4
  FILL mask 0xff
  *(.ramfunc.$RAM4)
  *(.ramfunc.$RamAHB16)
@@ -14777,7 +14774,7 @@ END GROUP
  *(.data.$RamAHB16*)
                 0x20008000                . = ALIGN (0x4)
 
-.data_RAM5      0x2000c000        0x0 load address 0x1a0024dc
+.data_RAM5      0x2000c000        0x0 load address 0x1a0026c4
  FILL mask 0xff
  *(.ramfunc.$RAM5)
  *(.ramfunc.$RamAHB_ETB16)
@@ -14791,7 +14788,7 @@ END GROUP
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                _end_uninit_RESERVED = .
 
-.data           0x10000000      0x118 load address 0x1a0024dc
+.data           0x10000000      0x11c load address 0x1a0026c4
  FILL mask 0xff
                 0x10000000                _data = .
  *(vtable)
@@ -14800,21 +14797,24 @@ END GROUP
  .data.estados_maq
                 0x10000000       0x50 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
                 0x10000000                estados_maq
+ .data.ptrFunction
+                0x10000050        0x4 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+                0x10000050                ptrFunction
  .data.ClockSpeed
-                0x10000050        0x4 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
- .data.DWT_CTRL
                 0x10000054        0x4 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
-                0x10000054                DWT_CTRL
+ .data.DWT_CTRL
+                0x10000058        0x4 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
+                0x10000058                DWT_CTRL
  .data.timer_dd
-                0x10000058       0x40 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
+                0x1000005c       0x40 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
  .data.ultrasonicSensors
-                0x10000098       0x48 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_ultrasonic_hcsr04.o
- .data.i2c      0x100000e0       0x38 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/i2c_18xx_43xx.o
-                0x10000118                . = ALIGN (0x4)
-                0x10000118                _edata = .
+                0x1000009c       0x48 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_ultrasonic_hcsr04.o
+ .data.i2c      0x100000e4       0x38 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/i2c_18xx_43xx.o
+                0x1000011c                . = ALIGN (0x4)
+                0x1000011c                _edata = .
 
-.igot.plt       0x10000118        0x0 load address 0x1a0025f4
- .igot.plt      0x10000118        0x0 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+.igot.plt       0x1000011c        0x0 load address 0x1a0027e0
+ .igot.plt      0x1000011c        0x0 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
 
 .bss_RAM2       0x10080000        0x0
  *(.bss.$RAM2*)
@@ -14836,64 +14836,64 @@ END GROUP
  *(.bss.$RamAHB_ETB16*)
                 0x2000c000                . = ALIGN (0x4)
 
-.bss            0x10000118     0x13d8
-                0x10000118                _bss = .
+.bss            0x10000120     0x13d8
+                0x10000120                _bss = .
  *(.bss*)
  .bss.estadoInt
-                0x10000118        0x1 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
-                0x10000118                estadoInt
- *fill*         0x10000119        0x3 
+                0x10000120        0x1 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+                0x10000120                estadoInt
+ *fill*         0x10000121        0x3 
  .bss.callBackFuncParams
-                0x1000011c        0x4 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
+                0x10000124        0x4 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
  .bss.tickCounter
-                0x10000120        0x8 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
+                0x10000128        0x8 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
  .bss.tickHookFunction
-                0x10000128        0x4 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
+                0x10000130        0x4 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
  .bss.rxIsrCallbackUART0
-                0x1000012c        0x4 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
- .bss.rxIsrCallbackUART2
-                0x10000130        0x4 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
- .bss.rxIsrCallbackUART3
                 0x10000134        0x4 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
- .bss.txIsrCallbackUART0
+ .bss.rxIsrCallbackUART2
                 0x10000138        0x4 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
- .bss.txIsrCallbackUART2
+ .bss.rxIsrCallbackUART3
                 0x1000013c        0x4 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
- .bss.txIsrCallbackUART3
+ .bss.txIsrCallbackUART0
                 0x10000140        0x4 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
- .bss.g_hUsb    0x10000144        0x4 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
+ .bss.txIsrCallbackUART2
+                0x10000144        0x4 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+ .bss.txIsrCallbackUART3
+                0x10000148        0x4 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+ .bss.g_hUsb    0x1000014c        0x4 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
  .bss.audio_usb_pll_freq
-                0x10000148        0x8 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x10000150        0x8 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
  *(COMMON)
- COMMON         0x10000150     0x138c Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
-                0x10000150                sdBuffer
-                0x10000550                cantDatos
-                0x10000554                punt_rx_gpio
-                0x10000558                sdcard
-                0x10000794                ssid_wifi
-                0x100007b4                servidor_tcpip
-                0x100007e8                packetBuffer
-                0x10000818                punt_rx_esp
-                0x1000081c                bandera_dato_esp
-                0x10000820                puerto_tcpip
-                0x1000082c                servidor_ntp
-                0x1000084c                clave_wifi
-                0x1000086c                time_rx_esp_set
-                0x10000870                tcpIpDataToSend
-                0x100008d4                punt_rx_sd
-                0x100008d8                cuentaDatos
-                0x100008dc                espRxIntBuffer
-                0x10000cdc                gpioRxBuffer
-                0x100010dc                espResponseBuffer
- *fill*         0x100014dc        0x4 
- COMMON         0x100014e0        0x8 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
-                0x100014e0                tickRateMS
- COMMON         0x100014e8        0x4 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
-                0x100014e8                g_pUsbApi
- COMMON         0x100014ec        0x4 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/chip_18xx_43xx.o
-                0x100014ec                SystemCoreClock
-                0x100014f0                . = ALIGN (0x4)
-                0x100014f0                _ebss = .
+ COMMON         0x10000158     0x138c Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+                0x10000158                sdBuffer
+                0x10000558                cantDatos
+                0x1000055c                punt_rx_gpio
+                0x10000560                sdcard
+                0x1000079c                ssid_wifi
+                0x100007bc                servidor_tcpip
+                0x100007f0                packetBuffer
+                0x10000820                punt_rx_esp
+                0x10000824                bandera_dato_esp
+                0x10000828                puerto_tcpip
+                0x10000834                servidor_ntp
+                0x10000854                clave_wifi
+                0x10000874                time_rx_esp_set
+                0x10000878                tcpIpDataToSend
+                0x100008dc                punt_rx_sd
+                0x100008e0                cuentaDatos
+                0x100008e4                espRxIntBuffer
+                0x10000ce4                gpioRxBuffer
+                0x100010e4                espResponseBuffer
+ *fill*         0x100014e4        0x4 
+ COMMON         0x100014e8        0x8 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
+                0x100014e8                tickRateMS
+ COMMON         0x100014f0        0x4 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
+                0x100014f0                g_pUsbApi
+ COMMON         0x100014f4        0x4 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/chip_18xx_43xx.o
+                0x100014f4                SystemCoreClock
+                0x100014f8                . = ALIGN (0x4)
+                0x100014f8                _ebss = .
                 [!provide]                PROVIDE (end, .)
 
 .noinit_RAM2    0x10080000        0x0
@@ -14916,45 +14916,46 @@ END GROUP
  *(.noinit.$RamAHB_ETB16*)
                 0x2000c000                . = ALIGN (0x4)
 
-.noinit         0x100014f0        0x0
-                0x100014f0                _noinit = .
+.noinit         0x100014f8        0x0
+                0x100014f8                _noinit = .
  *(.noinit*)
-                0x100014f0                . = ALIGN (0x4)
-                0x100014f0                _end_noinit = .
-                0x100014f0                PROVIDE (_pvHeapStart, .)
+                0x100014f8                . = ALIGN (0x4)
+                0x100014f8                _end_noinit = .
+                0x100014f8                PROVIDE (_pvHeapStart, .)
                 0x10008000                PROVIDE (_vStackTop, (__top_RamLoc32 - 0x0))
-                0x53ff5bf0                PROVIDE (__valid_user_code_checksum, (0x0 - ((((((_vStackTop + (ResetISR + 0x1)) + (NMI_Handler + 0x1)) + (HardFault_Handler + 0x1)) + (DEFINED (MemManage_Handler)?MemManage_Handler:0x0 + 0x1)) + (DEFINED (BusFault_Handler)?BusFault_Handler:0x0 + 0x1)) + (DEFINED (UsageFault_Handler)?UsageFault_Handler:0x0 + 0x1))))
+                0x53ff5a60                PROVIDE (__valid_user_code_checksum, (0x0 - ((((((_vStackTop + (ResetISR + 0x1)) + (NMI_Handler + 0x1)) + (HardFault_Handler + 0x1)) + (DEFINED (MemManage_Handler)?MemManage_Handler:0x0 + 0x1)) + (DEFINED (BusFault_Handler)?BusFault_Handler:0x0 + 0x1)) + (DEFINED (UsageFault_Handler)?UsageFault_Handler:0x0 + 0x1))))
 OUTPUT(Project_Gateway/out/Project_Gateway.elf elf32-littlearm)
 
-.debug_info     0x00000000    0x240b3
- .debug_info    0x00000000     0x5aa3 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_info    0x00005aa3      0x914 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_sleep.o
- .debug_info    0x000063b7      0xec6 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
- .debug_info    0x0000727d     0x1a90 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
- .debug_info    0x00008d0d     0x1d10 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
- .debug_info    0x0000aa1d     0x14a2 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
- .debug_info    0x0000bebf     0x2472 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
- .debug_info    0x0000e331     0x330e Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
- .debug_info    0x0001163f      0xdb2 Project_Gateway/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
- .debug_info    0x000123f1      0xb90 Project_Gateway/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
- .debug_info    0x00012f81     0x1dff Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_ultrasonic_hcsr04.o
- .debug_info    0x00014d80     0x25ae Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_lcd.o
- .debug_info    0x0001732e     0x14c3 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board_sysinit.o
- .debug_info    0x000187f1      0x95b Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/sysinit.o
- .debug_info    0x0001914c     0x20b6 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
- .debug_info    0x0001b202     0x1606 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/ssp_18xx_43xx.o
- .debug_info    0x0001c808      0x219 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/gpio_18xx_43xx.o
- .debug_info    0x0001ca21      0x145 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/fpu_init.o
- .debug_info    0x0001cb66      0xaef Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/adc_18xx_43xx.o
- .debug_info    0x0001d655      0xab0 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/sysinit_18xx_43xx.o
- .debug_info    0x0001e105     0x18ed Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
- .debug_info    0x0001f9f2      0xc3d Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/chip_18xx_43xx.o
- .debug_info    0x0002062f     0x164f Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/uart_18xx_43xx.o
- .debug_info    0x00021c7e     0x1366 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/i2c_18xx_43xx.o
- .debug_info    0x00022fe4     0x1090 Project_Gateway/out/libs/vendor_libs/lpc_startup/src/cr_startup_lpc43xx.o
- .debug_info    0x00024074       0x3f Project_Gateway/out/libs/vendor_libs/lpc_startup/src/crp.o
+.debug_info     0x00000000    0x246ad
+ .debug_info    0x00000000     0x5b3e Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_info    0x00005b3e      0x914 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_sleep.o
+ .debug_info    0x00006452      0xec6 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
+ .debug_info    0x00007318     0x1a90 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
+ .debug_info    0x00008da8     0x1d10 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
+ .debug_info    0x0000aab8     0x14a2 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
+ .debug_info    0x0000bf5a     0x2472 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+ .debug_info    0x0000e3cc     0x330e Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
+ .debug_info    0x000116da      0xdb2 Project_Gateway/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
+ .debug_info    0x0001248c      0xb90 Project_Gateway/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
+ .debug_info    0x0001301c     0x1dff Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_ultrasonic_hcsr04.o
+ .debug_info    0x00014e1b     0x25ae Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_lcd.o
+ .debug_info    0x000173c9     0x14c3 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board_sysinit.o
+ .debug_info    0x0001888c      0x95b Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/sysinit.o
+ .debug_info    0x000191e7     0x20b6 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
+ .debug_info    0x0001b29d     0x1606 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/ssp_18xx_43xx.o
+ .debug_info    0x0001c8a3      0x219 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/gpio_18xx_43xx.o
+ .debug_info    0x0001cabc      0x145 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/fpu_init.o
+ .debug_info    0x0001cc01      0x55f Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
+ .debug_info    0x0001d160      0xaef Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/adc_18xx_43xx.o
+ .debug_info    0x0001dc4f      0xab0 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+ .debug_info    0x0001e6ff     0x18ed Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
+ .debug_info    0x0001ffec      0xc3d Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/chip_18xx_43xx.o
+ .debug_info    0x00020c29     0x164f Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/uart_18xx_43xx.o
+ .debug_info    0x00022278     0x1366 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/i2c_18xx_43xx.o
+ .debug_info    0x000235de     0x1090 Project_Gateway/out/libs/vendor_libs/lpc_startup/src/cr_startup_lpc43xx.o
+ .debug_info    0x0002466e       0x3f Project_Gateway/out/libs/vendor_libs/lpc_startup/src/crp.o
 
-.debug_abbrev   0x00000000     0x483e
+.debug_abbrev   0x00000000     0x49e7
  .debug_abbrev  0x00000000      0x4f7 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
  .debug_abbrev  0x000004f7      0x1b1 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_sleep.o
  .debug_abbrev  0x000006a8      0x284 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
@@ -14973,16 +14974,17 @@ OUTPUT(Project_Gateway/out/Project_Gateway.elf elf32-littlearm)
  .debug_abbrev  0x00003069      0x352 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/ssp_18xx_43xx.o
  .debug_abbrev  0x000033bb      0x100 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/gpio_18xx_43xx.o
  .debug_abbrev  0x000034bb       0xa2 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/fpu_init.o
- .debug_abbrev  0x0000355d      0x1f9 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/adc_18xx_43xx.o
- .debug_abbrev  0x00003756      0x203 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/sysinit_18xx_43xx.o
- .debug_abbrev  0x00003959      0x379 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
- .debug_abbrev  0x00003cd2      0x1c3 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/chip_18xx_43xx.o
- .debug_abbrev  0x00003e95      0x3b7 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/uart_18xx_43xx.o
- .debug_abbrev  0x0000424c      0x344 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/i2c_18xx_43xx.o
- .debug_abbrev  0x00004590      0x278 Project_Gateway/out/libs/vendor_libs/lpc_startup/src/cr_startup_lpc43xx.o
- .debug_abbrev  0x00004808       0x36 Project_Gateway/out/libs/vendor_libs/lpc_startup/src/crp.o
+ .debug_abbrev  0x0000355d      0x1a9 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
+ .debug_abbrev  0x00003706      0x1f9 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/adc_18xx_43xx.o
+ .debug_abbrev  0x000038ff      0x203 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+ .debug_abbrev  0x00003b02      0x379 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
+ .debug_abbrev  0x00003e7b      0x1c3 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/chip_18xx_43xx.o
+ .debug_abbrev  0x0000403e      0x3b7 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/uart_18xx_43xx.o
+ .debug_abbrev  0x000043f5      0x344 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/i2c_18xx_43xx.o
+ .debug_abbrev  0x00004739      0x278 Project_Gateway/out/libs/vendor_libs/lpc_startup/src/cr_startup_lpc43xx.o
+ .debug_abbrev  0x000049b1       0x36 Project_Gateway/out/libs/vendor_libs/lpc_startup/src/crp.o
 
-.debug_loc      0x00000000     0x830c
+.debug_loc      0x00000000     0x8457
  .debug_loc     0x00000000     0x1074 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
  .debug_loc     0x00001074       0x8e Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
  .debug_loc     0x00001102      0x7e4 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
@@ -14997,325 +14999,333 @@ OUTPUT(Project_Gateway/out/Project_Gateway.elf elf32-littlearm)
  .debug_loc     0x000039c8      0x58f Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
  .debug_loc     0x00003f57      0xd56 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/ssp_18xx_43xx.o
  .debug_loc     0x00004cad       0x2b Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/fpu_init.o
- .debug_loc     0x00004cd8      0x67e Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/adc_18xx_43xx.o
- .debug_loc     0x00005356      0x1b5 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/sysinit_18xx_43xx.o
- .debug_loc     0x0000550b     0x123c Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
- .debug_loc     0x00006747      0xd25 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/uart_18xx_43xx.o
- .debug_loc     0x0000746c      0xc9a Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/i2c_18xx_43xx.o
- .debug_loc     0x00008106      0x206 Project_Gateway/out/libs/vendor_libs/lpc_startup/src/cr_startup_lpc43xx.o
+ .debug_loc     0x00004cd8      0x14b Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
+ .debug_loc     0x00004e23      0x67e Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/adc_18xx_43xx.o
+ .debug_loc     0x000054a1      0x1b5 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+ .debug_loc     0x00005656     0x123c Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
+ .debug_loc     0x00006892      0xd25 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/uart_18xx_43xx.o
+ .debug_loc     0x000075b7      0xc9a Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/i2c_18xx_43xx.o
+ .debug_loc     0x00008251      0x206 Project_Gateway/out/libs/vendor_libs/lpc_startup/src/cr_startup_lpc43xx.o
 
-.debug_aranges  0x00000000      0xb08
+.debug_aranges  0x00000000      0xb50
  .debug_aranges
-                0x00000000      0x138 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+                0x00000000      0x140 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
  .debug_aranges
-                0x00000138       0x20 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_sleep.o
+                0x00000140       0x20 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_sleep.o
  .debug_aranges
-                0x00000158       0x40 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
+                0x00000160       0x40 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
  .debug_aranges
-                0x00000198       0x40 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
+                0x000001a0       0x40 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
  .debug_aranges
-                0x000001d8       0x78 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
+                0x000001e0       0x78 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
  .debug_aranges
-                0x00000250       0x48 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
+                0x00000258       0x48 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
  .debug_aranges
-                0x00000298       0xb8 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+                0x000002a0       0xb8 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
  .debug_aranges
-                0x00000350       0x50 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
+                0x00000358       0x50 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
  .debug_aranges
-                0x000003a0       0x20 Project_Gateway/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
+                0x000003a8       0x20 Project_Gateway/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
  .debug_aranges
-                0x000003c0       0x50 Project_Gateway/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
+                0x000003c8       0x50 Project_Gateway/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
  .debug_aranges
-                0x00000410       0x70 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_ultrasonic_hcsr04.o
+                0x00000418       0x70 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_ultrasonic_hcsr04.o
  .debug_aranges
-                0x00000480       0x60 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_lcd.o
+                0x00000488       0x60 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_lcd.o
  .debug_aranges
-                0x000004e0       0x30 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board_sysinit.o
+                0x000004e8       0x30 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board_sysinit.o
  .debug_aranges
-                0x00000510       0x20 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/sysinit.o
+                0x00000518       0x20 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/sysinit.o
  .debug_aranges
-                0x00000530       0xa8 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
+                0x00000538       0xa8 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
  .debug_aranges
-                0x000005d8       0xa0 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/ssp_18xx_43xx.o
+                0x000005e0       0xa0 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/ssp_18xx_43xx.o
  .debug_aranges
-                0x00000678       0x28 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/gpio_18xx_43xx.o
+                0x00000680       0x28 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/gpio_18xx_43xx.o
  .debug_aranges
-                0x000006a0       0x20 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/fpu_init.o
+                0x000006a8       0x20 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/fpu_init.o
  .debug_aranges
-                0x000006c0       0x90 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x000006c8       0x40 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
  .debug_aranges
-                0x00000750       0x38 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+                0x00000708       0x90 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/adc_18xx_43xx.o
  .debug_aranges
-                0x00000788      0x128 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x00000798       0x38 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/sysinit_18xx_43xx.o
  .debug_aranges
-                0x000008b0       0x38 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/chip_18xx_43xx.o
+                0x000007d0      0x128 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
  .debug_aranges
-                0x000008e8       0xa8 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/uart_18xx_43xx.o
+                0x000008f8       0x38 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/chip_18xx_43xx.o
  .debug_aranges
-                0x00000990       0xd8 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/i2c_18xx_43xx.o
+                0x00000930       0xa8 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/uart_18xx_43xx.o
  .debug_aranges
-                0x00000a68       0x88 Project_Gateway/out/libs/vendor_libs/lpc_startup/src/cr_startup_lpc43xx.o
+                0x000009d8       0xd8 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/i2c_18xx_43xx.o
  .debug_aranges
-                0x00000af0       0x18 Project_Gateway/out/libs/vendor_libs/lpc_startup/src/crp.o
+                0x00000ab0       0x88 Project_Gateway/out/libs/vendor_libs/lpc_startup/src/cr_startup_lpc43xx.o
+ .debug_aranges
+                0x00000b38       0x18 Project_Gateway/out/libs/vendor_libs/lpc_startup/src/crp.o
 
-.debug_ranges   0x00000000      0xac8
- .debug_ranges  0x00000000      0x128 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_ranges  0x00000128       0x10 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_sleep.o
- .debug_ranges  0x00000138       0x30 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
- .debug_ranges  0x00000168       0x30 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
- .debug_ranges  0x00000198       0x80 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
- .debug_ranges  0x00000218       0x38 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
- .debug_ranges  0x00000250       0xc0 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
- .debug_ranges  0x00000310       0x40 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
- .debug_ranges  0x00000350       0x10 Project_Gateway/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
- .debug_ranges  0x00000360       0x40 Project_Gateway/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
- .debug_ranges  0x000003a0       0x60 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_ultrasonic_hcsr04.o
- .debug_ranges  0x00000400       0x50 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_lcd.o
- .debug_ranges  0x00000450       0x50 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board_sysinit.o
- .debug_ranges  0x000004a0       0x10 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/sysinit.o
- .debug_ranges  0x000004b0       0xe0 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
- .debug_ranges  0x00000590       0xc0 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/ssp_18xx_43xx.o
- .debug_ranges  0x00000650       0x18 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/gpio_18xx_43xx.o
- .debug_ranges  0x00000668       0x10 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/fpu_init.o
- .debug_ranges  0x00000678       0x80 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/adc_18xx_43xx.o
- .debug_ranges  0x000006f8       0x28 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/sysinit_18xx_43xx.o
- .debug_ranges  0x00000720      0x190 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
- .debug_ranges  0x000008b0       0x28 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/chip_18xx_43xx.o
- .debug_ranges  0x000008d8       0xb0 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/uart_18xx_43xx.o
- .debug_ranges  0x00000988       0xc8 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/i2c_18xx_43xx.o
- .debug_ranges  0x00000a50       0x78 Project_Gateway/out/libs/vendor_libs/lpc_startup/src/cr_startup_lpc43xx.o
+.debug_ranges   0x00000000      0xb00
+ .debug_ranges  0x00000000      0x130 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_ranges  0x00000130       0x10 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_sleep.o
+ .debug_ranges  0x00000140       0x30 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
+ .debug_ranges  0x00000170       0x30 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
+ .debug_ranges  0x000001a0       0x80 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
+ .debug_ranges  0x00000220       0x38 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
+ .debug_ranges  0x00000258       0xc0 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+ .debug_ranges  0x00000318       0x40 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
+ .debug_ranges  0x00000358       0x10 Project_Gateway/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
+ .debug_ranges  0x00000368       0x40 Project_Gateway/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
+ .debug_ranges  0x000003a8       0x60 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_ultrasonic_hcsr04.o
+ .debug_ranges  0x00000408       0x50 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_lcd.o
+ .debug_ranges  0x00000458       0x50 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board_sysinit.o
+ .debug_ranges  0x000004a8       0x10 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/sysinit.o
+ .debug_ranges  0x000004b8       0xe0 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
+ .debug_ranges  0x00000598       0xc0 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/ssp_18xx_43xx.o
+ .debug_ranges  0x00000658       0x18 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/gpio_18xx_43xx.o
+ .debug_ranges  0x00000670       0x10 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/fpu_init.o
+ .debug_ranges  0x00000680       0x30 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
+ .debug_ranges  0x000006b0       0x80 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/adc_18xx_43xx.o
+ .debug_ranges  0x00000730       0x28 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+ .debug_ranges  0x00000758      0x190 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
+ .debug_ranges  0x000008e8       0x28 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/chip_18xx_43xx.o
+ .debug_ranges  0x00000910       0xb0 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/uart_18xx_43xx.o
+ .debug_ranges  0x000009c0       0xc8 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/i2c_18xx_43xx.o
+ .debug_ranges  0x00000a88       0x78 Project_Gateway/out/libs/vendor_libs/lpc_startup/src/cr_startup_lpc43xx.o
 
-.debug_macro    0x00000000     0xcd16
- .debug_macro   0x00000000      0x714 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00000714      0xa60 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00001174       0x22 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00001196       0x4f Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x000011e5       0x51 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00001236       0xef Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00001325       0x6a Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x0000138f      0x1df Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x0000156e       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x0000157e       0x22 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x000015a0       0x73 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00001613       0x28 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x0000163b       0x3b Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00001676       0x2d Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x000016a3       0x42 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x000016e5      0xd39 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x0000241e      0x2c3 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x000026e1      0x112 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x000027f3       0x11 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00002804       0x2a Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x0000282e       0x16 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00002844      0x2e6 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00002b2a       0x82 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00002bac      0x13d Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00002ce9      0x198 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00002e81       0x34 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00002eb5       0x58 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00002f0d      0x236 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00003143      0x572 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x000036b5       0x16 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x000036cb      0x18a Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00003855       0x88 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x000038dd      0x1b9 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00003a96      0x1da Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00003c70       0x40 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00003cb0       0x1c Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00003ccc       0x2e Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00003cfa       0x2e Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00003d28       0x22 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00003d4a      0x201 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00003f4b       0xe0 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x0000402b      0x34c Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00004377       0xdc Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00004453       0xc4 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00004517       0x8f Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x000045a6       0x94 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x0000463a       0xb8 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x000046f2       0x4c Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x0000473e       0x16 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00004754      0x328 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00004a7c       0x3a Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00004ab6       0xd0 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00004b86       0x18 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00004b9e       0x22 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00004bc0       0x40 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00004c00       0x58 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00004c58       0x17 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00004c6f       0x35 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00004ca4       0x9c Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00004d40       0x16 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00004d56       0x97 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00004ded      0x353 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00005140       0xf6 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00005236       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00005246       0x58 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x0000529e       0x1f Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x000052bd       0x43 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00005300       0x20 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00005320      0x18e Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x000054ae       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x000054be       0xb6 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00005574       0x16 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x0000558a      0x129 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x000056b3       0x20 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x000056d3       0xee Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x000057c1       0x1c Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x000057dd       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x000057ed       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x000057fd       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x0000580d       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x0000581d       0x1c Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00005839       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00005849       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00005859       0x40 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00005899       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x000058a9       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x000058b9       0x16 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x000058cf      0x26c Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00005b3b       0x5e Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00005b99       0x12 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00005bab       0xfa Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00005ca5       0xee Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00005d93      0x69a Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x0000642d      0x272 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x0000669f       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x000066af       0x16 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x000066c5       0xde Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x000067a3       0x16 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x000067b9       0x35 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x000067ee       0x40 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x0000682e       0x70 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x0000689e       0x70 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x0000690e       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x0000691e       0x22 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00006940       0x16 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00006956       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00006966       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00006976       0x82 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x000069f8       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00006a08       0x16 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00006a1e       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00006a2e       0x7c Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00006aaa       0x64 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00006b0e      0x1ec Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00006cfa       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00006d0a       0x22 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00006d2c       0x8e Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00006dba       0xf8 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00006eb2       0xe8 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00006f9a       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00006faa       0x28 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_macro   0x00006fd2      0x443 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_sleep.o
- .debug_macro   0x00007415       0x16 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_sleep.o
- .debug_macro   0x0000742b      0x43f Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
- .debug_macro   0x0000786a       0x10 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
- .debug_macro   0x0000787a      0x449 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
- .debug_macro   0x00007cc3      0x44f Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
- .debug_macro   0x00008112      0x446 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
- .debug_macro   0x00008558      0x478 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
- .debug_macro   0x000089d0       0x16 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
- .debug_macro   0x000089e6      0x53c Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
- .debug_macro   0x00008f22      0x46b Project_Gateway/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
- .debug_macro   0x0000938d      0x451 Project_Gateway/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
- .debug_macro   0x000097de      0x498 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_ultrasonic_hcsr04.o
- .debug_macro   0x00009c76      0x694 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_lcd.o
- .debug_macro   0x0000a30a      0x421 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board_sysinit.o
- .debug_macro   0x0000a72b      0x421 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/sysinit.o
- .debug_macro   0x0000ab4c      0x433 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
- .debug_macro   0x0000af7f      0x30b Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/ssp_18xx_43xx.o
- .debug_macro   0x0000b28a      0x30b Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/gpio_18xx_43xx.o
- .debug_macro   0x0000b595       0xe3 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/fpu_init.o
- .debug_macro   0x0000b678      0x30b Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/adc_18xx_43xx.o
- .debug_macro   0x0000b983      0x30b Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/sysinit_18xx_43xx.o
- .debug_macro   0x0000bc8e      0x311 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
- .debug_macro   0x0000bf9f      0x30b Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/chip_18xx_43xx.o
- .debug_macro   0x0000c2aa      0x30b Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/uart_18xx_43xx.o
- .debug_macro   0x0000c5b5      0x31d Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/i2c_18xx_43xx.o
- .debug_macro   0x0000c8d2      0x42d Project_Gateway/out/libs/vendor_libs/lpc_startup/src/cr_startup_lpc43xx.o
- .debug_macro   0x0000ccff       0x17 Project_Gateway/out/libs/vendor_libs/lpc_startup/src/crp.o
+.debug_macro    0x00000000     0xd027
+ .debug_macro   0x00000000      0x71a Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x0000071a      0xa60 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x0000117a       0x22 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x0000119c       0x4f Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x000011eb       0x51 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x0000123c       0xef Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x0000132b       0x6a Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00001395      0x1df Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00001574       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00001584       0x22 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x000015a6       0x73 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00001619       0x28 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00001641       0x3b Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x0000167c       0x2d Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x000016a9       0x42 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x000016eb      0xd39 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00002424      0x2c3 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x000026e7      0x112 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x000027f9       0x11 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x0000280a       0x2a Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00002834       0x16 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x0000284a      0x2e6 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00002b30       0x82 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00002bb2      0x13d Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00002cef      0x198 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00002e87       0x34 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00002ebb       0x58 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00002f13      0x236 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00003149      0x572 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x000036bb       0x16 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x000036d1      0x18a Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x0000385b       0x88 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x000038e3      0x1b9 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00003a9c      0x1da Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00003c76       0x40 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00003cb6       0x1c Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00003cd2       0x2e Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00003d00       0x2e Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00003d2e       0x22 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00003d50      0x201 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00003f51       0xe0 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00004031      0x34c Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x0000437d       0xdc Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00004459       0xc4 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x0000451d       0x8f Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x000045ac       0x94 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00004640       0xb8 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x000046f8       0x4c Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00004744       0x16 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x0000475a      0x328 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00004a82       0x3a Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00004abc       0xd0 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00004b8c       0x18 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00004ba4       0x22 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00004bc6       0x40 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00004c06       0x58 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00004c5e       0x17 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00004c75       0x35 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00004caa       0x9c Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00004d46       0x16 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00004d5c       0x97 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00004df3      0x353 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00005146       0xf6 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x0000523c       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x0000524c       0x58 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x000052a4       0x1f Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x000052c3       0x43 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00005306       0x20 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00005326      0x18e Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x000054b4       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x000054c4       0xb6 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x0000557a       0x16 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00005590      0x129 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x000056b9       0x20 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x000056d9       0xee Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x000057c7       0x1c Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x000057e3       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x000057f3       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00005803       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00005813       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00005823       0x1c Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x0000583f       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x0000584f       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x0000585f       0x40 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x0000589f       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x000058af       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x000058bf       0x16 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x000058d5      0x26c Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00005b41       0x5e Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00005b9f       0x12 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00005bb1       0xfa Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00005cab       0xee Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00005d99      0x69a Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00006433      0x272 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x000066a5       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x000066b5       0x16 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x000066cb       0xde Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x000067a9       0x16 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x000067bf       0x35 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x000067f4       0x40 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00006834       0x70 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x000068a4       0x70 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00006914       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00006924       0x22 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00006946       0x16 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x0000695c       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x0000696c       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x0000697c       0x82 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x000069fe       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00006a0e       0x16 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00006a24       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00006a34       0x7c Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00006ab0       0x64 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00006b14      0x1ec Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00006d00       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00006d10       0x22 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00006d32       0x8e Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00006dc0       0xf8 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00006eb8       0xe8 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00006fa0       0x10 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00006fb0       0x28 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_macro   0x00006fd8      0x443 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_sleep.o
+ .debug_macro   0x0000741b       0x16 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_sleep.o
+ .debug_macro   0x00007431      0x43f Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
+ .debug_macro   0x00007870       0x10 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
+ .debug_macro   0x00007880      0x449 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
+ .debug_macro   0x00007cc9      0x44f Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
+ .debug_macro   0x00008118      0x446 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
+ .debug_macro   0x0000855e      0x478 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+ .debug_macro   0x000089d6       0x16 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+ .debug_macro   0x000089ec      0x53c Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
+ .debug_macro   0x00008f28      0x46b Project_Gateway/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
+ .debug_macro   0x00009393      0x451 Project_Gateway/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
+ .debug_macro   0x000097e4      0x498 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_ultrasonic_hcsr04.o
+ .debug_macro   0x00009c7c      0x694 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_lcd.o
+ .debug_macro   0x0000a310      0x421 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board_sysinit.o
+ .debug_macro   0x0000a731      0x421 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/sysinit.o
+ .debug_macro   0x0000ab52      0x433 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
+ .debug_macro   0x0000af85      0x30b Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/ssp_18xx_43xx.o
+ .debug_macro   0x0000b290      0x30b Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/gpio_18xx_43xx.o
+ .debug_macro   0x0000b59b       0xe3 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/fpu_init.o
+ .debug_macro   0x0000b67e      0x30b Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
+ .debug_macro   0x0000b989      0x30b Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/adc_18xx_43xx.o
+ .debug_macro   0x0000bc94      0x30b Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+ .debug_macro   0x0000bf9f      0x311 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
+ .debug_macro   0x0000c2b0      0x30b Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/chip_18xx_43xx.o
+ .debug_macro   0x0000c5bb      0x30b Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/uart_18xx_43xx.o
+ .debug_macro   0x0000c8c6      0x31d Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/i2c_18xx_43xx.o
+ .debug_macro   0x0000cbe3      0x42d Project_Gateway/out/libs/vendor_libs/lpc_startup/src/cr_startup_lpc43xx.o
+ .debug_macro   0x0000d010       0x17 Project_Gateway/out/libs/vendor_libs/lpc_startup/src/crp.o
 
-.debug_line     0x00000000     0xe882
- .debug_line    0x00000000     0x13d5 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_line    0x000013d5      0x825 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_sleep.o
- .debug_line    0x00001bfa      0x846 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
- .debug_line    0x00002440      0x92a Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
- .debug_line    0x00002d6a      0xa0d Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
- .debug_line    0x00003777      0x883 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
- .debug_line    0x00003ffa      0xba2 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
- .debug_line    0x00004b9c      0xad8 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
- .debug_line    0x00005674      0x89f Project_Gateway/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
- .debug_line    0x00005f13      0x90c Project_Gateway/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
- .debug_line    0x0000681f      0x9ec Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_ultrasonic_hcsr04.o
- .debug_line    0x0000720b      0xd31 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_lcd.o
- .debug_line    0x00007f3c      0x7f7 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board_sysinit.o
- .debug_line    0x00008733      0x78f Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/sysinit.o
- .debug_line    0x00008ec2      0x9be Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
- .debug_line    0x00009880      0xb1e Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/ssp_18xx_43xx.o
- .debug_line    0x0000a39e      0x694 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/gpio_18xx_43xx.o
- .debug_line    0x0000aa32      0x274 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/fpu_init.o
- .debug_line    0x0000aca6      0x7bb Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/adc_18xx_43xx.o
- .debug_line    0x0000b461      0x733 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/sysinit_18xx_43xx.o
- .debug_line    0x0000bb94      0xacc Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
- .debug_line    0x0000c660      0x6d6 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/chip_18xx_43xx.o
- .debug_line    0x0000cd36      0x974 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/uart_18xx_43xx.o
- .debug_line    0x0000d6aa      0x979 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/i2c_18xx_43xx.o
- .debug_line    0x0000e023      0x818 Project_Gateway/out/libs/vendor_libs/lpc_startup/src/cr_startup_lpc43xx.o
- .debug_line    0x0000e83b       0x47 Project_Gateway/out/libs/vendor_libs/lpc_startup/src/crp.o
+.debug_line     0x00000000     0xef7c
+ .debug_line    0x00000000     0x13ea Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_line    0x000013ea      0x825 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_sleep.o
+ .debug_line    0x00001c0f      0x846 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
+ .debug_line    0x00002455      0x92a Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
+ .debug_line    0x00002d7f      0xa0d Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
+ .debug_line    0x0000378c      0x883 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
+ .debug_line    0x0000400f      0xba2 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+ .debug_line    0x00004bb1      0xad8 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
+ .debug_line    0x00005689      0x89f Project_Gateway/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
+ .debug_line    0x00005f28      0x90c Project_Gateway/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
+ .debug_line    0x00006834      0x9ec Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_ultrasonic_hcsr04.o
+ .debug_line    0x00007220      0xd31 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_lcd.o
+ .debug_line    0x00007f51      0x7f7 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board_sysinit.o
+ .debug_line    0x00008748      0x78f Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/sysinit.o
+ .debug_line    0x00008ed7      0x9be Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
+ .debug_line    0x00009895      0xb1e Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/ssp_18xx_43xx.o
+ .debug_line    0x0000a3b3      0x694 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/gpio_18xx_43xx.o
+ .debug_line    0x0000aa47      0x274 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/fpu_init.o
+ .debug_line    0x0000acbb      0x6e5 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
+ .debug_line    0x0000b3a0      0x7bb Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/adc_18xx_43xx.o
+ .debug_line    0x0000bb5b      0x733 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+ .debug_line    0x0000c28e      0xacc Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
+ .debug_line    0x0000cd5a      0x6d6 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/chip_18xx_43xx.o
+ .debug_line    0x0000d430      0x974 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/uart_18xx_43xx.o
+ .debug_line    0x0000dda4      0x979 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/i2c_18xx_43xx.o
+ .debug_line    0x0000e71d      0x818 Project_Gateway/out/libs/vendor_libs/lpc_startup/src/cr_startup_lpc43xx.o
+ .debug_line    0x0000ef35       0x47 Project_Gateway/out/libs/vendor_libs/lpc_startup/src/crp.o
 
-.debug_str      0x00000000    0x269c0
- .debug_str     0x00000000    0x2253b Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
-                              0x22a12 (size before relaxing)
- .debug_str     0x0002253b       0x30 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_sleep.o
+.debug_str      0x00000000    0x26b04
+ .debug_str     0x00000000    0x225a1 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+                              0x22a78 (size before relaxing)
+ .debug_str     0x000225a1       0x30 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_sleep.o
                               0x18e5a (size before relaxing)
- .debug_str     0x0002256b       0xda Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
+ .debug_str     0x000225d1       0xda Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
                               0x1993d (size before relaxing)
- .debug_str     0x00022645      0x26b Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
+ .debug_str     0x000226ab      0x26b Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
                               0x19c53 (size before relaxing)
- .debug_str     0x000228b0      0x7bb Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
+ .debug_str     0x00022916      0x784 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
                               0x1a082 (size before relaxing)
- .debug_str     0x0002306b      0x126 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
+ .debug_str     0x0002309a      0x126 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
                               0x19d9b (size before relaxing)
- .debug_str     0x00023191      0x590 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+ .debug_str     0x000231c0      0x590 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
                               0x1a662 (size before relaxing)
- .debug_str     0x00023721      0x765 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
+ .debug_str     0x00023750      0x765 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
                               0x1fb03 (size before relaxing)
- .debug_str     0x00023e86       0x43 Project_Gateway/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
+ .debug_str     0x00023eb5       0x43 Project_Gateway/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
                               0x190e6 (size before relaxing)
- .debug_str     0x00023ec9       0xa5 Project_Gateway/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
+ .debug_str     0x00023ef8       0xa5 Project_Gateway/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
                               0x18feb (size before relaxing)
- .debug_str     0x00023f6e      0x4cc Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_ultrasonic_hcsr04.o
+ .debug_str     0x00023f9d      0x4cc Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_ultrasonic_hcsr04.o
                               0x1a45f (size before relaxing)
- .debug_str     0x0002443a      0x168 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_lcd.o
+ .debug_str     0x00024469      0x168 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_lcd.o
                               0x20d07 (size before relaxing)
- .debug_str     0x000245a2      0x33d Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board_sysinit.o
+ .debug_str     0x000245d1      0x33d Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board_sysinit.o
                               0x19bce (size before relaxing)
- .debug_str     0x000248df       0x56 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/sysinit.o
+ .debug_str     0x0002490e       0x56 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/sysinit.o
                               0x18e02 (size before relaxing)
- .debug_str     0x00024935      0x83e Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
+ .debug_str     0x00024964      0x83e Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
                               0x1a210 (size before relaxing)
- .debug_str     0x00025173      0x436 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/ssp_18xx_43xx.o
+ .debug_str     0x000251a2      0x436 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/ssp_18xx_43xx.o
                               0x15ce5 (size before relaxing)
- .debug_str     0x000255a9       0x45 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/gpio_18xx_43xx.o
+ .debug_str     0x000255d8       0x45 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/gpio_18xx_43xx.o
                               0x152a6 (size before relaxing)
- .debug_str     0x000255ee       0xc9 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/fpu_init.o
+ .debug_str     0x0002561d       0xc9 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/fpu_init.o
                                0x97eb (size before relaxing)
- .debug_str     0x000256b7      0x177 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/adc_18xx_43xx.o
+ .debug_str     0x000256e6      0x115 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
+                              0x157b0 (size before relaxing)
+ .debug_str     0x000257fb      0x177 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/adc_18xx_43xx.o
                               0x15aef (size before relaxing)
- .debug_str     0x0002582e      0x1c7 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+ .debug_str     0x00025972      0x1c7 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/sysinit_18xx_43xx.o
                               0x15fa5 (size before relaxing)
- .debug_str     0x000259f5      0x496 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
+ .debug_str     0x00025b39      0x496 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
                               0x16517 (size before relaxing)
- .debug_str     0x00025e8b       0x79 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/chip_18xx_43xx.o
+ .debug_str     0x00025fcf       0x79 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/chip_18xx_43xx.o
                               0x16044 (size before relaxing)
- .debug_str     0x00025f04      0x300 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/uart_18xx_43xx.o
+ .debug_str     0x00026048      0x300 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/uart_18xx_43xx.o
                               0x16154 (size before relaxing)
- .debug_str     0x00026204      0x575 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/i2c_18xx_43xx.o
+ .debug_str     0x00026348      0x575 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/i2c_18xx_43xx.o
                               0x16286 (size before relaxing)
- .debug_str     0x00026779      0x201 Project_Gateway/out/libs/vendor_libs/lpc_startup/src/cr_startup_lpc43xx.o
+ .debug_str     0x000268bd      0x201 Project_Gateway/out/libs/vendor_libs/lpc_startup/src/cr_startup_lpc43xx.o
                               0x199ee (size before relaxing)
- .debug_str     0x0002697a       0x46 Project_Gateway/out/libs/vendor_libs/lpc_startup/src/crp.o
+ .debug_str     0x00026abe       0x46 Project_Gateway/out/libs/vendor_libs/lpc_startup/src/crp.o
                                0x2d0f (size before relaxing)
 
 .comment        0x00000000       0x7e
@@ -15338,6 +15348,7 @@ OUTPUT(Project_Gateway/out/Project_Gateway.elf elf32-littlearm)
  .comment       0x0000007e       0x7f Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/ssp_18xx_43xx.o
  .comment       0x0000007e       0x7f Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/gpio_18xx_43xx.o
  .comment       0x0000007e       0x7f Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/fpu_init.o
+ .comment       0x0000007e       0x7f Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
  .comment       0x0000007e       0x7f Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/adc_18xx_43xx.o
  .comment       0x0000007e       0x7f Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/sysinit_18xx_43xx.o
  .comment       0x0000007e       0x7f Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
@@ -15386,62 +15397,65 @@ OUTPUT(Project_Gateway/out/Project_Gateway.elf elf32-littlearm)
  .ARM.attributes
                 0x000003c9       0x39 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/fpu_init.o
  .ARM.attributes
-                0x00000402       0x39 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/adc_18xx_43xx.o
+                0x00000402       0x39 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
  .ARM.attributes
-                0x0000043b       0x39 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+                0x0000043b       0x39 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/adc_18xx_43xx.o
  .ARM.attributes
-                0x00000474       0x39 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
+                0x00000474       0x39 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/sysinit_18xx_43xx.o
  .ARM.attributes
-                0x000004ad       0x39 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/chip_18xx_43xx.o
+                0x000004ad       0x39 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
  .ARM.attributes
-                0x000004e6       0x39 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/uart_18xx_43xx.o
+                0x000004e6       0x39 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/chip_18xx_43xx.o
  .ARM.attributes
-                0x0000051f       0x39 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/i2c_18xx_43xx.o
+                0x0000051f       0x39 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/uart_18xx_43xx.o
  .ARM.attributes
-                0x00000558       0x39 Project_Gateway/out/libs/vendor_libs/lpc_startup/src/cr_startup_lpc43xx.o
+                0x00000558       0x39 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/i2c_18xx_43xx.o
  .ARM.attributes
-                0x00000591       0x39 Project_Gateway/out/libs/vendor_libs/lpc_startup/src/crp.o
+                0x00000591       0x39 Project_Gateway/out/libs/vendor_libs/lpc_startup/src/cr_startup_lpc43xx.o
  .ARM.attributes
-                0x000005ca       0x22 c:/ciaa_suite/usr/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_aeabi_uldivmod.o)
+                0x000005ca       0x39 Project_Gateway/out/libs/vendor_libs/lpc_startup/src/crp.o
  .ARM.attributes
-                0x000005ec       0x34 c:/ciaa_suite/usr/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_udivmoddi4.o)
+                0x00000603       0x22 c:/ciaa_suite/usr/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_aeabi_uldivmod.o)
  .ARM.attributes
-                0x00000620       0x22 c:/ciaa_suite/usr/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_dvmd_tls.o)
+                0x00000625       0x34 c:/ciaa_suite/usr/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_udivmoddi4.o)
  .ARM.attributes
-                0x00000642       0x34 c:/ciaa_suite/usr/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-init.o)
+                0x00000659       0x22 c:/ciaa_suite/usr/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_dvmd_tls.o)
  .ARM.attributes
-                0x00000676       0x34 c:/ciaa_suite/usr/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memset.o)
+                0x0000067b       0x34 c:/ciaa_suite/usr/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-init.o)
+ .ARM.attributes
+                0x000006af       0x34 c:/ciaa_suite/usr/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memset.o)
 
-.debug_frame    0x00000000     0x1d00
- .debug_frame   0x00000000      0x498 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
- .debug_frame   0x00000498       0x20 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_sleep.o
- .debug_frame   0x000004b8       0x60 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
- .debug_frame   0x00000518       0xa4 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
- .debug_frame   0x000005bc      0x134 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
- .debug_frame   0x000006f0       0x84 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
- .debug_frame   0x00000774      0x204 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
- .debug_frame   0x00000978       0xb8 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
- .debug_frame   0x00000a30       0x28 Project_Gateway/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
- .debug_frame   0x00000a58       0xe8 Project_Gateway/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
- .debug_frame   0x00000b40      0x120 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_ultrasonic_hcsr04.o
- .debug_frame   0x00000c60       0xf4 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_lcd.o
- .debug_frame   0x00000d54       0x5c Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board_sysinit.o
- .debug_frame   0x00000db0       0x28 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/sysinit.o
- .debug_frame   0x00000dd8      0x1bc Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
- .debug_frame   0x00000f94      0x198 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/ssp_18xx_43xx.o
- .debug_frame   0x0000112c       0x30 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/gpio_18xx_43xx.o
- .debug_frame   0x0000115c       0x2c Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/fpu_init.o
- .debug_frame   0x00001188      0x160 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/adc_18xx_43xx.o
- .debug_frame   0x000012e8       0x7c Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/sysinit_18xx_43xx.o
- .debug_frame   0x00001364      0x318 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
- .debug_frame   0x0000167c       0x70 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/chip_18xx_43xx.o
- .debug_frame   0x000016ec      0x1f4 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/uart_18xx_43xx.o
- .debug_frame   0x000018e0      0x270 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/i2c_18xx_43xx.o
- .debug_frame   0x00001b50      0x104 Project_Gateway/out/libs/vendor_libs/lpc_startup/src/cr_startup_lpc43xx.o
- .debug_frame   0x00001c54       0x2c c:/ciaa_suite/usr/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_aeabi_uldivmod.o)
- .debug_frame   0x00001c80       0x34 c:/ciaa_suite/usr/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_udivmoddi4.o)
- .debug_frame   0x00001cb4       0x2c c:/ciaa_suite/usr/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-init.o)
- .debug_frame   0x00001ce0       0x20 c:/ciaa_suite/usr/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memset.o)
+.debug_frame    0x00000000     0x1d98
+ .debug_frame   0x00000000      0x4b0 Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
+ .debug_frame   0x000004b0       0x20 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_sleep.o
+ .debug_frame   0x000004d0       0x60 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/core/src/sapi_cyclesCounter.o
+ .debug_frame   0x00000530       0xa4 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_gpio.o
+ .debug_frame   0x000005d4      0x134 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
+ .debug_frame   0x00000708       0x84 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_tick.o
+ .debug_frame   0x0000078c      0x204 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
+ .debug_frame   0x00000990       0xb8 Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/usb/device/src/sapi_usb_device.o
+ .debug_frame   0x00000a48       0x28 Project_Gateway/out/libs/sapi/sapi_v0.5.2/board/src/sapi_board.o
+ .debug_frame   0x00000a70       0xe8 Project_Gateway/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_delay.o
+ .debug_frame   0x00000b58      0x120 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_ultrasonic_hcsr04.o
+ .debug_frame   0x00000c78       0xf4 Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_lcd.o
+ .debug_frame   0x00000d6c       0x5c Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board_sysinit.o
+ .debug_frame   0x00000dc8       0x28 Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/sysinit.o
+ .debug_frame   0x00000df0      0x1bc Project_Gateway/out/libs/vendor_libs/lpc_board_ciaa_edu_4337/src/board.o
+ .debug_frame   0x00000fac      0x198 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/ssp_18xx_43xx.o
+ .debug_frame   0x00001144       0x30 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/gpio_18xx_43xx.o
+ .debug_frame   0x00001174       0x2c Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/fpu_init.o
+ .debug_frame   0x000011a0       0x80 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/timer_18xx_43xx.o
+ .debug_frame   0x00001220      0x160 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/adc_18xx_43xx.o
+ .debug_frame   0x00001380       0x7c Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/sysinit_18xx_43xx.o
+ .debug_frame   0x000013fc      0x318 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/clock_18xx_43xx.o
+ .debug_frame   0x00001714       0x70 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/chip_18xx_43xx.o
+ .debug_frame   0x00001784      0x1f4 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/uart_18xx_43xx.o
+ .debug_frame   0x00001978      0x270 Project_Gateway/out/libs/vendor_libs/lpc_chip_43xx/src/i2c_18xx_43xx.o
+ .debug_frame   0x00001be8      0x104 Project_Gateway/out/libs/vendor_libs/lpc_startup/src/cr_startup_lpc43xx.o
+ .debug_frame   0x00001cec       0x2c c:/ciaa_suite/usr/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x00001d18       0x34 c:/ciaa_suite/usr/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x00001d4c       0x2c c:/ciaa_suite/usr/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-init.o)
+ .debug_frame   0x00001d78       0x20 c:/ciaa_suite/usr/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memset.o)
 
 Cross Reference Table
 
@@ -15992,12 +16006,14 @@ Timer_Init                                        Project_Gateway/out/libs/sapi/
                                                   Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_servo.o
                                                   Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_ultrasonic_hcsr04.o
                                                   Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_rgb.o
+                                                  Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
 Timer_SetCompareMatch                             Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
                                                   Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_servo.o
 Timer_microsecondsToTicks                         Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_timer.o
                                                   Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_servo.o
                                                   Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_ultrasonic_hcsr04.o
                                                   Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_rgb.o
+                                                  Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
 Tomar_Config_SD                                   Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
 UART0_IRQHandler                                  Project_Gateway/out/libs/sapi/sapi_v0.5.2/soc/peripherals/src/sapi_uart.o
 UART1_IRQHandler                                  Project_Gateway/out/libs/vendor_libs/lpc_startup/src/cr_startup_lpc43xx.o
@@ -16525,6 +16541,7 @@ mpu9250GetMagZ_uT                                 Project_Gateway/out/libs/sapi/
 mpu9250GetTemperature_C                           Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_imu_mpu9250.o
 mpu9250Init                                       Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_imu_mpu9250.o
 mpu9250Read                                       Project_Gateway/out/libs/sapi/sapi_v0.5.2/external_peripherals/src/sapi_imu_mpu9250.o
+myIntTick                                         Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
 nan                                               c:/ciaa_suite/usr/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libm.a(lib_a-s_nan.o)
                                                   c:/ciaa_suite/usr/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libm.a(lib_a-e_pow.o)
 outbyte                                           Project_Gateway/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_stdio.o
@@ -16538,6 +16555,7 @@ printIntFormat                                    Project_Gateway/out/libs/sapi/
 printSetUart                                      Project_Gateway/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_print.o
 printString                                       Project_Gateway/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_print.o
 printUIntFormat                                   Project_Gateway/out/libs/sapi/sapi_v0.5.2/abstract_modules/src/sapi_print.o
+ptrFunction                                       Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
 puerto_tcpip                                      Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
 punt_rx_esp                                       Project_Gateway/out/Project_Gateway/src/Project_Gateway.o
 punt_rx_gpio                                      Project_Gateway/out/Project_Gateway/src/Project_Gateway.o

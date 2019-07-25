@@ -25,16 +25,20 @@ Año: 2014
 
 
 // ************************ DECLARACIONES ************************************ //
-
+#define TIEMPO_INT_TIMER 1000000
+callBackFuncPtr_t ptrFunction = *myIntTick;
 
 // *********************** VARIABLES GLOBALES ******************************** //
-
+//Paso los prototipos para que no me de ningun Warning el compilador
+uint32_t Timer_microsecondsToTicks(uint32_t);
+void Timer_Init( uint8_t, uint32_t,callBackFuncPtr_t);
 
 // *************************** FUNCTIONS ************************************* //
 
 #include "Funciones_mandar_datos.h" //Funciones para Recibir y Transmitir datos
 
 // ***************************** MAIN **************************************** //
+
 
 int main(void)
 {
@@ -181,8 +185,12 @@ int main(void)
 
     uartCallbackSet(UART_232, UART_RECEIVE, INT_ESP_RX, NULL);
     uartInterrupt(UART_232, true);
-    
+        
     punt_rx_gpio = gpioRxBuffer;
+    
+    //Timer_Init( uint8_t timerNumber, uint32_t timerTicks,callBackFuncPtr_t voidFunctionPointer )
+    Timer_Init(3,Timer_microsecondsToTicks(TIEMPO_INT_TIMER), ptrFunction);
+    
     
     //mandar_paquete = false;
     uartWriteString(UART_USB, "\r\n...Interrupciones activadas con éxito...\r\n");
