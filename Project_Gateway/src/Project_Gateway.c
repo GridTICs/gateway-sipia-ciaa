@@ -182,12 +182,14 @@ int main(void)
     uartCallbackSet(UART_232, UART_RECEIVE, INT_ESP_RX, NULL);
     uartInterrupt(UART_232, true);
     
+    punt_rx_gpio = gpioRxBuffer;
+    
     //mandar_paquete = false;
     uartWriteString(UART_USB, "\r\n...Interrupciones activadas con éxito...\r\n");
     
     LCD_Estado(EST_OK);
     
-    delay(5000);
+    //delay(5000);
     
     //Variables para mostrar el tiempo
     char dateandtime[30];
