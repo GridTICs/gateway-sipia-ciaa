@@ -8,19 +8,26 @@ Año: 2014
 
 */
 //#define PRUEBA
-#define PRUEBA_INT_UART
+//#define PRUEBA_INT_UART
 
 // ************************** INCLUDES *************************************** //
 #include "sapi.h"
 #include <string.h>
 
+#define UART_DEBUG                 UART_USB
+#define UART_ESP01                 UART_232
+#define UARTS_BAUD_RATE            115200
+#define UART_MOTE_RX_BUFF_SIZE         1024     //Buffer de recepción de datos de los motes por el UART_GPIO
+#define ESP8266_RX_BUFFER_SIZE         1024     //Buffer para la recepción del ESP8266
+
+bool_t espSendDataServer(void);
 
 //Inclusiones propias
 #include "Estados.h"                //Estados que se muestran en el LCD.
+#include "FAT_SD.h"                 //Funciones de la SD
+#include "Interrupciones.h"         //Funciones de las interrupciones de todos los UART's
 #include "ESP8622_driver.h"         //Driver de la placa de WiFi
 #include "RTC_Config.h"             //Funciones de el Real Time Counter
-#include "FAT_SD.h"                 //Funciones de la SD
-#include "Interrupciones_UART.h"    //Funciones de las interrupciones de todos los UART's
 #include "NTP_Config.h"             //Funciones de las conexiones con el Server NTP
 
 
@@ -73,7 +80,7 @@ int main(void)
  
 #ifndef PRUEBA 
     //Esta función inicia el RTC, y le pone una fecha y hora establecidos
-    RTC_Init();
+    //RTC_Init();
 #endif
     
     LCD_Estado(CONFIG_SD);
@@ -161,8 +168,6 @@ int main(void)
         
     fatFs_Add_Log(sdcardDriveName(), "La EDU-CIAA es reiniciada por causas desconocidas."); 
     
-    bandera_dato_esp = false;
-    
     LCD_Estado(CONFIG_NTP);
    
     
@@ -186,10 +191,11 @@ int main(void)
     uartCallbackSet(UART_232, UART_RECEIVE, INT_ESP_RX, NULL);
     uartInterrupt(UART_232, true);
         
-    punt_rx_gpio = gpioRxBuffer;
+    ResetGpioBuff();
+    
     
     //Timer_Init( uint8_t timerNumber, uint32_t timerTicks,callBackFuncPtr_t voidFunctionPointer )
-    Timer_Init(3,Timer_microsecondsToTicks(TIEMPO_INT_TIMER), ptrFunction);
+    //Timer_Init(3,Timer_microsecondsToTicks(TIEMPO_INT_TIMER), ptrFunction);
     
     
     //mandar_paquete = false;
@@ -214,7 +220,7 @@ int main(void)
  
 #ifndef PRUEBA_INT_UART
         
-        Mandar_Uart_TCP();
+        /*Mandar_Uart_TCP();
         
         Mandar_Uart_Gpio();
         
@@ -253,10 +259,14 @@ int main(void)
                     tiempo_set_lcd = tickRead();
                 }
                 break;
-        }
+        } */
 #endif
+        //Mandar_Uart_Gpio();
         
-        sleepUntilNextInterrupt(); 
+        if(bandera_mandar_datos == true)Mandar_Uart_TCP();
+        
+        
+        //sleepUntilNextInterrupt(); 
    }
 
    return 0;

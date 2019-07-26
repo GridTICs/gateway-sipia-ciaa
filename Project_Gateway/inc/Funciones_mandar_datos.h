@@ -7,11 +7,10 @@
 
 void Mandar_Uart_TCP()
 {
-        uartInterrupt(UART_GPIO, false);
+    if(espSendDataServer())uartWriteString(UART_USB, "SEND_OK");
+    else uartWriteString(UART_USB, "NO SEND"); 
     
-            //ACÁ VA A IR LA FUNCIÓN OPTIMIZADA PARA MANDAR LOS DATOS AL SERVER
-    
-        uartInterrupt(UART_232, true);
+    ResetGpioBuff();
 }
 
 //************************************************************************************************************************************************************************************************
@@ -31,6 +30,7 @@ void Mandar_Uart_Gpio()
 {
  
     uint32_t cantDataIn = 0;
+        /*
     
         if(bandera_dato_esp == true && tickRead() - time_rx_esp_set > timeout_rx_esp) //&& bandera_dato_gpio == false)
         {
@@ -56,6 +56,6 @@ void Mandar_Uart_Gpio()
             //Reinicializamos nuevamente el puntero del buffer para que apunte a la primer dirección del mismo
             punt_rx_esp=espRxIntBuffer; 
             
-        }  
+        }  */
     
 }
