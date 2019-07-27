@@ -119,12 +119,12 @@ Project_Gateway/out/Project_Gateway/src/Project_Gateway.o: \
  libs/sapi/sapi_v0.5.2/external_peripherals/inc/sapi_magnetometer_qmc5883l.h \
  libs/sapi/sapi_v0.5.2/external_peripherals/inc/sapi_imu_mpu9250.h \
  libs/sapi/sapi_v0.5.2/external_peripherals/inc/sapi_ultrasonic_hcsr04.h \
- Project_Gateway/inc/Estados.h Project_Gateway/inc/ESP8622_driver.h \
- Project_Gateway/inc/RTC_Config.h Project_Gateway/inc/FAT_SD.h \
+ Project_Gateway/inc/Estados.h Project_Gateway/inc/FAT_SD.h \
  libs/lpc_fatfs_disks/sapi/inc/sapi_sdcard.h \
  libs/lpc_fatfs_disks/source/fssdc.h libs/fatfs/source/diskio.h \
  libs/fatfs/source/integer.h libs/fatfs/source/ff.h \
  libs/lpc_fatfs_disks/source/ffconf.h \
- Project_Gateway/inc/Interrupciones_UART.h \
+ Project_Gateway/inc/Interrupciones.h \
+ Project_Gateway/inc/ESP8622_driver.h Project_Gateway/inc/RTC_Config.h \
  Project_Gateway/inc/NTP_Config.h \
  Project_Gateway/inc/Funciones_mandar_datos.h

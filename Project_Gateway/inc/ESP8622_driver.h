@@ -5,14 +5,6 @@
 //  - UART_USB or UART_ENET
 //  - UART_232
 
-#define UART_DEBUG                 UART_USB
-#define UART_ESP01                 UART_232
-#define UARTS_BAUD_RATE            115200
-
-#define UART_MOTE_RX_BUFF_SIZE         1024     //Buffer de recepción de datos de los motes por el UART_GPIO
-#define ESP8266_RX_BUFFER_SIZE         1024     //Buffer para la recepción del ESP8266
-
-
 /*==================[definiciones de datos internos]=========================*/
 
 CONSOLE_PRINT_ENABLE
@@ -66,6 +58,8 @@ bool_t esp01_IP();
 
 bool_t esp01_Disconect_AP();
 
+bool_t espSendDataServer();
+
 void esp01CleanRxBuffer( void ){
    espResponseBufferSize = ESP8266_RX_BUFFER_SIZE;
    memset( espResponseBuffer, 0, espResponseBufferSize );
@@ -74,17 +68,6 @@ void esp01CleanRxBuffer( void ){
 
 // AT+CIPSTART="TCP","api.thingspeak.com",80
 bool_t esp01SendTPCIPDataToServer( char* url, uint32_t port, char* strData, uint32_t strDataLen ){
-
-   // Enviar dato "data" al servidor "url", puerto "port".
-/*   uartWriteString( UART_DEBUG, ">>>> ===========================================================\r\n" );
-   uartWriteString( UART_DEBUG,  ">>>> Enviar dato: \"" );
-   uartWriteString( UART_DEBUG,  strData );
-   uartWriteString( UART_DEBUG, "\"\r\n>>>> al servidor \"" );
-   uartWriteString( UART_DEBUG, url );
-   uartWriteString( UART_DEBUG, "\", puerto \"" );
-   uartWriteString( UART_DEBUG, intToString(port) );
-   uartWriteString( UART_DEBUG, "\"...\r\n" );
-   uartWriteString( UART_DEBUG,"\r\n");*/
 
    // AT+CIPSTART="TCP","url",port ---------------------------
    if( !esp01ConnectToServer( url, port ) )
@@ -130,7 +113,7 @@ bool_t esp01SendTCPIPData( char* strData, uint32_t strDataLen ){
                uartEsp01,
                "\r\n\r\nOK\r\n>", 9,
                espResponseBuffer, &espResponseBufferSize,
-               5000
+               2000
             );
     
        
@@ -154,7 +137,7 @@ bool_t esp01SendTCPIPData( char* strData, uint32_t strDataLen ){
                   uartEsp01,
                   "SEND OK\r\n", 9,
                   espResponseBuffer, &espResponseBufferSize,
-                  5000
+                  2000
                );
       if( retVal ){
 
@@ -322,18 +305,6 @@ bool_t esp01ConnectToServer( char* url, uint32_t port ){
    // "receiveBytesUntilReceiveStringOrTimeoutBlocking")
    esp01CleanRxBuffer();
 
-   /*uartWriteString( UART_DEBUG, ">>>> Conectando al servidor \"" );
-   uartWriteString( UART_DEBUG, url );
-   uartWriteString( UART_DEBUG, "\", puerto \"" );
-   uartWriteString( UART_DEBUG, intToString(port) );
-   uartWriteString( UART_DEBUG, "\"...\r\n" );
-
-   uartWriteString( UART_DEBUG, ">>>> AT+CIPSTART=\"TCP\",\"" );
-   uartWriteString( UART_DEBUG, url );
-   uartWriteString( UART_DEBUG, "\"," );
-   uartWriteString( UART_DEBUG, intToString(port) );
-   uartWriteString( UART_DEBUG, "\r\n" );*/
-
    uartWriteString( UART_ESP01, "AT+CIPSTART=\"TCP\",\"" );
    uartWriteString( UART_ESP01,url );
    uartWriteString( UART_ESP01, "\"," );
@@ -345,21 +316,18 @@ bool_t esp01ConnectToServer( char* url, uint32_t port ){
                uartEsp01,
                "CONNECT\r\n\r\nOK\r\n", 15,
                espResponseBuffer, &espResponseBufferSize,
-               3000
+               2000
             );
     
-    if(strstr(espResponseBuffer, "ALREADY CONNECTED") !=NULL ) retVal = true;
+    if(retVal == false)
+    {    
+        if(strstr(espResponseBuffer, "ALREADY CONNECTED") != NULL )
+        {
+            retVal = true;
+        }
+    }
     
-   if( !retVal ){
-      uartWriteString( UART_DEBUG, ">>>>    Error: No se puede conectar al servidor: \"" );
-      uartWriteString( UART_DEBUG, url );
-      uartWriteString( UART_DEBUG,"\"," );
-      uartWriteString( UART_DEBUG, intToString(port) );
-      uartWriteString( UART_DEBUG, "\"!!\r\n" );
-   }
-   // Imprimo todo lo recibido
-   //uartWriteString( UART_DEBUG, espResponseBuffer );
-   return retVal;
+    return retVal;
 }
 
 
@@ -674,3 +642,79 @@ bool_t esp01_Disconect_AP()
 
 
 }
+
+//VAMOS A TRATAR DE HACER LAS FUNCIONES MAS EFICIENTES CON LA AYUDA DE LA INTERRUPCIÓN
+bool_t espSendDataServer(void) 
+{
+    estadoIntEsp = ESP_MANDAR_DATO_TCP;
+    estadoATComm = AT_MANDAR_COMM;
+    
+    uint32_t timeout = 2000;
+    uint64_t tiempo_set;
+    
+    tiempo_set = tickRead();
+    
+    bool_t retVal = false;
+    
+    while(estadoATComm != AT_EST_INICIAL)
+    {    
+    
+        switch(estadoATComm)
+        { 
+                case AT_MANDAR_COMM:
+                    ResetESPBuff();
+                
+                    uartWriteString( UART_ESP01, "AT+CIPSTART=\"TCP\",\"" );
+                    uartWriteString( UART_ESP01, servidor_tcpip);
+                    uartWriteString( UART_ESP01, "\"," );
+                    uartWriteString( UART_ESP01, puerto_tcpip);
+                    uartWriteString( UART_ESP01, "\r\n" );
+                    estadoATComm = AT_WAIT_CONNECT;         
+                break;
+                
+                case AT_WAIT_CONNECT:
+                    if(strstr(espRxIntBuffer, "OK")!= NULL || strstr(espRxIntBuffer, "ALREADY") != NULL)estadoATComm = AT_SEND_COMM;  
+                break;
+                    
+                case AT_SEND_COMM:
+                    ResetESPBuff();
+                    uartWriteString( UART_ESP01, "AT+CIPSEND=" );
+                    uartWriteString( UART_ESP01, intToString(cantDatos+2) );
+                    uartWriteString( UART_ESP01, "\r\n" );
+                    estadoATComm = AT_WAIT_READY_FOR_SEND;
+                break;
+                
+                case AT_WAIT_READY_FOR_SEND:
+                    if(strstr(espRxIntBuffer, ">")!= NULL)estadoATComm = AT_SEND_DATA; 
+                break;
+                    
+                case AT_SEND_DATA:
+                    ResetESPBuff();
+                    uartWriteByteArray(UART_USB, gpioRxBuffer , cantDatos+2);
+                    uartWriteByteArray(UART_ESP01, gpioRxBuffer , cantDatos+2);
+                    estadoATComm = AT_WAIT_SEND_OK; 
+                break;
+                
+                case AT_WAIT_SEND_OK:
+                    if(strstr(espRxIntBuffer, "SEND")!= NULL)estadoATComm = AT_SEND_OK;
+                break;
+                
+                case AT_SEND_OK:
+                    estadoATComm = AT_EST_INICIAL;
+                    retVal = true;
+                break;
+               
+        }
+        
+        if(tickRead() - tiempo_set > timeout)
+        {
+            estadoATComm = AT_EST_INICIAL;
+            retVal = false;
+        }
+    }
+    
+    ResetESPBuff();
+    estadoIntEsp = ESP_RECIBIENDO_DATO_SERVER;
+    estadoATComm = AT_EST_INICIAL;
+    return retVal;
+}    

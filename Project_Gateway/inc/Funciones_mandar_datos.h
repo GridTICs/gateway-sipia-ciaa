@@ -7,63 +7,10 @@
 
 void Mandar_Uart_TCP()
 {
+    if(espSendDataServer())uartWriteString(UART_USB, "SEND_OK");
+    else uartWriteString(UART_USB, "NO SEND"); 
     
-    if(bandera_dato_gpio == true && (tickRead() - time_rx_gpio_set) > timeout_rx_gpio)
-    {   
-        //uartInterrupt(UART_232, false);
-        
-        char buffer_fp[UART_MOTE_RX_BUFF_SIZE];
-        memset( buffer_fp, '\0', sizeof(buffer_fp) );
-        char buffer_aux[UART_MOTE_RX_BUFF_SIZE];
-        memset( buffer_aux, '\0', sizeof(buffer_aux) );
-        unsigned int tam_archivo;
-        //Bandera para indicar que estoy mandando el gpioRxBuffer, para que en el 
-        //caso de que lleguen mas datos se guarden en el buffer secundario.
-
-    
-        if(fatFs_Open_and_GetSize("BUFF.TXT", buffer_fp) > 0 ) 
-        {
-            strcpy(buffer_aux,gpioRxBuffer);
-            memset( gpioRxBuffer, '\0', sizeof(gpioRxBuffer) );
-            strcpy(gpioRxBuffer,buffer_fp);
-            strcat(gpioRxBuffer,buffer_aux);
-            if(Erase_Arch("BUFF.TXT")==true)uartWriteString(UART_USB, "\r\nEl archivo ha sido borrado con éxito.\r\n");
-        }
-        else
-        {
-            uartWriteString(UART_USB,"\r\nNo hay datos que leer.\r\n");
-        }  
-    
-        if(esp01SendTPCIPDataToServer(servidor_tcpip, atoi(puerto_tcpip), gpioRxBuffer, gpioBuff_cant)==true)
-        {
-            uartWriteString(UART_USB,"\r\nPaquete enviado con éxito...\r\n");
-            ResetGpioBuff();
-        }
-        else
-        {
-            uartWriteString(UART_USB,"\r\nPaquete NO enviado con éxito...\r\n");
-            uartWriteString(UART_USB,"...Se guarda en memoria SD...\r\n");
-        
-            //Guardo el contenido de gpioRxBuffer en "BUFF.TXT de la tarjeta SD"
-            if(fatFs_Add_Buff(gpioRxBuffer))
-            {
-                ResetGpioBuff();
-                fatFs_Add_Log(sdcardDriveName(), "No hay conexión TCP con el servidor, se guarda el paquete en la SD.");
-            }
-            else
-            {
-                uartWriteString(UART_USB,"\r\nPaquete no se ha guardado correctamente en la SD...\r\n...SE PIERDEN DATOS...\r\n"); 
-                fatFs_Add_Log(sdcardDriveName(), "No hay conexión TCP con el servidor, NO se guarda el contenido del buffer en la SD ERROR."); 
-                LCD_Estado(ERROR_SD);
-                stopProgramError();  
-            }
-        
-        }
-        
-        bandera_dato_gpio = false;
-                
-        //uartInterrupt(UART_232, true);
-    }
+    ResetGpioBuff();
 }
 
 //************************************************************************************************************************************************************************************************
@@ -83,6 +30,7 @@ void Mandar_Uart_Gpio()
 {
  
     uint32_t cantDataIn = 0;
+        /*
     
         if(bandera_dato_esp == true && tickRead() - time_rx_esp_set > timeout_rx_esp) //&& bandera_dato_gpio == false)
         {
@@ -108,6 +56,6 @@ void Mandar_Uart_Gpio()
             //Reinicializamos nuevamente el puntero del buffer para que apunte a la primer dirección del mismo
             punt_rx_esp=espRxIntBuffer; 
             
-        }  
+        }  */
     
 }
