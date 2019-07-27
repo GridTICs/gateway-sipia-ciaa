@@ -126,5 +126,5 @@ Project_Gateway/out/Project_Gateway/src/Project_Gateway.o: \
  libs/lpc_fatfs_disks/source/ffconf.h \
  Project_Gateway/inc/Interrupciones.h \
  Project_Gateway/inc/ESP8622_driver.h Project_Gateway/inc/RTC_Config.h \
- Project_Gateway/inc/NTP_Config.h \
+ Project_Gateway/inc/NTP_Config.h Project_Gateway/inc/Menues_Config.h \
  Project_Gateway/inc/Funciones_mandar_datos.h

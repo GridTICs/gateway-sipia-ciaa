@@ -14,7 +14,8 @@ enum ESTADOS {
     ENV_PAQUETE_TCP,
     REC_PAQUETE_TCP,
     CONFIG_FAT,
-    ERROR_SD
+    ERROR_SD,
+    MENU_CONFIG,
     
     
 };   
@@ -31,7 +32,8 @@ char* estados_maq[CANT_ESTADOS] = {
     "ENVIANDO TCP",
     "RECIBIENDO TCP",
     "",
-    "SD ERROR"
+    "SD ERROR",
+    "MENU CONFIG.",
     
 };
 

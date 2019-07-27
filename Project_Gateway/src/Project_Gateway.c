@@ -29,6 +29,7 @@ bool_t espSendDataServer(void);
 #include "ESP8622_driver.h"         //Driver de la placa de WiFi
 #include "RTC_Config.h"             //Funciones de el Real Time Counter
 #include "NTP_Config.h"             //Funciones de las conexiones con el Server NTP
+#include "Menues_Config.h"
 
 
 // ************************ DECLARACIONES ************************************ //
@@ -80,7 +81,7 @@ int main(void)
  
 #ifndef PRUEBA 
     //Esta función inicia el RTC, y le pone una fecha y hora establecidos
-    RTC_Init();
+    //RTC_Init();
 #endif
     
     LCD_Estado(CONFIG_SD);
@@ -191,6 +192,10 @@ int main(void)
     uartCallbackSet(UART_232, UART_RECEIVE, INT_ESP_RX, NULL);
     uartInterrupt(UART_232, true);
         
+    uartCallbackSet(UART_USB, UART_RECEIVE, USB_INT_RX, NULL);
+    uartInterrupt(UART_USB, false);  
+    punt_rx_usb = usbRxIntBuffer;  
+        
     ResetGpioBuff();
     
     
@@ -231,11 +236,11 @@ int main(void)
                 break;
              
                 case 3:
-                    lcdClear(); // Borrar la pantalla
-                    lcdGoToXY( 1, 1 ); // Poner cursor en 1, 1
-                    lcdSendStringRaw( "Estoy en el ");
-                    lcdGoToXY( 1, 2 ); // Poner cursor en 1, 2
-                    lcdSendStringRaw( "Menu número 3");
+                    if(usbStatus == UART_USB_CLEAR)
+                    {
+                        mainMenu();
+                        lcdStatus = MENU_CONFIG;
+                    }
                 break;
             }
         botStatus = BOT_WAIT;

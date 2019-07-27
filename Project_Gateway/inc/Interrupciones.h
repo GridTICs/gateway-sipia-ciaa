@@ -205,6 +205,85 @@ void INT_ESP_RX()
 
 }
 
+//INTERRUPCION DE RECEPCIÓN DEL UART DE LA CONSOLA SERIE
+enum {
+    UART_USB_CLEAR = 0,
+    UART_MENU_PPAL,
+    UART_USB_EXIT,
+    
+    
+};
+
+//Buffer y puntero al Buffer de la int del ESP8266
+uint8_t usbRxIntBuffer[UART_MOTE_RX_BUFF_SIZE];
+uint8_t *punt_rx_usb;
+uint8_t usbStatus = 0;
+
+void ResetUSB()
+{
+    memset(usbRxIntBuffer,'\0',sizeof(usbRxIntBuffer));
+    punt_rx_usb = usbRxIntBuffer;
+}
+
+
+void USB_INT_RX()
+{
+    *punt_rx_usb = uartRxRead(UART_USB);
+    uartWriteByte(UART_USB,*punt_rx_usb);
+    
+    switch(usbStatus)
+    {
+        case UART_MENU_PPAL:
+            
+            if(*punt_rx_usb > 48 && *punt_rx_usb < 52)
+            {    
+                switch(*punt_rx_usb)
+                {
+                    //Quiero configurar el WiFi - Opción 1
+                    case 49:
+                        uartWriteString(UART_USB,"\r\nEstoy en el menú 1.");
+                        while(1);
+                    break;
+                    //Quiero configurar el Server - Opción 2
+                    case 50:
+                        uartWriteString(UART_USB,"\r\nEstoy en el menú 2.");
+                        while(1);
+                    break;
+                    //Quiero configurar el Server NTP - Opción 3
+                    case 51:
+                        uartWriteString(UART_USB,"\r\nEstoy en el menú 3.");
+                        while(1);
+                    break;
+                    
+                }
+            }
+            else
+            {    
+                if(*punt_rx_usb == 52)
+                {    
+                    usbStatus = UART_USB_EXIT;    
+                }
+                else
+                {
+                    ResetUSB();
+                }
+            }
+            
+        break;
+            
+        case UART_USB_EXIT:
+            uartWriteString(UART_USB, "\r\nQuise salir del Menú Ppal.");
+        break;
+        
+    }
+    
+    punt_rx_usb++;
+    
+}
+
+
+
+
 //Interrupcion TIMER
 enum BOTTON_STATUS{
         BOT_WAIT = 0,
