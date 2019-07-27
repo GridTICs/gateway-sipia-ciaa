@@ -8,7 +8,7 @@ Año: 2014
 
 */
 //#define PRUEBA
-//#define PRUEBA_INT_UART
+#define PRUEBA_INT_UART
 
 // ************************** INCLUDES *************************************** //
 #include "sapi.h"
@@ -192,9 +192,9 @@ int main(void)
     uartCallbackSet(UART_232, UART_RECEIVE, INT_ESP_RX, NULL);
     uartInterrupt(UART_232, true);
         
-    uartCallbackSet(UART_USB, UART_RECEIVE, USB_INT_RX, NULL);
+    /*uartCallbackSet(UART_USB, UART_RECEIVE, USB_INT_RX, NULL);
     uartInterrupt(UART_USB, false);  
-    punt_rx_usb = usbRxIntBuffer;  
+    punt_rx_usb = usbRxIntBuffer;  */
         
     ResetGpioBuff();
     
@@ -219,7 +219,7 @@ int main(void)
     while(1)
     {     
  
-#ifndef PRUEBA_INT_UART
+
        
         //Si la interrupción me da el "Ejecutar"
          if(botStatus == BOT_EJEC)
@@ -238,15 +238,14 @@ int main(void)
                 case 3:
                     if(usbStatus == UART_USB_CLEAR)
                     {
-                        mainMenu();
-                        lcdStatus = MENU_CONFIG;
+                        startMenu();
                     }
                 break;
             }
         botStatus = BOT_WAIT;
         }
         
-#endif
+
         //Mandar_Uart_Gpio();
         
         if(bandera_mandar_datos == true)Mandar_Uart_TCP();
