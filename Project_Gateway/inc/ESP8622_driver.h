@@ -659,15 +659,12 @@ bool_t espSendDataServer(void)
     while(estadoATComm != AT_EST_INICIAL)
     {    
     
-        if(tickRead() - tiempo_set > timeout)estadoATComm = AT_EST_INICIAL;
-
-        
         switch(estadoATComm)
         { 
                 case AT_MANDAR_COMM:
                     ResetESPBuff();
                 
-                    uartWriteString( UART_ESP01, "AT+CIPSTART=\"UDP\",\"" );
+                    uartWriteString( UART_ESP01, "AT+CIPSTART=\"TCP\",\"" );
                     uartWriteString( UART_ESP01, servidor_tcpip);
                     uartWriteString( UART_ESP01, "\"," );
                     uartWriteString( UART_ESP01, puerto_tcpip);
@@ -709,7 +706,11 @@ bool_t espSendDataServer(void)
                
         }
         
-        
+        if(tickRead() - tiempo_set > timeout)
+        {
+            estadoATComm = AT_EST_INICIAL;
+            retVal = false;
+        }
     }
     
     ResetESPBuff();
