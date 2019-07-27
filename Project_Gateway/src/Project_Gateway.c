@@ -32,7 +32,7 @@ bool_t espSendDataServer(void);
 
 
 // ************************ DECLARACIONES ************************************ //
-#define TIEMPO_INT_TIMER 1000000
+#define TIEMPO_INT_TIMER 500000
 callBackFuncPtr_t ptrFunction = *myIntTick;
 
 // *********************** VARIABLES GLOBALES ******************************** //
@@ -80,7 +80,7 @@ int main(void)
  
 #ifndef PRUEBA 
     //Esta función inicia el RTC, y le pone una fecha y hora establecidos
-    //RTC_Init();
+    RTC_Init();
 #endif
     
     LCD_Estado(CONFIG_SD);
@@ -195,7 +195,7 @@ int main(void)
     
     
     //Timer_Init( uint8_t timerNumber, uint32_t timerTicks,callBackFuncPtr_t voidFunctionPointer )
-    //Timer_Init(3,Timer_microsecondsToTicks(TIEMPO_INT_TIMER), ptrFunction);
+    Timer_Init(3,Timer_microsecondsToTicks(TIEMPO_INT_TIMER), ptrFunction);
     
     
     //mandar_paquete = false;
@@ -207,10 +207,6 @@ int main(void)
     
     //Variables para mostrar el tiempo
     char dateandtime[30];
-    unsigned int tiempo_set_lcd = tickRead();
-    const unsigned int timeout_lcd = 2000;
-    rtc_t rtc_lcd;
-    unsigned int boton_pulsado;
     
     gpioWrite( LEDB, OFF );
     gpioWrite( LEDG, ON );
@@ -219,54 +215,39 @@ int main(void)
     {     
  
 #ifndef PRUEBA_INT_UART
+       
+        //Si la interrupción me da el "Ejecutar"
+         if(botStatus == BOT_EJEC)
+        {    
+            switch(boton_pulsado)
+            {
         
-        /*Mandar_Uart_TCP();
-        
-        Mandar_Uart_Gpio();
-        
-        if(gpioRead(TEC1)== FALSE)boton_pulsado = 1;
-        if(gpioRead(TEC2)== FALSE)boton_pulsado = 2;
-        if(gpioRead(TEC3)== FALSE)boton_pulsado = 3;
-        
-        switch(boton_pulsado)
-        {
-        
-            case 1:
-                if(tickRead() - tiempo_set_lcd > timeout_lcd)
-                {    
+                case 1:
                     showDateAndTimeLCD(&rtc_lcd);
-                    tiempo_set_lcd = tickRead();
-                }
                 break;
-            
-            
-            case 2:
-                if(tickRead() - tiempo_set_lcd > timeout_lcd)
-                {
-                    LCD_Estado(EST_OK);
-                    tiempo_set_lcd = tickRead();
-                }
+                        
+                case 2:
+                    LCD_Estado(lcdStatus);
                 break;
              
-            case 3:
-                if(tickRead() - tiempo_set_lcd > timeout_lcd)
-                {
+                case 3:
                     lcdClear(); // Borrar la pantalla
                     lcdGoToXY( 1, 1 ); // Poner cursor en 1, 1
                     lcdSendStringRaw( "Estoy en el ");
                     lcdGoToXY( 1, 2 ); // Poner cursor en 1, 2
                     lcdSendStringRaw( "Menu número 3");
-                    tiempo_set_lcd = tickRead();
-                }
                 break;
-        } */
+            }
+        botStatus = BOT_WAIT;
+        }
+        
 #endif
         //Mandar_Uart_Gpio();
         
         if(bandera_mandar_datos == true)Mandar_Uart_TCP();
         
-        
-        //sleepUntilNextInterrupt(); 
+        //Como trabajo todo por interrupciones duermo la EDU-CIAA hasta que la próxima llegue
+        sleepUntilNextInterrupt(); 
    }
 
    return 0;

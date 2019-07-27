@@ -1,8 +1,10 @@
 bool_t esp01ConnectToServer( char*, uint32_t);
+void showDateAndTimeLCD( rtc_t *);
 
 
 //************************   Esta función es la interrupción de recepción que viene por GPIO (MOTE)  ***************************//
-
+//Esta variables es para mostrar los estados en el LCD con interrupcion por tiempo.
+uint8_t lcdStatus = EST_OK;
 
 
 enum ESTADOS_INT_MOTE {
@@ -141,7 +143,7 @@ void INT_ESP_RX()
     switch(estadoIntEsp)
     {
         case  ESP_RECIBIENDO_DATO_SERVER:
-            
+        
             switch(estadoIntIPD)
             {
                     case IPD_INIT:
@@ -157,7 +159,7 @@ void INT_ESP_RX()
                     break;    
                         
                     case IPD_RCV_DATA_LENGH:
-                        
+                    
                         if(*punt_rx_esp == 0x3A)
                         {
                             cantDataIPD = atoi(length_IPD_Str);
@@ -204,14 +206,30 @@ void INT_ESP_RX()
 }
 
 //Interrupcion TIMER
-enum SERVER_STATUS{
-        SERVER_DISCONNECT = 0,
-        SERVER_CONNECT
+enum BOTTON_STATUS{
+        BOT_WAIT = 0,
+        BOT_EJEC,
 };
 
 uint8_t statusServer = 0;
+uint8_t boton_pulsado = 2;
+uint8_t botStatus = 0;
+rtc_t rtc_lcd;
 
 void myIntTick()
-{
-    esp01ConnectToServer(servidor_tcpip,atoi(puerto_tcpip));
+{   
+    //Esta interrupción se ejecuta cada TIEMPO_INT_TIMER micro segundos
+    //Se va a utilizar para:
+    //      1- Refrescar los estados en el LCD.
+    //      2- Saber que boton de la EDU-CIAA se apretó.
+    //      3- Para indicarle al Main la acción a realizar.
+    
+    
+    //Qué botón se apretó?
+    if(gpioRead(TEC1)== FALSE)boton_pulsado = 1;
+    if(gpioRead(TEC2)== FALSE)boton_pulsado = 2;
+    if(gpioRead(TEC3)== FALSE)boton_pulsado = 3;
+    botStatus = BOT_EJEC;
+    
+    
 }
