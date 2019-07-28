@@ -66,8 +66,14 @@ void startMenu(void)
     
     usbStatus = UART_USB_CLEAR;
     boton_pulsado = 2;
+    uartInterrupt(UART_GPIO, true);
+    uartInterrupt(UART_232, true);
     
-    uartWriteString(UART_USB, "\r\nSali del Menu\r\n");
+    gpioWrite( LEDB, OFF );
+    gpioWrite( LEDG, ON );
+    
+    uartWriteString(UART_USB, "\r\nSalió del menu, las interrupciones fueron correctamente habilitadas.\r\n");
+    
     
 }
 
@@ -76,7 +82,6 @@ void startMenu(void)
 void mainMenu(void)
 {
     
-    uartInterrupt(UART_USB, true);
     uartInterrupt(UART_GPIO, false);
     uartInterrupt(UART_232, false);
     uartWriteString(UART_USB, "\r\n¡¡¡ATENCIÓN!!!\r\n");
@@ -133,25 +138,83 @@ void menuConfigWiFi(void)
     uartWriteString(UART_USB, bufferRxClave);
     
     //Falta Asignar lo leído a las variables que corresponden y modificarlos en la SD
+    /*if( !esp01ConnectToWifiAP( bufferRxSSID, bufferRxClave ) ){
+            LCD_Estado(EST_ERROR); 
+            stopProgramError(); // Como dio falso (error) me quedo en un bucle infinito
+    }*/
     
+    Escribir_Config_SD(SD_WRITE_WIFI,bufferRxSSID,bufferRxClave);
+        
     mainMenu();
     
 }
 
 void menuConfigServer(void)
 {
+    char buffServer[50];
+    char *ptrServer;
+    ptrServer = buffServer;
+    char buffPuerto[50];
+    char *ptrPuerto;
+    ptrPuerto = buffPuerto;
 
     uartWriteString(UART_USB, "\r\n\r\n---------------------------------------------\r\n");
     uartWriteString(UART_USB, "               CONFIGURAR SERVER               \r\n");
     uartWriteString(UART_USB, "---------------------------------------------\r\n");
-    while(1);
+    uartWriteString(UART_USB, "\r\nPor favor ingrese la dirección del Server Remoto:\r\n");
+    while(uartRxReady(UART_USB) == false);
+
+    while(uartReadByte(UART_USB, ptrServer) == true)
+    {   
+        //Delay necesario para que el uart se pueda leer como corresponde, sino tira error
+        delay(10);
+        ptrServer++;
+    }
+    *ptrServer = '\0';
+    uartWriteString(UART_USB, buffServer);
+    
+    uartWriteString(UART_USB, "\r\nPor favor ingrese el puerto del Server Remoto:\r\n");
+    while(uartRxReady(UART_USB) == false);
+
+    while(uartReadByte(UART_USB, ptrPuerto) == true)
+    {   
+        //Delay necesario para que el uart se pueda leer como corresponde, sino tira error
+        delay(10);
+        ptrPuerto++;
+    }
+    *ptrPuerto = '\0';
+    uartWriteString(UART_USB, buffPuerto);
+    
+    Escribir_Config_SD(SD_WRITE_SERVER,buffServer,buffPuerto);
+    
+    mainMenu();
 }
 
 void menuConfigNTP(void)
 {
+    
+    char buffServerNTP[50];
+    char *ptrServerNTP;
+    ptrServerNTP = buffServerNTP;
 
     uartWriteString(UART_USB, "\r\n\r\n---------------------------------------------\r\n");
     uartWriteString(UART_USB, "               CONFIGURAR SERVER NTP               \r\n");
     uartWriteString(UART_USB, "---------------------------------------------\r\n");
-    while(1);
+     uartWriteString(UART_USB, "\r\nPor favor ingrese la dirección del Server Remoto:\r\n");
+    while(uartRxReady(UART_USB) == false);
+
+    while(uartReadByte(UART_USB, ptrServerNTP) == true)
+    {   
+        //Delay necesario para que el uart se pueda leer como corresponde, sino tira error
+        delay(10);
+        ptrServerNTP++;
+    }
+    *ptrServerNTP = '\0';
+    uartWriteString(UART_USB, buffServerNTP);
+    
+    Escribir_Config_SD(SD_WRITE_SERVER_NTP,buffServerNTP,NULL);
+    
+    mainMenu();
+    
+    mainMenu();
 }

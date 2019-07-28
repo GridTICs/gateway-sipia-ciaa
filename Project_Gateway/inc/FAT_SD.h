@@ -176,6 +176,53 @@ static bool fatFs_Add_Log(const char *unidad , const char *log)
     f_close( &file );
 }
 
+static bool fatFsWriteText(const char *nombre_archivo, const char *text)
+{
+    char buf[1024];
+    char filename[64];    
+    FIL file;
+    FRESULT fr;
+    int r;
+    
+    sprintf( filename, "%s/%s", sdcardDriveName(),nombre_archivo);
+
+    uartWriteString( UART_USB, "\r\n-------------------------------------------\r\n" );   
+    sprintf( buf, "Abriendo archivo: '%s'.\r\n", filename);
+    uartWriteString( UART_USB, buf);
+    uartWriteString( UART_USB, "-------------------------------------------\r\n" ); 
+    
+    // Ver http://elm-chan.org/fsw/ff/00index_e.html para una referencia de la
+    // API de FatFs
+    
+    // Abre un archivo. Si no existe lo crea, si existe, me manda el puntero al último para escribir debajo.
+    fr = f_open( &file, filename, FA_OPEN_APPEND | FA_WRITE);
+    if( fr != FR_OK )
+    {
+        uartWriteString( UART_USB, "\r\nERROR AL ABRIR ARCHIVO.\r\n" ); 
+        fatFsTestERROR( fr );
+        return false;
+    }
+    
+    //f_puts
+    sprintf (buf, "%s", text);
+    
+    r = f_puts( buf, &file );
+    if (f_error(&file))
+    {
+       uartWriteString( UART_USB, "\r\nERROR AL ESCRIBIR ARCHIVO.\r\n" ); 
+       fatFsTestERROR( r );
+       f_close( &file );
+       return false;
+    }
+    fatFsTestOK( );
+    
+    // Cierra el archivo
+    f_close( &file );
+    
+    return true;
+}
+
+
 static bool fatFs_Add_Buff(const char *text)
 {
     char buf[1024];
@@ -221,6 +268,9 @@ static bool fatFs_Add_Buff(const char *text)
     
     return true;
 }
+
+
+
 
 unsigned int fatFs_Open_and_GetSize(const char *nombre_archivo, char *buffer)
 {
@@ -330,6 +380,7 @@ bool_t Tomar_Config_SD()
  
     // Abre un archivo. Si no existe lo crea, si existe, me manda el puntero al último para escribir debajo.
     fr = f_open( &file, filename, FA_READ);
+    
     if( fr != FR_OK )
     {
         fatFsTestERROR( fr );
@@ -345,6 +396,8 @@ bool_t Tomar_Config_SD()
     
     }
     
+    // Cierra el archivo
+    f_close( &file);
 
     ptr_inicio = strstr(buf, "=");
     ptr_final = strstr(buf, ";");
@@ -402,5 +455,180 @@ bool_t Tomar_Config_SD()
     uartWriteString( UART_USB, servidor_ntp );
     uartWriteString( UART_USB, "\r\n" );
     
+    
+}
+
+enum {
+    SD_WRITE_WIFI = 0,
+    SD_WRITE_SERVER,
+    SD_WRITE_SERVER_NTP
+    
+};
+
+bool_t Escribir_Config_SD(uint8_t sdStateWrite, char* server_ssid, char* puerto_clave)
+{
+    char buf[1024];
+    char filename[64];    
+    FIL file;
+    FRESULT fr;
+    unsigned int size_of_file, out_bytes;
+
+    sprintf( filename, "%s/CONFIG.TXT", sdcardDriveName());
+
+    uartWriteString( UART_USB, "\r\n-------------------------------------------\r\n" );   
+    sprintf( buf, "Abriendo archivo: '%s'.\r\n", filename);
+    uartWriteString( UART_USB, buf);
+    uartWriteString( UART_USB, "-------------------------------------------\r\n" ); 
+ 
+    memset(buf,'\0',sizeof(buf));
+    
+    // Abre un archivo. Si no existe lo crea, si existe, me manda el puntero al último para escribir debajo.
+    fr = f_open( &file, filename, FA_READ);
+    if( fr != FR_OK )
+    {
+        fatFsTestERROR( fr );
+        return false;
+    }
+    
+    size_of_file = f_size(&file);
+    
+    if(size_of_file > 0)
+    {
+        //fr = f_read(&fsrc, buffer, sizeof buffer, &br); 
+        if(f_read(&file,buf,(size_of_file+1), &out_bytes) == FR_OK)uartWriteString(UART_USB, "\r\nEl dato ha sido leído correctamente.\r\n");
+    
+    }
+    
+   
+    char *ptr_igual = 0;
+    char *ptr_punto_coma = 0;
+    uint32_t cantEntre = 0;
+    
+    char buffPrimeraParte[1024];
+    char buffSegundaParte[1024];
+    
+    memset(buffPrimeraParte,'\0',sizeof(buffPrimeraParte));
+    memset(buffSegundaParte,'\0',sizeof(buffSegundaParte));
+    
+    //Lo primero que hago es separar todo lo que hay antes del igual, y todo lo que hay después del punto y coma.  
+    //Como las funciones de la biblioteca string.h escapan o retornan con un '\0' (NULL) apreovechamos esto y cambio algunos
+    //caracteres por éste para guardar lo que me sirva:
+    
+    switch(sdStateWrite)
+    {
+        case   SD_WRITE_WIFI:
+            
+            //Aislo las dos primeras partes:
+            ptr_igual = strstr(buf, "=");
+            ptr_punto_coma = strstr(buf, ";");
+            ptr_igual++;
+            *ptr_igual = '\0';  //Aquí inserto el NULL
+            strcpy(buffPrimeraParte,buf);
+    
+            strcat(buffSegundaParte, ptr_punto_coma);
+            
+            //Las junto en un buffer mas grande:
+            strcat(buffPrimeraParte,server_ssid);
+            strcat(buffPrimeraParte,buffSegundaParte);
+        
+            memset(buf, '\0', sizeof(buf));
+        
+            strcpy(buf,buffPrimeraParte);
+            
+            //Ahora buscamos el segundo igual
+            ptr_igual = strstr(buf,"clave_wifi =");
+            ptr_igual = ptr_igual + 12;
+            ptr_punto_coma = strstr(buf,";");
+            ptr_punto_coma++;
+            ptr_punto_coma = strstr(ptr_punto_coma,";"); //Ya estamos en el segundo punto y coma
+            *ptr_igual = '\0';  //Aquí inserto el NULL
+            
+            memset(buffPrimeraParte,'\0',sizeof(buffPrimeraParte));
+            memset(buffSegundaParte,'\0',sizeof(buffSegundaParte));
+            
+            strcpy(buffPrimeraParte,buf);
+            strcpy(buffSegundaParte, ptr_punto_coma);
+            
+            //Las junto en un buffer mas grande:
+            strcat(buffPrimeraParte,puerto_clave);
+            strcat(buffPrimeraParte,buffSegundaParte);
+           
+            if(Erase_Arch("CONFIG.TXT"))uartWriteString(UART_USB, "\r\nArchivo borrado correctamente.\r\n");
+            
+            if(fatFsWriteText("CONFIG.TXT", buffPrimeraParte))uartWriteString(UART_USB, "\r\nArchivo escrito correctamente.\r\n");
+            
+                    
+        break;  
+        
+        case   SD_WRITE_SERVER:
+                
+            //Aislo las dos primeras partes:
+            ptr_igual = strstr(buf, "server_tcpip =");
+            ptr_punto_coma = strstr(ptr_igual, ";");
+            ptr_igual = ptr_igual + 14;
+            *ptr_igual = '\0';  //Aquí inserto el NULL
+            
+            strcpy(buffPrimeraParte,buf);
+            strcpy(buffSegundaParte, ptr_punto_coma);
+            
+            //Las junto en un buffer mas grande:
+            strcat(buffPrimeraParte,server_ssid);
+            strcat(buffPrimeraParte,buffSegundaParte);
+            memset(buf, '\0', sizeof(buf));
+            strcpy(buf,buffPrimeraParte);
+            
+            //Ahora buscamos el segundo igual
+            ptr_igual = strstr(buf,"puerto_tcpip =");
+            ptr_punto_coma = strstr(ptr_igual,";");
+            ptr_igual = ptr_igual + 14;
+            *ptr_igual = '\0';  //Aquí inserto el NULL
+            
+            memset(buffPrimeraParte,'\0',sizeof(buffPrimeraParte));
+            memset(buffSegundaParte,'\0',sizeof(buffSegundaParte));
+            
+            strcpy(buffPrimeraParte,buf);
+            strcpy(buffSegundaParte, ptr_punto_coma);
+            
+            //Las junto en un buffer mas grande:
+            strcat(buffPrimeraParte,puerto_clave);
+            strcat(buffPrimeraParte,buffSegundaParte);
+        
+            uartWriteString(UART_USB, "\r\nTodo queda: \r\n");
+            uartWriteString(UART_USB, buffPrimeraParte);
+     
+            if(Erase_Arch("CONFIG.TXT"))uartWriteString(UART_USB, "\r\nArchivo borrado correctamente.\r\n");
+            
+            if(fatFsWriteText("CONFIG.TXT", buffPrimeraParte))uartWriteString(UART_USB, "\r\nArchivo escrito correctamente.\r\n");
+        
+        break;
+        
+        case   SD_WRITE_SERVER_NTP:
+                
+            //Ahora buscamos el segundo igual
+            ptr_igual = strstr(buf,"servidor_ntp =");
+            ptr_punto_coma = strstr(ptr_igual,";");
+            ptr_igual = ptr_igual + 14;
+            *ptr_igual = '\0';  //Aquí inserto el NULL
+            
+            strcpy(buffPrimeraParte,buf);
+            strcpy(buffSegundaParte, ptr_punto_coma);
+            
+            //Las junto en un buffer mas grande:
+            strcat(buffPrimeraParte,server_ssid);
+            strcat(buffPrimeraParte,buffSegundaParte);
+        
+            uartWriteString(UART_USB, "\r\nTodo queda: \r\n");
+            uartWriteString(UART_USB, buffPrimeraParte);
+     
+            if(Erase_Arch("CONFIG.TXT"))uartWriteString(UART_USB, "\r\nArchivo borrado correctamente.\r\n");
+            
+            if(fatFsWriteText("CONFIG.TXT", buffPrimeraParte))uartWriteString(UART_USB, "\r\nArchivo escrito correctamente.\r\n");
+        
+        break;
+        
+    }
+    
+    // Cierra el archivo
+    f_close( &file );
     
 }

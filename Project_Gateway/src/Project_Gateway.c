@@ -8,7 +8,7 @@ Año: 2014
 
 */
 //#define PRUEBA
-#define PRUEBA_INT_UART
+//#define PRUEBA_INT_UART
 
 // ************************** INCLUDES *************************************** //
 #include "sapi.h"
@@ -59,7 +59,7 @@ int main(void)
     
     gpioWrite( LEDB, ON );
  
- #ifndef PRUEBA_INT_UART
+
     
     uartWriteString(UART_USB, "\r\nLa EDU-CIAA ha sido iniciada correctamente,\r\ny los UART han sido configurados correctamente.\r\n");
  
@@ -71,7 +71,7 @@ int main(void)
     lcdGoToXY( 1, 2 ); // Poner cursor en 1, 2
     lcdSendStringRaw( "UTN FRM");
  
-    delay(3000);    
+    //delay(3000);    
     
     LCD_Estado(EST_OK);
     
@@ -129,7 +129,7 @@ int main(void)
     //Si esto no ocurre se procede a configurar:
     
     
-    
+#ifndef PRUEBA_INT_UART   
     
     if(!esp01_IP())
     {
@@ -191,10 +191,6 @@ int main(void)
 
     uartCallbackSet(UART_232, UART_RECEIVE, INT_ESP_RX, NULL);
     uartInterrupt(UART_232, true);
-        
-    /*uartCallbackSet(UART_USB, UART_RECEIVE, USB_INT_RX, NULL);
-    uartInterrupt(UART_USB, false);  
-    punt_rx_usb = usbRxIntBuffer;  */
         
     ResetGpioBuff();
     
