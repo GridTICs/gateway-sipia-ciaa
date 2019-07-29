@@ -33,7 +33,7 @@ bool_t espSendDataServer(void);
 
 
 // ************************ DECLARACIONES ************************************ //
-#define TIEMPO_INT_TIMER 500000
+#define TIEMPO_INT_TIMER 1000000
 callBackFuncPtr_t ptrFunction = *myIntTick;
 
 // *********************** VARIABLES GLOBALES ******************************** //

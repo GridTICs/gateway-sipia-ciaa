@@ -211,35 +211,13 @@ enum {
     UART_MENU_PPAL,
     UART_USB_EXIT,
     UART_MENU_WIFI,
-    
-    
 };
 
-//Buffer y puntero al Buffer de la int del ESP8266
-uint8_t usbRxIntBuffer[UART_MOTE_RX_BUFF_SIZE];
-uint8_t *punt_rx_usb;
+//Variable de Estado del UART_USB
 uint8_t usbStatus = 0;
-bool_t usbBanderaDato = false;
-
-void ResetUSB()
-{
-    memset(usbRxIntBuffer,'\0',sizeof(usbRxIntBuffer));
-    punt_rx_usb = usbRxIntBuffer;
-    usbBanderaDato = false;
-}
 
 
-/*void USB_INT_RX()
-{
-    *punt_rx_usb = uartRxRead(UART_USB);
-    uartWriteByte(UART_USB,*punt_rx_usb);
-    usbBanderaDato = true;
-}*/
-
-
-
-
-//Interrupcion TIMER
+//Interrupcion TIMER_4 
 enum BOTTON_STATUS{
         BOT_WAIT = 0,
         BOT_EJEC,

@@ -12,6 +12,8 @@ void startMenu(void)
     gpioWrite( LEDB, ON );
     gpioWrite( LEDG, OFF );
     
+    LCD_Estado(MENU_CONFIG);
+    
     while(usbStatus != UART_USB_EXIT)
     {    
     
@@ -74,6 +76,9 @@ void startMenu(void)
     
     uartWriteString(UART_USB, "\r\nSalió del menu, las interrupciones fueron correctamente habilitadas.\r\n");
     
+    ResetESPBuff();
+    ResetIPD();
+    ResetGpioBuff();
     
 }
 

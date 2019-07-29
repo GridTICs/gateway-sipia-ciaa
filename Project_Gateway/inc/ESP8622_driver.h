@@ -592,7 +592,7 @@ bool_t esp01_IP()
                uartEsp01,
                "OK\r\n", 4,
                espResponseBuffer, &espResponseBufferSize,
-               5000
+               3000
             );
     
     if(strstr(espResponseBuffer, "+CIPSTA:ip:\"0.0.0.0\"")!=NULL)
