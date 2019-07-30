@@ -23,10 +23,10 @@ Año: 2014
 bool_t espSendDataServer(void);
 
 //Inclusiones propias
-#include "Estados.h"                //Estados que se muestran en el LCD.
+#include "EstadosLCD.h"                //Estados que se muestran en el LCD.
 #include "FAT_SD.h"                 //Funciones de la SD
 #include "Interrupciones.h"         //Funciones de las interrupciones de todos los UART's
-#include "ESP8622_driver.h"         //Driver de la placa de WiFi
+#include "ESP8266_driver.h"         //Driver de la placa de WiFi
 #include "RTC_Config.h"             //Funciones de el Real Time Counter
 #include "NTP_Config.h"             //Funciones de las conexiones con el Server NTP
 #include "Menues_Config.h"
@@ -43,7 +43,7 @@ void Timer_Init( uint8_t, uint32_t,callBackFuncPtr_t);
 
 // *************************** FUNCTIONS ************************************* //
 
-#include "Funciones_mandar_datos.h" //Funciones para Recibir y Transmitir datos
+#include "MandarDatos.h" //Funciones para Recibir y Transmitir datos
 
 // ***************************** MAIN **************************************** //
 
