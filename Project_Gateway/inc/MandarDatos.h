@@ -4,11 +4,82 @@
 // - No recibe ningún valor
 //
 //************************************************************************************************************************************************************************************************
+enum {
+  
+    SD_NO_DATA = 0,
+    SD_WITH_DATA,
+    SD_ERROR,  
+   
+};
+
+uint8_t statusSD;
+
 
 void Mandar_Uart_TCP()
 {
-    if(espSendDataServer())uartWriteString(UART_USB, "SEND_OK");
-    else uartWriteString(UART_USB, "NO SEND"); 
+    
+    uint8_t bufferSD[UART_MOTE_RX_BUFF_SIZE];
+    uint8_t bufferGpioRX_Aux[UART_MOTE_RX_BUFF_SIZE];
+    uint16_t dataSizeSD;
+    uint8_t *ptrBuffSD;
+    
+    
+    switch(statusSD)
+    {
+     case   SD_NO_DATA:
+     
+        if(espSendDataServer())uartWriteString(UART_USB, "SEND_OK");
+        else 
+        {
+            uartWriteString(UART_USB, "NO SEND");
+            if(fatFsWriteText("BUFF.BIN", gpioRxBuffer))statusSD = SD_WITH_DATA;        
+            else statusSD = SD_ERROR;
+        }
+     break;    
+     
+     case  SD_WITH_DATA:
+        
+        dataSizeSD = fatFs_Open_and_GetSize("BUFF.BIN", bufferSD);
+        ptrBuffSD = bufferSD;
+    
+        if(dataSizeSD > 0 )
+        {
+            //Seteamos el puntero donde dejamos de escribir datos desde la SD:
+            ptrBuffSD = ptrBuffSD + dataSizeSD;
+            
+            //Copiamos el buffer de recepción del Gpio al buffer auxiliar
+            //La cantidad es la encontrada en la interrrupción + los dos primeros bytes
+            memcpy(ptrBuffSD, gpioRxBuffer, cantDatos+2);
+            memset(gpioRxBuffer,'\0',sizeof(gpioRxBuffer));
+            memcpy(gpioRxBuffer,ptrBuffSD, dataSizeSD + cantDatos + 2);
+            
+            if(espSendDataServer())
+            {
+                uartWriteString(UART_USB, "SEND_OK");
+                statusSD = SD_NO_DATA;
+            }
+            else
+            {
+                uartWriteString(UART_USB, "NO SEND");
+                if(fatFsWriteText("BUFF.BIN",gpioRxBuffer))statusSD = SD_WITH_DATA; 
+                else statusSD = SD_ERROR;
+            } 
+            
+        }
+        else
+        {
+            statusSD = SD_ERROR;
+        }    
+            
+     break;  
+  
+     case SD_ERROR:
+        LCD_Estado(EST_ERROR); 
+        stopProgramError(); // Como dio falso (error) me quedo en un bucle infinito
+     break;
+     
+    }
+    
     
     ResetGpioBuff();
 }

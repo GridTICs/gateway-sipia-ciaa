@@ -176,7 +176,7 @@ static bool fatFs_Add_Log(const char *unidad , const char *log)
     f_close( &file );
 }
 
-static bool fatFsWriteText(const char *nombre_archivo, const char *text)
+static bool fatFsWriteText(const char *nombre_archivo, uint8_t *text)
 {
     char buf[1024];
     char filename[64];    
@@ -204,9 +204,12 @@ static bool fatFsWriteText(const char *nombre_archivo, const char *text)
     }
     
     //f_puts
-    sprintf (buf, "%s", text);
+    //sprintf (buf, "%s", text);
     
-    r = f_puts( buf, &file );
+    //r = f_puts( buf, &file );
+    
+    for(int i=0;i<cantDatos+2;i++)f_putc(text[i],&file);
+    
     if (f_error(&file))
     {
        uartWriteString( UART_USB, "\r\nERROR AL ESCRIBIR ARCHIVO.\r\n" ); 

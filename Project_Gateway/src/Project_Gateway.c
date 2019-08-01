@@ -8,7 +8,7 @@ Año: 2014
 
 */
 //#define PRUEBA
-//#define PRUEBA_INT_UART
+#define PRUEBA_INT_UART
 
 // ************************** INCLUDES *************************************** //
 #include "sapi.h"
@@ -24,8 +24,9 @@ bool_t espSendDataServer(void);
 
 //Inclusiones propias
 #include "EstadosLCD.h"                //Estados que se muestran en el LCD.
-#include "FAT_SD.h"                 //Funciones de la SD
+
 #include "Interrupciones.h"         //Funciones de las interrupciones de todos los UART's
+#include "FAT_SD.h"                 //Funciones de la SD
 #include "ESP8266_driver.h"         //Driver de la placa de WiFi
 #include "RTC_Config.h"             //Funciones de el Real Time Counter
 #include "NTP_Config.h"             //Funciones de las conexiones con el Server NTP
