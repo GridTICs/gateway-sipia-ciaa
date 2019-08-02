@@ -1,0 +1,5 @@
+ssid_wifi =MDNTEC_M;
+clave_wifi =Marchetti;
+server_tcpip =192.168.1.104;
+puerto_tcpip =1234;
+servidor_ntp =3.ar-pool.ntp.org;   

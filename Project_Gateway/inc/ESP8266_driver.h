@@ -690,7 +690,6 @@ bool_t espSendDataServer(void)
                     
                 case AT_SEND_DATA:
                     ResetESPBuff();
-                    uartWriteByteArray(UART_USB, gpioRxBuffer , cantDatos+2);
                     uartWriteByteArray(UART_ESP01, gpioRxBuffer , cantDatos+2);
                     estadoATComm = AT_WAIT_SEND_OK; 
                 break;
@@ -713,7 +712,8 @@ bool_t espSendDataServer(void)
         }
     }
     
-    ResetESPBuff();
+    
+    if(retVal == true)ResetESPBuff();
     estadoIntEsp = ESP_RECIBIENDO_DATO_SERVER;
     estadoATComm = AT_EST_INICIAL;
     return retVal;

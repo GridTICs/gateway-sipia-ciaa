@@ -183,13 +183,14 @@ static bool fatFsWriteText(const char *nombre_archivo, uint8_t *text)
     FIL file;
     FRESULT fr;
     int r;
+    unsigned int bw;
     
     sprintf( filename, "%s/%s", sdcardDriveName(),nombre_archivo);
 
-    uartWriteString( UART_USB, "\r\n-------------------------------------------\r\n" );   
+    /*uartWriteString( UART_USB, "\r\n-------------------------------------------\r\n" );   
     sprintf( buf, "Abriendo archivo: '%s'.\r\n", filename);
     uartWriteString( UART_USB, buf);
-    uartWriteString( UART_USB, "-------------------------------------------\r\n" ); 
+    uartWriteString( UART_USB, "-------------------------------------------\r\n" ); */
     
     // Ver http://elm-chan.org/fsw/ff/00index_e.html para una referencia de la
     // API de FatFs
@@ -208,7 +209,9 @@ static bool fatFsWriteText(const char *nombre_archivo, uint8_t *text)
     
     //r = f_puts( buf, &file );
     
-    for(int i=0;i<cantDatos+2;i++)f_putc(text[i],&file);
+   //for(int i=0;i<cantDatos+2;i++)f_putc(text[i],&file);
+    
+    f_write(&file, text, cantDatos+2, &bw);
     
     if (f_error(&file))
     {
@@ -221,6 +224,8 @@ static bool fatFsWriteText(const char *nombre_archivo, uint8_t *text)
     
     // Cierra el archivo
     f_close( &file );
+    
+    uartWriteString( UART_USB, "\r\nSE ESCRIBIO EL ARCHIVO.\r\n" ); 
     
     return true;
 }
@@ -287,10 +292,10 @@ unsigned int fatFs_Open_and_GetSize(const char *nombre_archivo, char *buffer)
     
     sprintf( filename, "%s/%s", sdcardDriveName(), nombre_archivo );
 
-    uartWriteString( UART_USB, "\r\n-------------------------------------------\r\n" );   
+    /*uartWriteString( UART_USB, "\r\n-------------------------------------------\r\n" );   
     sprintf( buf, "Abriendo archivo: '%s'.\r\n", filename);
     uartWriteString( UART_USB, buf);
-    uartWriteString( UART_USB, "-------------------------------------------\r\n" ); 
+    uartWriteString( UART_USB, "-------------------------------------------\r\n" ); */
     
     // Ver http://elm-chan.org/fsw/ff/00index_e.html para una referencia de la
     // API de FatFs
@@ -317,9 +322,7 @@ unsigned int fatFs_Open_and_GetSize(const char *nombre_archivo, char *buffer)
     
     // Cierra el archivo
     f_close( &file );
-    
-    uartWriteString(UART_USB, "\r\nEl archivo se cerró correctamente.\r\n");
-    
+        
     return size_of_file;
 }
 
@@ -333,11 +336,7 @@ static bool Erase_Arch(const char *nombre_archivo)
     
     sprintf( filename, "%s/%s", sdcardDriveName(), nombre_archivo );
 
-    uartWriteString( UART_USB, "\r\n-------------------------------------------\r\n" );   
-    sprintf( buf, "Abriendo archivo: '%s'.\r\n", filename);
-    uartWriteString( UART_USB, buf);
-    uartWriteString( UART_USB, "-------------------------------------------\r\n" ); 
-    
+  
     // Ver http://elm-chan.org/fsw/ff/00index_e.html para una referencia de la
     // API de FatFs
     

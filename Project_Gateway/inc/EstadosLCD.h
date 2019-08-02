@@ -16,6 +16,7 @@ enum ESTADOS {
     CONFIG_FAT,
     ERROR_SD,
     MENU_CONFIG,
+    GUARDA_SD,
     
     
 };   
@@ -34,6 +35,7 @@ char* estados_maq[CANT_ESTADOS] = {
     "",
     "SD ERROR",
     "MENU CONFIG.",
+    "GUARDANDO SD"
     
 };
 

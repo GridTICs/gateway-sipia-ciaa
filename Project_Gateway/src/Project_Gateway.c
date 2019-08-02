@@ -7,8 +7,8 @@ Autor: Lucas Escribano - Rodrigo Gonzalez
 Año: 2014
 
 */
-//#define PRUEBA
-#define PRUEBA_INT_UART
+#define PRUEBA
+//#define PRUEBA_INT_UART
 
 // ************************** INCLUDES *************************************** //
 #include "sapi.h"
@@ -71,9 +71,14 @@ int main(void)
     lcdSendStringRaw( "Proyecto Final");
     lcdGoToXY( 1, 2 ); // Poner cursor en 1, 2
     lcdSendStringRaw( "UTN FRM");
+    delay(3000);    
+    lcdClear(); // Borrar la pantalla
+    lcdGoToXY( 1, 1 ); // Poner cursor en 1, 1
+    lcdSendStringRaw( "Gonzalez");
+    lcdGoToXY( 1, 2 ); // Poner cursor en 1, 2
+    lcdSendStringRaw( "Escribano"); 
+    delay(3000);
  
-    //delay(3000);    
-    
     LCD_Estado(EST_OK);
     
     uartWriteString(UART_USB, "\r\n...Ahora se configurará el Real Time Counter (RTC)...\r\n");
@@ -82,7 +87,7 @@ int main(void)
  
 #ifndef PRUEBA 
     //Esta función inicia el RTC, y le pone una fecha y hora establecidos
-    //RTC_Init();
+    RTC_Init();
 #endif
     
     LCD_Estado(CONFIG_SD);

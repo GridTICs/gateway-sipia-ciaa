@@ -14,6 +14,9 @@ enum {
 
 uint8_t statusSD;
 
+//Se crea un buffer global de 100 * 100 datos 10KB
+uint8_t bufferGlobalSD[100][100];
+
 
 void Mandar_Uart_TCP()
 {
@@ -28,19 +31,31 @@ void Mandar_Uart_TCP()
     {
      case   SD_NO_DATA:
      
+        gpioWrite( LEDB, OFF );
+        gpioWrite( LEDG, ON );
+        gpioWrite( LED1, OFF );
+        lcdStatus = EST_OK;
+        
         if(espSendDataServer())uartWriteString(UART_USB, "SEND_OK");
         else 
         {
             uartWriteString(UART_USB, "NO SEND");
-            if(fatFsWriteText("BUFF.BIN", gpioRxBuffer))statusSD = SD_WITH_DATA;        
+            if(fatFsWriteText("BUFF.TXT", gpioRxBuffer))statusSD = SD_WITH_DATA;        
             else statusSD = SD_ERROR;
         }
+        
      break;    
      
      case  SD_WITH_DATA:
         
-        dataSizeSD = fatFs_Open_and_GetSize("BUFF.BIN", bufferSD);
+        gpioWrite( LEDB, OFF );
+        gpioWrite( LEDG, OFF );
+        gpioWrite( LED1, ON );
+        lcdStatus = GUARDA_SD;
+     
         ptrBuffSD = bufferSD;
+        dataSizeSD = fatFs_Open_and_GetSize("BUFF.TXT", bufferSD);
+        Erase_Arch("BUFF.TXT");
     
         if(dataSizeSD > 0 )
         {
@@ -52,16 +67,18 @@ void Mandar_Uart_TCP()
             memcpy(ptrBuffSD, gpioRxBuffer, cantDatos+2);
             memset(gpioRxBuffer,'\0',sizeof(gpioRxBuffer));
             memcpy(gpioRxBuffer,ptrBuffSD, dataSizeSD + cantDatos + 2);
+            uartWriteString(UART_USB, "Los datos que se mandan son: ");
+            uartWriteByteArray(UART_USB,gpioRxBuffer,dataSizeSD + cantDatos + 2);
             
             if(espSendDataServer())
             {
-                uartWriteString(UART_USB, "SEND_OK");
+                uartWriteString(UART_USB, "SE ENVIO DESPUES DE RECUPERAR EL BUFFER");
                 statusSD = SD_NO_DATA;
             }
             else
             {
-                uartWriteString(UART_USB, "NO SEND");
-                if(fatFsWriteText("BUFF.BIN",gpioRxBuffer))statusSD = SD_WITH_DATA; 
+                uartWriteString(UART_USB, "NO SE MANDA ESTA VEZ");
+                if(fatFsWriteText("BUFF.TXT",gpioRxBuffer))statusSD = SD_WITH_DATA; 
                 else statusSD = SD_ERROR;
             } 
             
